@@ -1,0 +1,55 @@
+{
+  "name": "@fluent-finance/cognition",
+  "author": "Fluent <devops@fluent.finance>",
+  "license": "Apache-2.0",
+  "version": "0.0.1",
+  "description": "Fluent Finance Cognition - Application to aggregate and display charted data metrics for the Fluent network; SvelteKit application, powered by Vite",
+  "homepage": "https://github.com/Fluent-Finance/cognition#readme",
+  "type": "module",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Fluent-Finance/cognition.git"
+  },
+  "os": ["darwin", "linux"],
+  "engines": {
+    "node": ">=16.17.0",
+    "bun": ">=0.8.1"
+  },
+  "contributors": [
+    {
+      "name": "𝙆𝙊𝘿𝞝𝙋𝞸𝞝𝙏",
+      "email": "poet@fluent.finance"
+    }
+  ],
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "bun run test:integration && bun run test:unit",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+    "lint": "prettier --plugin-search-dir . --check . && eslint .",
+    "format": "prettier --plugin-search-dir . --write .",
+    "test:integration": "playwright test",
+    "test:unit": "vitest"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.28.1",
+    "@sveltejs/adapter-auto": "^2.0.0",
+    "@sveltejs/kit": "^1.20.4",
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "eslint": "^8.28.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-svelte": "^2.30.0",
+    "prettier": "^2.8.0",
+    "prettier-plugin-svelte": "^2.10.1",
+    "svelte": "^4.0.5",
+    "svelte-check": "^3.4.3",
+    "tslib": "^2.4.1",
+    "typescript": "^5.0.0",
+    "vite": "^4.4.2",
+    "vitest": "^0.32.2"
+  }
+}
