@@ -1,0 +1,55 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - wip
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    environment: 
+      name: production
+      url: https://deno-cognition.fluent.finance
+
+    permissions:
+      id-token: write
+      contents: read
+
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v3
+
+      - name: Install Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20.x
+
+      - name: Configure 1Password Connect
+        uses: 1password/load-secrets-action/configure@v1
+        with:
+          connect-host: https://vault.3cc.vc
+          connect-token: ${{ secrets.OP_CONNECT_TOKEN }}
+
+      - name: Install 1Password CLI
+        uses: 1password/install-cli-action@v1
+
+      - name: Bun in the oven
+        uses: oven-sh/setup-bun@v1
+
+      - name: Build & Bake
+        run: bun install && op run --env-file=bootstrap.env -- bun run build
+        working-directory: .
+        env:
+          NODE_ENV: production
+          OP_CONNECT_HOST: https://vault.3cc.vc
+          OP_CONNECT_TOKEN: ${{ secrets.OP_CONNECT_TOKEN }}
+
+      - name: Upload to Deno Deploy
+        uses: denoland/deployctl@v1
+        with:
+          project: "fluent-finance-cognition"
+          import-map: import_map.json
+          entrypoint: mod.ts
+          root: "build" 

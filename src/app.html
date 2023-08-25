@@ -1,0 +1,45 @@
+<!-- handcoded with ♥︎  by ⚡️--𝙆𝙊𝘿𝞝𝙋𝞸𝞝𝙏--⚡️-->
+<!doctype html>
+<html class='h-full min-h-screen bg-transparent dark:bg-base-100 dark' lang="en" data-theme='fluent'>
+  <head>
+    <link rel="icon"                                  href="%sveltekit.assets%/images/favicon.ico" />
+    <link rel="apple-touch-icon"      sizes="180x180" href="%sveltekit.assets%/images/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32"   href="%sveltekit.assets%/images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16"   href="%sveltekit.assets%/images/favicon-16x16.png" />
+    <link rel="manifest"                              href="%sveltekit.assets%/site.webmanifest" />
+    <link rel="mask-icon"                             href="%sveltekit.assets%/images/safari-pinned-tab.svg" color="#7140e0" />
+    <link rel="shortcut icon"                         href="%sveltekit.assets%/images/favicon.ico" />
+
+    <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, user-scalable=yes, maximum-scale=1.5, minimum-scale=1" />
+
+    <meta charset="utf-8" />
+    <meta name="theme-color"                           content="#7140e0" />
+    <meta name="application-name"                      content="Fluent" />
+    <meta name="apple-mobile-web-app-title"            content="Fluent" />
+    <meta name="apple-mobile-web-app-capable"          content="yes" />  
+    <meta name="apple-mobile-web-app-status-bar-style" content="#7140e0" />
+    <meta name="msapplication-TileColor"               content="#7140e0" />
+    <meta name="msapplication-TileImage"               content="%sveltekit.assets%/images/mstile-144x144.png" />
+    <meta name="msapplication-config"                  content="%sveltekit.assets%/browserconfig.xml" />
+
+    <script>
+      localStorage.theme === 'dark' ||
+      (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+        ? document.documentElement.classList.add('dark')
+        : document.documentElement.classList.remove('dark');
+    </script>
+
+    %sveltekit.head%
+  </head>
+
+  <body 
+    data-sveltekit-prefetch 
+    data-sveltekit-preload-data="hover" 
+    class='h-full min-h-screen bg-white dark:bg-base-100 font-neuehaas'>
+      <div 
+        class='min-h-screen flex bg-white dark:bg-base-100' 
+        style="display: contents">
+          %sveltekit.body%
+      </div>
+  </body>
+</html>

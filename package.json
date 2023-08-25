@@ -1,0 +1,154 @@
+{
+  "name": "@fluent-finance/cognition",
+  "author": "Fluent <devops@fluent.finance>",
+  "license": "Apache-2.0",
+  "version": "0.0.3",
+  "description": "Fluent Finance Cognition - Application to aggregate and display charted data metrics for the Fluent network;",
+  "homepage": "https://github.com/Fluent-Finance/cognition#readme",
+  "type": "module",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Fluent-Finance/cognition.git"
+  },
+  "os": [
+    "darwin",
+    "linux"
+  ],
+  "engines": {
+    "node": ">=16.17.0",
+    "bun": ">=1.0.0"
+  },
+  "contributors": [
+    {
+      "name": "𝙆𝙊𝘿𝞝𝙋𝞸𝞝𝙏",
+      "email": "poet@fluent.finance"
+    }
+  ],
+  "keywords": [
+    "fluent",
+    "usplus",
+    "network",
+    "blockchain",
+    "svelte",
+    "finance",
+    "cognition",
+    "ethereum"
+  ],
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "go": "op run -- npx vite dev --port $PORT --host $HOST",
+    "do": "op run -- npx vite build",
+    "fun": "bun --hot run --bun go",
+    "done": "op run -- npx vite preview --port $PORT --host $HOST",
+    "test": "bun run test:integration && bun run test:unit",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+    "lint": "prettier --plugin-search-dir . --check . && eslint .",
+    "format": "prettier --plugin-search-dir . --write .",
+    "test:integration": "playwright test",
+    "test:unit": "vitest"
+  },
+  "devDependencies": {
+    "@headlessui/tailwindcss": "^0.2.0",
+    "@inlang/sdk-js": "^0.11.8",
+    "@kurkle/color": "^0.3.2",
+    "@macfja/svelte-persistent-store": "^2.4.0",
+    "@playwright/test": "^1.28.1",
+    "@poppanator/sveltekit-svg": "^4.1.3",
+    "@popperjs/core": "^2.11.8",
+    "@rgossiaux/svelte-headlessui": "^2.0.0",
+    "@steeze-ui/heroicons": "^2.2.3",
+    "@steeze-ui/svelte-icon": "^1.5.0",
+    "@sveltejs/adapter-auto": "^2.0.0",
+    "@sveltejs/adapter-node": "^1.3.1",
+    "@sveltejs/adapter-static": "^2.0.3",
+    "@sveltejs/kit": "^1.20.4",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/container-queries": "^0.1.1",
+    "@tailwindcss/forms": "^0.5.6",
+    "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
+    "@tailwindcss/typography": "^0.5.9",
+    "@types/chart.js": "^2.9.37",
+    "@types/lodash": "^4.14.197",
+    "@types/luxon": "^3.3.1",
+    "@types/postcss-import": "^14.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "autoprefixer": "latest",
+    "caniuse-lite": "^1.0.30001542",
+    "classnames": "^2.3.2",
+    "cssnano": "^6.0.1",
+    "daisyui": "3.8.3",
+    "dotenv": "^16.3.1",
+    "esbuild": "^0.19.2",
+    "eslint": "^8.28.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-svelte": "^2.30.0",
+    "flowbite": "^1.8.1",
+    "flowbite-svelte": "latest",
+    "flowbite-svelte-blocks": "^0.5.1",
+    "flowbite-svelte-icons": "^0.4.3",
+    "headlessui": "^0.0.0",
+    "mdsvex": "^0.11.0",
+    "postcss": "latest",
+    "postcss-cli": "^10.1.0",
+    "postcss-import": "^15.1.0",
+    "postcss-load-config": "^4.0.1",
+    "postcss-nesting": "latest",
+    "prettier": "^2.8.0",
+    "prettier-plugin-svelte": "^2.10.1",
+    "sass": "^1.66.1",
+    "sharp": "^0.32.5",
+    "svelte": "^4.0.5",
+    "svelte-adapter-bun": "^0.5.0",
+    "svelte-chartjs": "^3.1.2",
+    "svelte-check": "^3.4.3",
+    "svelte-eslint-parser": "^0.33.0",
+    "svelte-hero-icons": "^5.0.0",
+    "svelte-heros-v2": "^0.10.11",
+    "svelte-meta-tags": "^3.0.3",
+    "svelte-preprocess": "^5.0.4",
+    "svelte-preprocess-import-assets": "^1.0.1",
+    "sveltekit-adapter-deno": "^0.11.2",
+    "tailwindcss": "latest",
+    "tslib": "^2.6.2",
+    "typescript": "^5.0.0",
+    "typescript-svelte-plugin": "^0.3.30",
+    "vite": "^4.4.11",
+    "vite-plugin-top-level-await": "^1.3.1",
+    "vitest": "^0.34.6"
+  },
+  "dependencies": {
+    "axios": "^1.5.0",
+    "chart.js": "^4.4.0",
+    "chartjs-adapter-luxon": "^1.3.1",
+    "dayjs": "^1.11.9",
+    "lodash": "^4.17.21",
+    "luxon": "^3.4.2"
+  },
+  "prettier": {
+    "useTabs": false,
+    "indentWidth": 2,
+    "singleQuote": true,
+    "trailingComma": "none",
+    "printWidth": 120,
+    "plugins": [
+      "prettier-plugin-svelte",
+      "prettier-plugin-tailwindcss"
+    ],
+    "pluginSearchDirs": [
+      "."
+    ],
+    "overrides": [
+      {
+        "files": "*.svelte",
+        "options": {
+          "parser": "svelte"
+        }
+      }
+    ]
+  }
+}

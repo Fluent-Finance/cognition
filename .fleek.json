@@ -1,0 +1,9 @@
+{
+  "build": {
+    "image": "fleek/svelte:node-latest",
+    "command": "yarn install && yarn build && echo 'Build Complete'",
+    "publicDir": "build",
+    "baseDir": "."
+  }
+}
+
