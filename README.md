@@ -16,6 +16,12 @@ cd cognition
 curl -fsSL https://bun.sh/install | bash
 ```
 
+## Install Packages
+
+```bash
+bun install
+```
+
 ## Setup Shell Environment
 
 ```bash
@@ -37,4 +43,21 @@ cp bootstrap.env .env.bootstrap
 ```bash
 # source .env.bootstrap
 . ./.env.bootstrap 
+```
+## Run App
+
+```bash
+bun go
+```
+
+```bash
+# Ultra Secure Method (1password)
+
+# op run --env-file=bootstrap.env -- bun fun
+
+# uses secure vault and 1password cli
+# to read in environment variables into runtime
+# secrets are not exposed even in the shell 
+#
+# bun run --bun dev --port $PORT --host $HOST
 ```

@@ -26,6 +26,8 @@
     "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview",
+    "go": "op run -- bun fun",
+    "fun": "bun run --bun dev --port $PORT --host $HOST",
     "test": "bun run test:integration && bun run test:unit",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
@@ -49,6 +51,7 @@
     "svelte-check": "^3.4.3",
     "tslib": "^2.4.1",
     "typescript": "^5.0.0",
+    "typescript-svelte-plugin": "^0.3.30",
     "vite": "^4.4.2",
     "vitest": "^0.32.2"
   }
