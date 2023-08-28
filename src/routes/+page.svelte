@@ -1,1 +1,5 @@
-<h1>Fluent Finance Cognition</h1>
+<script>
+  import Chart from '$lib/comps/Chart.svelte';
+</script>
+
+<Chart />
