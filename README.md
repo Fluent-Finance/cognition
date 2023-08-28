@@ -61,3 +61,14 @@ bun go
 #
 # bun run --bun dev --port $PORT --host $HOST
 ```
+
+## Build Process
+
+```bash
+bun do
+```
+### Preview App (static)
+
+```bash
+bun done
+```
