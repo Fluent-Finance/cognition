@@ -1,4 +1,5 @@
 <script>
+  import '../app.css';
   import '@fontsource/righteous';
   import '@fontsource/marvel';
   import '@fontsource/kalam';
@@ -8,7 +9,11 @@
 </script>
 
 
-<style>
+<style global lang='postcss'>
+  :global(html) {
+    background-color: theme(colors.stone.800);
+  }
+
   div.layout {
     font-family: 'Righteous', sans-serif;
     background-color: rgba(23,23,23, 0.9);
