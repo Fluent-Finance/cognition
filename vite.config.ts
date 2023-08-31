@@ -1,8 +1,8 @@
-import { sveltekit } from '@sveltejs/kit/vite';
+import { sveltekit }		from '@sveltejs/kit/vite';
 import { defineConfig } from 'vitest/config';
-import { resolve } from 'path';
-import tailwindcss from 'tailwindcss';
-import autoprefixer from 'autoprefixer';
+import { resolve }			from 'path';
+import tailwindcss			from 'tailwindcss';
+import autoprefixer			from 'autoprefixer';
 
 export default defineConfig({
 	plugins: [ sveltekit() ],

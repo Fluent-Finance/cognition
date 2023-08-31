@@ -1,6 +1,7 @@
+<!-- handcoded with ♥︎  by ⚡️-𝙆𝙊𝘿𝞝𝙋𝞸𝞝𝙏 ⚡️ -->
 <script>
   import { Line } from 'svelte-chartjs';
-  import { data } from '$lib/data/dataset.js';
+  import { data } from '$lib/chartData/line';
 
   import {
     Chart as ChartJS,
@@ -24,4 +25,4 @@
   );
 </script>
 
-<Line {data} options={{ responsive: true }} />
+<Line { data } options={{ responsive: true }} />
