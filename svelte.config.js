@@ -8,21 +8,21 @@ import mdsvexConfig from './mdsvex.config.js';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	extensions: ['.svelte', ...mdsvexConfig.extensions],
+  extensions: ['.svelte', ...mdsvexConfig.extensions],
 
   kit: {
-		adapter: adapter(),
+    adapter: adapter(),
     alias: {
-			$actions: 'src/lib/actions',
-			$components: 'src/lib/components',
-			$icons: 'src/lib/icons',
-			$stores: 'src/lib/stores',
-			$utils: 'src/lib/utils'
-		}
-	}, 
+      $actions: 'src/lib/actions',
+      $components: 'src/lib/components',
+      $icons: 'src/lib/icons',
+      $stores: 'src/lib/stores',
+      $utils: 'src/lib/utils'
+    }
+  }, 
 
   preprocess: [
-		vitePreprocess({
+    vitePreprocess({
       onwarn: (warning, handler) => {
           const { code } = warning;
           if (code === "css-unused-selector")
@@ -31,20 +31,20 @@ const config = {
           handler(warning);
       },
     }),
-		preprocess({
-			postcss: { 
+    preprocess({
+      postcss: { 
         plugins: [tailwindcss(), autoprefixer()]
       }
-		}),
-		mdsvex(mdsvexConfig),
-	],
+    }),
+    mdsvex(mdsvexConfig),
+  ],
 
   vitePlugin: {
-		inspector: {
-			holdMode: true,
-			toggleKeyCombo: 'meta-shift'
-		}
-	}
+    inspector: {
+      holdMode: true,
+      toggleKeyCombo: 'meta-shift'
+    }
+  }
 };
 
 export default config;

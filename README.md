@@ -1,6 +1,6 @@
 # Fluent Cognition
 
-A charted data dashboard to track metrics across the fluent network.
+A charted data dashboard to track metrics across the [fluent](https://fluent.finance) network.
 
 # Bootstrop
 
@@ -72,3 +72,20 @@ bun do
 ```bash
 bun done
 ```
+
+### Data Sources
+
+*Off Chain*
+- [Reserves](https://gatewayapi.fluent.finance/v1/gateway/balances)
+
+*On Chain*
+- [US+ Contract](https://etherscan.io/token/0xe2e15a27fd732a96534b9797bf8091f3d9849831)
+
+### Powered By NextGen Technology
+
+- [Vite](https://vitejs.dev)
+- [Svelte](https://svelte.dev)
+- [ChartJS](https://www.chartjs.org)
+- [SvelteKit](https://kit.svelte.dev)
+- [TailwindCSS](https://tailwindcss.com)
+- [Flowbite (svelte)](https://flowbite-svelte.com)

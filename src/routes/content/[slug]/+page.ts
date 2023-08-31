@@ -9,8 +9,8 @@ export const entries: EntryGenerator = () => {
 };
 
 export async function load({ params }) {
-	let content  = await import(`../${params.slug}.svelte`);
-	let contents = content.default;
+  let content  = await import(`../${params.slug}.svelte`);
+  let contents = content.default;
 
-	return { contents };
+  return { contents };
 }
