@@ -5,9 +5,9 @@
   import BarGraph       from '$components/BarGraph.svelte';
 </script>
 
-<Heading class="p-8" tag="h1" customSize="text-3xl">Fluent Network Dashboard</Heading>
+<Heading class="p-9" tag="h1" customSize="text-3xl">Fluent US+ Reserves</Heading>
 
-<LineGraph />
+<BarGraph /> 
 
 <P class="px-8 py-4">
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -18,7 +18,7 @@
   Elementum sagittis vitae et leo duis ut diam quam nulla. Vel turpis nunc eget lorem.
 </P>
 
-<BarGraph /> 
+<LineGraph />
 
 <P class="px-8 py-4">
   Aliquet porttitor lacus luctus accumsan. Ac orci phasellus egestas tellus rutrum tellus. Non odio

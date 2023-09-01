@@ -1,6 +1,6 @@
 // handcoded with ♥︎  by ⚡️-𝙆𝙊𝘿𝞝𝙋𝞸𝞝𝙏 ⚡️
 
-export const prerender = true;
+export const prerender = 'auto';
 
 export const load = async ({ fetch }) => {
   try {

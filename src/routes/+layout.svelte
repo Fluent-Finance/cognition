@@ -169,7 +169,7 @@
       </span>
     </NavBrand>
     <NavUl {hidden} {divClasses} {ulClasses} nonActiveClass={navUlNonActiveClasses} activeClass={navUlActiveClasses}>
-      <NavLi class={navLiClasses} active={activeUrl === '/'} href="/">
+      <NavLi class={navLiClasses} active={activeUrl === '/dashboard/fluent'} href="/dashboard/fluent">
         Dashboard
       </NavLi>
       <NavLi class={navLiClasses} active={activeUrl === '/content/whitepaper'} href="/content/whitepaper">
@@ -207,7 +207,7 @@
 
         <SidebarBrand {site} /> 
 
-        <SidebarItem label="Dashboard" href="/" on:click={toggleSide} active={activeUrl === `/`}>
+        <SidebarItem label="Dashboard" href="/dashboard/fluent" on:click={toggleSide} active={activeUrl === `/dashboard/fluent`}>
           <svelte:fragment slot="icon">
             <Icon name="chart-mixed-solid" class={sideIconClasses} /> 
           </svelte:fragment>
