@@ -1,6 +1,6 @@
 // handcoded with ♥︎  by ⚡️-𝙆𝙊𝘿𝞝𝙋𝞸𝞝𝙏 ⚡️
 
-import * as _ from 'lodash';
+import _ from 'lodash';
 import * as ax from 'axios';
 
 const axios = ax.default;
