@@ -11,6 +11,8 @@
 		"resolveJsonModule": true,
 		"skipLibCheck": true,
 		"sourceMap": true,
-		"strict": true
+		"strict": true,
+		"declaration": true,
+    "declarationDir": "./src/lib/types"
 	}
 }

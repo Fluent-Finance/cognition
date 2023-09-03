@@ -12,8 +12,11 @@ cd cognition
 ## Pre Reqs 
 
 ```bash
-# install bun
+# install native bun
 curl -fsSL https://bun.sh/install | bash
+
+# install via homebrew
+brew tap oven-sh/bun && brew install bun
 ```
 
 ## Install Packages
@@ -25,34 +28,34 @@ bun install
 ## Setup Shell Environment
 
 ```bash
-# want to stay secure even in the shell
-# you can extract env values from password manager
-# if using 1Password or Bitwarden, e.g. uses 1Password
-export OP_CONNECT_HOST=https://vault.fluent.finance
-export OP_CONNECT_TOKEN="$(cat < $HOME/.config/op/op_fluent_token)"
-
-# only run command if using 1password vault 
-op inject -i bootstrap.env > .env.bootstrap
-
-# Not using a pw manager ?
-# you will need to update the env vars 
-# with your data after copy 
-cp bootstrap.env .env.bootstrap
-```
-
-```bash
 # source .env.bootstrap
-. ./.env.bootstrap 
+. ./bootstrap.env 
 ```
+
 ## Run App
 
 ```bash
 bun go
 ```
 
-```bash
-# Ultra Secure Method (1password)
+## Secure Shell / Runtime
 
+```bash
+# want to stay secure even in the shell
+# you can extract env values from password manager
+# if using 1Password or Bitwarden, e.g. uses 1Password
+export OP_CONNECT_HOST=https://vault.fluent.finance
+export OP_CONNECT_TOKEN="$(cat < $HOME/.config/op/op_fluent_token)"
+
+# only run command if using 1password local vault 
+op inject -i bootstrap.env > .env.bootstrap
+
+# Not using a pw manager ?
+# you will need to update the env vars 
+# with your data after copy 
+cp bootstrap.env .env.bootstrap
+
+# Ultra Secure Method (1password)
 # op run --env-file=bootstrap.env -- bun fun
 
 # uses secure vault and 1password cli
@@ -67,6 +70,7 @@ bun go
 ```bash
 bun do
 ```
+
 ### Preview App (static)
 
 ```bash
