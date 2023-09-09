@@ -1,15 +1,18 @@
-# Fluent Cognition
+# :mag_right: :bar_chart: Fluent: Cognition
+
+
+[![Powered By Sveltekit](https://img.shields.io/badge/powered%20by-svelte-FF3C02.svg?style=flat&logo=svelte)](https://kit.svelte.dev/) [![Language: TypeScript](https://img.shields.io/badge/language-typescript-blue.svg?style=flat&logo=typescript)](https://www.typescriptlang.org/) [![Tailwindcss](https://img.shields.io/badge/Tailwindcss-CSS--Framework-%2338B2AC?logo=tailwindcss)](https://tailwindcss.com) [![Postcss](https://img.shields.io/badge/Postcss-style-%23DD3A0A?style=flat&logo=postcss)](https://postcss.org) [![SCSS](https://img.shields.io/badge/SCSS-Style-%23CC6699?style=flat&logo=sass)](https://sass-lang.com/)  [![Jest](https://img.shields.io/badge/Jest-Unit--Testing--Framework-%23C21325?style=flat&logo=jest)](https://jestjs.io/) [![Prettier](https://img.shields.io/badge/Prettier-code--formatter-%23F7B93E?style=flat&logo=prettier)](https://prettier.io/) [![Eslint](https://img.shields.io/badge/Eslint-linter-%234B32C3?style=flat&logo=eslint)](https://eslint.org/) [![License: Apache](https://img.shields.io/badge/license-Apache-brightgreen.svg?style=flat&logo=license)](https://github.com/Fluent-Finance/cognition/blob/main/LICENSE) [![ECMAScript: 2019](https://img.shields.io/badge/ES-9-F7DF1E.svg?style=flat&logo=javascript)](https://github.com/tc39/ecma262)
 
 A charted data dashboard to track metrics across the [fluent](https://fluent.finance) network.
 
-# Bootstrop
+## :rocket: Bootstrop
 
 ```bash
 git clone github:Fluent-Finance/cognition.git
 cd cognition
 ```
 
-## Pre Reqs 
+## :paperclip: Pre Reqs 
 
 ```bash
 # install native bun
@@ -19,26 +22,26 @@ curl -fsSL https://bun.sh/install | bash
 brew tap oven-sh/bun && brew install bun
 ```
 
-## Install Packages
+## :floppy_disk: Install Packages
 
 ```bash
 bun install
 ```
 
-## Setup Shell Environment
+## :sparkles: Setup Shell Environment
 
 ```bash
 # source .env.bootstrap
 . ./bootstrap.env 
 ```
 
-## Run App
+## :bulb: Run App
 
 ```bash
 bun go
 ```
 
-## Secure Shell / Runtime
+## :closed_lock_with_key: Secure Shell / Runtime
 
 ```bash
 # want to stay secure even in the shell
@@ -65,19 +68,19 @@ cp bootstrap.env .env.bootstrap
 # bun run --bun dev --port $PORT --host $HOST
 ```
 
-## Build Process
+### :hammer: Build Process
 
 ```bash
 bun do
 ```
 
-### Preview App (static)
+### :gift_heart: Preview App (static)
 
 ```bash
 bun done
 ```
 
-### Data Sources
+#### :file_folder: Data Sources
 
 *Off Chain*
 - [Reserves](https://gatewayapi.fluent.finance/v1/gateway/balances)
@@ -85,7 +88,7 @@ bun done
 *On Chain*
 - [US+ Contract](https://etherscan.io/token/0xe2e15a27fd732a96534b9797bf8091f3d9849831)
 
-### Powered By NextGen Technology
+#### :gift_heart: Powered By NextGen Technology
 
 - [Vite](https://vitejs.dev)
 - [Svelte](https://svelte.dev)

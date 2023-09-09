@@ -7,7 +7,7 @@ export const entries: EntryGenerator = () => {
   return [{ slug: 'compliance' }, { slug: 'summery' }];
 };
 
-export const prerender = true; 
+export const prerender = 'auto'; 
 
 /** @type {import('./$types').PageLoad} */
 export async function load({ params }) {

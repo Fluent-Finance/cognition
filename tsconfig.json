@@ -7,6 +7,7 @@
 		"allowJs": true,
 		"checkJs": true,
 		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true,
 		"forceConsistentCasingInFileNames": true,
 		"resolveJsonModule": true,
 		"skipLibCheck": true,
@@ -14,5 +15,27 @@
 		"strict": true,
 		"declaration": true,
     "declarationDir": "./src/lib/types"
-	}
+	},
+	"include": [
+		"*.d.ts",
+		"src/**/*.d.ts",
+		"src/**/*.js",
+		"src/**/*.ts",
+		"src/**/*.svelte",
+		"src/**/*.d.ts",
+		"src/*.d.ts",
+		"src/**/**/**/*.ts"
+	],
+  "exclude": [
+		"node_modules/*",
+		"dist/*",
+		".svelte/*",
+		".svelte-kit/*",
+		"build/*",
+		"coverage/*",
+		".vercel_build_output/*",
+		"functions/*",
+		"static/*",
+		"scripts/*"
+	]
 }

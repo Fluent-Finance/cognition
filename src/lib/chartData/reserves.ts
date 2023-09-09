@@ -1,6 +1,6 @@
 // handcoded with ♥︎  by ⚡️-𝙆𝙊𝘿𝞝𝙋𝞸𝞝𝙏 ⚡️
 
-import * as _  from 'lodash';
+import _  from 'lodash';
 import * as ax from 'axios';
 
 import type { DataSetType } from '$lib/types.d/cognition.d.ts';
@@ -43,7 +43,9 @@ class DataSet implements DataSetType {
     if (_.isEmpty(_.get(this, 'response.data'))) 
       throw new Error('Dataset response is empty, ensure fetch completed successful');
 
-    _.set(this, 'data',     _.orderBy(_.get(this.response, 'data'), ['balance'], ['asc']));
+    const ordered = _.orderBy(_.get(this.response, 'data'), ['balance'], ['asc']);
+
+    _.set(this, 'data',     _.filter(ordered, ['type', 'Reserve']));
     _.set(this, 'balances', _.sortBy(_.map(this.data, 'availableBalance').map(parseFloat)));
     _.set(this, 'types',    _.map(this.data, 'type'));
     _.set(this, 'names',    _.map(this.data, 'bankId'));
@@ -59,7 +61,7 @@ class DataSet implements DataSetType {
   }
 
   formatNumber = (num: number) => { return num.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,'); }
-  formatString = (x: any[])    => { return `${x[1]} - ${x[0]} - $${this.formatNumber(x[2])}`;  }
+  formatString = (x: any[])    => { return `${x[0]} - $${this.formatNumber(x[2])}`;  }
 
   formatLabels =()=> {
     if (_.isEmpty(this.data)) { this.fetch(); this.parse(); }

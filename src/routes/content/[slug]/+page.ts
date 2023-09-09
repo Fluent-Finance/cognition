@@ -2,7 +2,7 @@
 
 import type { EntryGenerator } from './$types';
  
-export const prerender = true; 
+export const prerender = 'auto'; 
 
 export const entries: EntryGenerator = () => {
   return [{ slug: 'whitepaper' }, { slug: 'profile' }];
