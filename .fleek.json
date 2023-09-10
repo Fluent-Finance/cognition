@@ -1,7 +1,7 @@
 {
   "build": {
-    "image": "fleek/svelte:node-19",
-    "command": "bun install && bun do && echo 'Build Complete'",
+    "image": "fleek/svelte:node-latest",
+    "command": "yarn install && yarn build && echo 'Build Complete'",
     "publicDir": "build",
     "baseDir": "."
   }
