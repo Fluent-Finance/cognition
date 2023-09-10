@@ -1,4 +1,4 @@
-<!-- handcoded with ♥︎  by ⚡️-𝙆𝙊𝘿𝞝𝙋𝞸𝞝𝙏 ⚡️ -->
+<!-- handcoded with ♥︎  by ⚡️-𝙆𝙊𝘿𝞝𝙋𝞸𝞝𝙏-⚡️--->
 <script lang='ts'>
   import _       from 'lodash';
   import { Cog } from 'svelte-heros-v2';

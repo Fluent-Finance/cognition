@@ -2,8 +2,8 @@
   "name": "@fluent-finance/cognition",
   "author": "Fluent <devops@fluent.finance>",
   "license": "Apache-2.0",
-  "version": "0.0.1",
-  "description": "Fluent Finance Cognition - Application to aggregate and display charted data metrics for the Fluent network; SvelteKit application, powered by Vite",
+  "version": "0.0.2",
+  "description": "Fluent Finance Cognition - Application to aggregate and display charted data metrics for the Fluent network;",
   "homepage": "https://github.com/Fluent-Finance/cognition#readme",
   "type": "module",
   "private": true,
@@ -24,6 +24,16 @@
       "name": "𝙆𝙊𝘿𝞝𝙋𝞸𝞝𝙏",
       "email": "poet@fluent.finance"
     }
+  ],
+  "keywords": [
+    "fluent",
+    "usplus",
+    "network",
+    "blockchain",
+    "svelte",
+    "finance",
+    "cognition",
+    "ethereum"
   ],
   "scripts": {
     "dev": "vite dev",
@@ -122,7 +132,7 @@
     "svelte-meta-tags": "^3.0.3"
   },
   "prettier": {
-    "useTabs": true,
+    "useTabs": false,
     "singleQuote": true,
     "trailingComma": "none",
     "printWidth": 120,

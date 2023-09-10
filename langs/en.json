@@ -1,1 +1,8 @@
-{}
+{
+  en: {
+    brand: {
+      name: 'Fluent Finance',
+      tagline: 'A superior, transparent, more reliable stablecoin'
+    }
+  }
+}

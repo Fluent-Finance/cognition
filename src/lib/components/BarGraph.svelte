@@ -1,7 +1,6 @@
-<!-- handcoded with ♥︎  by ⚡️-𝙆𝙊𝘿𝞝𝙋𝞸𝞝𝙏 ⚡️ -->
-
+<!-- handcoded with ♥︎  by ⚡️-𝙆𝙊𝘿𝞝𝙋𝞸𝞝𝙏-⚡️--->
 <script lang='ts'>
-  import { Button, Spinner } from 'flowbite-svelte';
+  import { Spinner } from 'flowbite-svelte';
 
   import { Bar } from 'svelte-chartjs';
   import DataSet from '$lib/chartData/reserves';

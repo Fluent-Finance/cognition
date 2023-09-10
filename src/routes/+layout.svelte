@@ -1,4 +1,4 @@
-<!-- handcoded with ♥︎  by ⚡️-𝙆𝙊𝘿𝞝𝙋𝞸𝞝𝙏 ⚡️ -->
+<!-- handcoded with ♥︎  by ⚡️-𝙆𝙊𝘿𝞝𝙋𝞸𝞝𝙏-⚡️--->
 <script lang="ts">
   import '../app.css';
   import _ from 'lodash';
@@ -12,10 +12,7 @@
   import { MetaTags } from 'svelte-meta-tags';
   import { sineIn }   from 'svelte/easing';
   
-  import {
-    Drawer,
-    CloseButton,
-  } from 'flowbite-svelte';
+  import { Drawer, CloseButton } from 'flowbite-svelte';
 
   import FluentHeader  from '$lib/layouts/FluentHeader.svelte';
   import FluentSidebar from '$lib/layouts/FluentSidebar.svelte';
@@ -82,8 +79,8 @@
   description='Fluent Finance Data Charts.' 
   openGraph={{
     url: `${import.meta.env.VITE_URL}`,
-    title: 'Cognition: Fluent Finance',
-    description: 'Data Charts for Fluent Stablecoins.',
+    title: 'Cognition: by Fluent Finance',
+    description: 'Fluent Network Data Charts.',
     images: [
       {
         url: '/images/fluent_banner_1500x500.png',
@@ -92,7 +89,7 @@
         alt: 'Fluent Og Image Alt'
       },
       {
-        url: '/images/light_footer_banner.png',
+        url: '/images/fluent_banner.png',
         width: 1500,
         height: 500,
         alt: 'Fluent Og Image Alt Second'
@@ -103,7 +100,6 @@
 /> 
 
 <svelte:window bind:innerWidth={width} />
-
 <div class='flex flex-col w-full justify-between mb-auto mx-auto'> 
   <!-- @Header Content Slot --> 
   <FluentHeader 
