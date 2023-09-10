@@ -1,5 +1,7 @@
 // handcoded with ♥︎  by ⚡️-𝙆𝙊𝘿𝞝𝙋𝞸𝞝𝙏 ⚡️
 
+export const prerender = true;
+
 import { json } from '@sveltejs/kit';
 
 export const GET = async () => {
