@@ -1,0 +1,9 @@
+{
+  "build": {
+    "image": "fleek/svelte:node-19",
+    "command": "bun install && bun do && echo 'Build Complete'",
+    "publicDir": "build",
+    "baseDir": "."
+  }
+}
+
