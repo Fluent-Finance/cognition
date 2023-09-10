@@ -1,8 +1,8 @@
-// handcoded with ♥︎  by ⚡️-𝙆𝙊𝘿𝞝𝙋𝞸𝞝𝙏 ⚡️
+// handcoded with ♥︎  by ⚡️ 𝙆𝙊𝘿𝞝𝙋𝞸𝞝𝙏 ⚡️
 
 import type { EntryGenerator } from './$types';
  
-export const prerender = 'auto'; 
+export const prerender = true; 
 
 export const entries: EntryGenerator = () => {
   return [{ slug: 'whitepaper' }, { slug: 'profile' }];
