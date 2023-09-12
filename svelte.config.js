@@ -18,7 +18,7 @@ const config = {
     adapter: adapter({ 
       out: 'build',
       precompress: true,
-      envPrefix: 'FLUENT_',
+      envPrefix: '',
       polyfill: true,
     }),
 		serviceWorker: { register: true },
