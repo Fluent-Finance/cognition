@@ -7,6 +7,7 @@ export type DataSetType = {
   balances: any[] | number[] | null;
   types:    any[] | string[] | null;
   names:    any[] | string[] | null;
+  banks:    any[] | string[] | null;
   labels:   any[] | string[] | null;
   borderColor:     string[]  | null;
   backgroundColor: string[]  | null;

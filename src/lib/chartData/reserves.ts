@@ -15,6 +15,7 @@ class DataSet implements DataSetType {
   public balances        = null;
   public types           = null;
   public names           = null;
+  public banks           = null;
   public labels          = null;
   public borderColor:     any[] = [];
   public backgroundColor: any[] = [];
@@ -45,10 +46,11 @@ class DataSet implements DataSetType {
 
     const ordered = _.orderBy(_.get(this.response, 'data'), ['balance'], ['asc']);
 
-    _.set(this, 'data',     _.filter(ordered, ['type', 'Reserve']));
+    _.set(this, 'data',     _.filter(ordered, { active: true, valid: true }));
     _.set(this, 'balances', _.sortBy(_.map(this.data, 'availableBalance').map(parseFloat)));
     _.set(this, 'types',    _.map(this.data, 'type'));
-    _.set(this, 'names',    _.map(this.data, 'bankId'));
+    _.set(this, 'banks',    _.map(this.data, 'bankId'));
+    _.set(this, 'names',    _.map(this.data, 'name'));
 
     return this.data;
   }
@@ -91,6 +93,7 @@ class DataSet implements DataSetType {
         borderWidth,
         backgroundColor,
         borderColor,
+        hoverOffset: 4,
       }]
     });
 

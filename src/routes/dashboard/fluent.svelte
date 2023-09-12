@@ -1,9 +1,10 @@
 <!-- handcoded with ♥︎  by ⚡️-𝙆𝙊𝘿𝞝𝙋𝞸𝞝𝙏-⚡️--->
 <script async lang='ts'>
-  import { Heading } from 'flowbite-svelte';
-  import BarGraph    from '$lib/components/BarGraph.svelte';
-  import PieGraph    from '$lib/components/PieGraph.svelte';
-  import LineGraph   from '$lib/components/LineGraph.svelte';
+  import { Heading }   from 'flowbite-svelte';
+  import BarGraph      from '$lib/components/BarGraph.svelte';
+  import PieGraph      from '$lib/components/PieGraph.svelte';
+  import LineGraph     from '$lib/components/LineGraph.svelte';
+  import DoughnutGraph from '$components/DoughnutGraph.svelte';
 
   let title = 'Fluent Network';
   let headingClass = `
@@ -32,5 +33,8 @@
   <div class='col-span-full row-span-2 md:col-span-2'>
     <BarGraph /> 
     <LineGraph /> 
+  </div>
+  <div class='col-span-full row-span-4 md:col-span-2 lg:col-span-2'>
+    <DoughnutGraph /> 
   </div>
 </div>
