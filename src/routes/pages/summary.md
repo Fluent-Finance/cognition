@@ -1,6 +1,6 @@
 ---
 dir: pages
-title: Summery
+title: Summary
 icon: Envelope
 ---
 

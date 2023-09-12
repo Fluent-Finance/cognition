@@ -4,7 +4,7 @@ import { error }               from '@sveltejs/kit';
 import type { EntryGenerator } from './$types';
  
 export const entries: EntryGenerator = () => {
-  return [{ slug: 'compliance' }, { slug: 'summery' }];
+  return [{ slug: 'compliance' }, { slug: 'summary' }];
 };
 
 export const prerender = true; 
