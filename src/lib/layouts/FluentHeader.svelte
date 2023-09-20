@@ -1,7 +1,9 @@
 <!-- handcoded with ♥︎  by ⚡️-𝙆𝙊𝘿𝞝𝙋𝞸𝞝𝙏-⚡️--->
 <script lang='ts'>
   import _       from 'lodash';
-  import { Cog } from 'svelte-heros-v2';
+  import FluentLogoIconWhite from '$lib/assets/Logo-White.svg?component';
+  import FluentLogoIconBlack from '$lib/assets/Logo-Black.svg?component';
+  import FluentLogoIconColor from '$lib/assets/Logo-Color.svg?component';
   import {
     DarkMode,
     Navbar,
@@ -11,10 +13,14 @@
     NavHamburger,
   } from 'flowbite-svelte';
 
+  import theme                     from '$lib/stores/ThemeStore';
   import { page }                  from '$app/stores';
   import { createEventDispatcher } from 'svelte';
 
   const dispatch = createEventDispatcher();
+
+  $: currentTheme  = $theme;
+  $: logoIconStyle = (currentTheme === 'dark' ? FluentLogoIconWhite : FluentLogoIconColor);
 
   export let drawerHidden: boolean = false;
 
@@ -26,15 +32,15 @@
   };
 
   let headerClasses = `
+    z-index-50
     sticky top-0 
-    flex flex-col 
+    flex 
     header w-full 
-    justify-between 
     mb-auto mx-auto 
     bg-white dark:bg-base-100
   `;
 
-  let btnCss   = `
+  let btnCss = `
     focus:outline-none 
     whitespace-normal 
     rounded-lg 
@@ -44,10 +50,10 @@
   `;
 
   let btnBgCss = `
-    hover:bg-base-100 
+    hover:bg-white
     dark:hover:bg-base-100 
     m-0 mr-3 
-    4xl:hidden
+    xl:hidden
   `;
 
   let darkModeClasses = `
@@ -64,7 +70,7 @@
 
   let navUlFlexCss = `
     md:!pl-3 md:!py-2 
-    lg:!pl-0 lg:text-primary-700 
+    lg:!pl-0 lg:text-primary-400 
     text-white
   `;
 
@@ -93,42 +99,45 @@
   `;
 
   let brandSpanClasses = `
-    self-center 
-    whitespace-nowrap 
-    text-xl 
-    font-semibold 
-    dark:text-white 
-    pl-4
+    pl-3 self-center 
+    whitespace-nowrap
+    lg:text-2xl 
+    font-semibold
+    font-['Basier Circle Bold'] 
+    text-base-300
+    opacity-70
+    dark:text-neutral 
   `;
 
-  let divClasses = `
-    flex flex-grow 
-    m-auto text-center 
-    justify-between 
-    lg:block 
-    2xl:w-auto 
-    order-1 
-    lg:order-none
+  let divClass = `
+    m-auto 
+    items-center
+    justify between
+    text-center 
+    order-3 
+    xl:order-none
   `;
 
-  let navbarClasses = `dark:bg-base-100`;
-  let navLiClasses  = `lg:px-2 lg:mb-0`;
-  let ulFlexCss     = `flex flex-row py-9 my-8`;
-  let ulBgCss       = `lg:bg-white dark:lg:bg-transparent lg:border-0`;
-  let ulTextCss     = `text-sm lg:text-xl lg:font-normal font-medium gap-4`;
+  let navbarClasses = `w-full bg-white dark:bg-base-100`;
+  let navLiClasses  = `px-0 lg:px-2 lg:mb-0`;
+  let ulFlexCss     = `flex flex-row py-7 my-3 mx-30`;
+  let ulBgCss       = `bg-white dark:bg-base-100 lg:border-0`;
+  let ulTextCss     = `text-sm lg:text-xl font-neuehaas font-medium gap-4`;
 
   const SPACE = '\u00A0';
 
   let btnClasses            = _.join(_.concat( btnCss, btnBgCss ), SPACE);
-  let ulClasses             = _.join(_.concat( ulFlexCss, ulTextCss, ulBgCss ), SPACE);
+  let ulClass               = _.join(_.concat( ulFlexCss, ulTextCss, ulBgCss ), SPACE);
   let navUlNonActiveClasses = _.join(_.concat( navUlMarginCss, navUlNonBgCss, navUlDarkBgCss ), SPACE);
   let navUlActiveClasses    = _.join(_.concat( navUlFlexCss, navUlBgCss ), SPACE);
 </script> 
 
 <!-- @Header Content Slot --> 
-<header class={headerClasses}>
+<header class={headerClasses} style='z-index: 50'>
+
   <Navbar class={navbarClasses} let:hidden let:toggle>
 
+    <div class='justify-between items-center'>
     <NavHamburger 
       on:toggleDrawer 
       on:click={toggleDrawer} 
@@ -138,36 +147,52 @@
       btnClass={btnClasses} />
 
     <NavBrand href="/">
-      <Cog />
+      <svelte:component this={logoIconStyle} width="32" height="32" /> 
       <span class={brandSpanClasses}>
-        Cognition
+        Fluent | 𝙐𝙎✚
       </span>
     </NavBrand>
 
-    <NavUl {hidden} {divClasses} {ulClasses} 
-      nonActiveClass={navUlNonActiveClasses} 
-      activeClass={navUlActiveClasses}>
-      <NavLi 
-        href='/dashboard/fluent'
-        class={navLiClasses} 
-        active={activeUrl === '/dashboard/fluent'}> Dashboard
-      </NavLi>
-      <NavLi 
-        href='/content/whitepaper' 
-        class={navLiClasses} 
-        active={activeUrl === '/content/whitepaper'}> Whitepaper
-      </NavLi>
-      <NavLi 
-        href='https://github.com/Fluent-Finance/Cognition' 
-        class={navLiClasses}> GitHub
-      </NavLi>
-    </NavUl>
+      <NavUl {hidden} {divClass} {ulClass}
+        nonActiveClass={navUlNonActiveClasses} 
+        activeClass={navUlActiveClasses}>
+
+        <NavLi 
+          href='/pages/about'
+          class={navLiClasses} 
+          active={activeUrl === '/pages/about'}> About
+        </NavLi>
+        <NavLi 
+          href='/'
+          class={navLiClasses} 
+          active={activeUrl === '/'}> Resources
+        </NavLi>
+
+        <NavLi 
+          href='/pages/engagements'
+          class={navLiClasses} 
+          active={activeUrl === '/pages/engagements'}> Engagments
+        </NavLi>
+
+        <NavLi 
+          href='/pages/team'
+          class={navLiClasses} 
+          active={activeUrl === '/pages/team'}> Team
+        </NavLi>
+
+        <NavLi 
+          href='/content/whitepaper' 
+          class={navLiClasses} 
+          active={activeUrl === '/content/whitepaper'}> Whitepaper
+        </NavLi>
+      </NavUl>
 
     <div class="flex items-center ml-auto">
       <DarkMode class={darkModeClasses} />
     </div>
 
     <NavHamburger on:click={toggle} btnClass="md:hidden lg:hidden xl:hidden" />
+    </div>
 
   </Navbar>
 </header>

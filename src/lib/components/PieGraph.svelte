@@ -30,7 +30,8 @@
 
 {#await promise}
   <div class='flex justify-between w-full text-center'> 
-    <Spinner size='8' color='purple' class='mr-3 text-center' />
+    <span class="text-center justify-between m-auto h-auto loading loading-infinity loading-lg"></span>
+    <!-- <Spinner size='8' color='purple' class='mr-3 text-center' /> -->
   </div> 
 {:then data}
   <Pie {data} {options} />

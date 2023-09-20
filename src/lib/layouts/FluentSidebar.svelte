@@ -2,6 +2,7 @@
 <script lang='ts'> 
   import _ from 'lodash';
 
+  import theme       from '$lib/stores/ThemeStore';
   import { onMount } from 'svelte';
   import { page }    from '$app/stores';
 
@@ -21,13 +22,18 @@
   import ChevronRightSolid       from 'flowbite-svelte-icons/ChevronRightSolid.svelte';
   import ChervonDoubleRightSolid from 'flowbite-svelte-icons/ChervonDoubleRightSolid.svelte';
 
+  import FluentLogoIconColor from '$lib/assets/LogoFullSVG/Fluent-Logo-Color.svg?url';
+  import FluentLogoIconWhite from '$lib/assets/LogoFullSVG/Fluent-Logo-White.svg?url';
+
   export let data: PageData;
   export let width: number;
 
-  export let breakPoint:   number  = 1024;
+  export let breakPoint:   number  = 2160;
   export let drawerHidden: boolean = false;
   export let activateClickOutside  = true;
 
+  $: currentTheme  = $theme;
+  $: logoIconStyle = (currentTheme === 'dark' ? '/images/Fluent-Logo-White.png' : '/images/Fluent-Logo-Black.png');
   $: activeUrl = $page.url.pathname;
 
   $: if (width >= breakPoint) {
@@ -66,10 +72,10 @@
   let sideIconClasses       = _.join(_.concat( sideIconFlexCss, sideIconTextCss), SPACE);
   let sideItemActiveClasses = _.join(_.concat( sideItemFlexCss, sideItemTextCss, sideItemBgCss ), SPACE);
 
-  let branding = {
-    name: 'Fluent | 𝙐𝙎✚',
+  $: branding = {
+    name: '𝙐𝙎✚',
     href: '/',
-    img: '/images/favicon-32x32.png'
+    img: logoIconStyle
   };
 
 </script> 
@@ -105,7 +111,7 @@
         </SidebarItem> 
       {/each}
 
-      <SidebarDropdownWrapper label="Research">
+      <SidebarDropdownWrapper label="Resources">
 
         <svelte:fragment slot="icon">
           <WandSparklesSolid size='md' class={sideIconClasses} /> 

@@ -50,7 +50,8 @@
 
 {#await promise}
   <div class='flex justify-between w-full text-center'> 
-    <Spinner size='8' color='pink' class='mr-3' />
+    <span class="text-center justify-between m-auto h-auto loading loading-infinity loading-lg"></span>
+    <!-- <Spinner size='8' color='pink' class='mr-3' /> -->
   </div> 
 {:then data}
   <Bar {data} {options} />

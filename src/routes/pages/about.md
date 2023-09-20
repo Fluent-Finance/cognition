@@ -1,7 +1,8 @@
 ---
 dir: pages
-title: Compliance
+title: About
 icon: ChatBubbleOvalLeftEllipsis
+order: 0
 ---
 
 <script>

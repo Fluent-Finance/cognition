@@ -24,3 +24,447 @@
  * your stylesheet by default.
  */
 @tailwind variants;
+
+@layer base {
+  @font-face {
+    font-family: 'Basier Square';
+    src: url('/fonts/BasierSquare-SemiBold.eot');
+    src: local('Basier Square SemiBold'), local('BasierSquare-SemiBold'),
+        url('/fonts/BasierSquare-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/BasierSquare-SemiBold.woff2') format('woff2'),
+        url('/fonts/BasierSquare-SemiBold.woff') format('woff'),
+        url('/fonts/BasierSquare-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Basier Square';
+    src: url('/fonts/BasierSquare-SemiBoldItalic.eot');
+    src: local('Basier Square SemiBold Italic'), local('BasierSquare-SemiBoldItalic'),
+        url('/fonts/BasierSquare-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/BasierSquare-SemiBoldItalic.woff2') format('woff2'),
+        url('/fonts/BasierSquare-SemiBoldItalic.woff') format('woff'),
+        url('/fonts/BasierSquare-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Basier Circle';
+    src: url('/fonts/BasierCircle-Regular.eot');
+    src: local('Basier Circle Regular'), local('BasierCircle-Regular'),
+        url('/fonts/BasierCircle-Regular.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/BasierCircle-Regular.woff2') format('woff2'),
+        url('/fonts/BasierCircle-Regular.woff') format('woff'),
+        url('/fonts/BasierCircle-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Basier Square';
+    src: url('/fonts/BasierSquare-Regular.eot');
+    src: local('Basier Square Regular'), local('BasierSquare-Regular'),
+        url('/fonts/BasierSquare-Regular.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/BasierSquare-Regular.woff2') format('woff2'),
+        url('/fonts/BasierSquare-Regular.woff') format('woff'),
+        url('/fonts/BasierSquare-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Basier Circle';
+    src: url('/fonts/BasierCircle-SemiBoldItalic.eot');
+    src: local('Basier Circle SemiBold Italic'), local('BasierCircle-SemiBoldItalic'),
+        url('/fonts/BasierCircle-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/BasierCircle-SemiBoldItalic.woff2') format('woff2'),
+        url('/fonts/BasierCircle-SemiBoldItalic.woff') format('woff'),
+        url('/fonts/BasierCircle-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Basier Circle';
+    src: url('/fonts/BasierCircle-SemiBold.eot');
+    src: local('Basier Circle SemiBold'), local('BasierCircle-SemiBold'),
+        url('/fonts/BasierCircle-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/BasierCircle-SemiBold.woff2') format('woff2'),
+        url('/fonts/BasierCircle-SemiBold.woff') format('woff'),
+        url('/fonts/BasierCircle-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Basier Square';
+    src: url('/fonts/BasierSquare-MediumItalic.eot');
+    src: local('Basier Square Medium Italic'), local('BasierSquare-MediumItalic'),
+        url('/fonts/BasierSquare-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/BasierSquare-MediumItalic.woff2') format('woff2'),
+        url('/fonts/BasierSquare-MediumItalic.woff') format('woff'),
+        url('/fonts/BasierSquare-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Basier Square';
+    src: url('/fonts/BasierSquare-Italic.eot');
+    src: local('Basier Square Italic'), local('BasierSquare-Italic'),
+        url('/fonts/BasierSquare-Italic.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/BasierSquare-Italic.woff2') format('woff2'),
+        url('/fonts/BasierSquare-Italic.woff') format('woff'),
+        url('/fonts/BasierSquare-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Basier Square';
+    src: url('/fonts/BasierSquare-BoldItalic.eot');
+    src: local('Basier Square Bold Italic'), local('BasierSquare-BoldItalic'),
+        url('/fonts/BasierSquare-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/BasierSquare-BoldItalic.woff2') format('woff2'),
+        url('/fonts/BasierSquare-BoldItalic.woff') format('woff'),
+        url('/fonts/BasierSquare-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Basier Square';
+    src: url('/fonts/BasierSquare-Bold.eot');
+    src: local('Basier Square Bold'), local('BasierSquare-Bold'),
+        url('/fonts/BasierSquare-Bold.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/BasierSquare-Bold.woff2') format('woff2'),
+        url('/fonts/BasierSquare-Bold.woff') format('woff'),
+        url('/fonts/BasierSquare-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Basier Square';
+    src: url('/fonts/BasierSquare-Medium.eot');
+    src: local('Basier Square Medium'), local('BasierSquare-Medium'),
+        url('/fonts/BasierSquare-Medium.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/BasierSquare-Medium.woff2') format('woff2'),
+        url('/fonts/BasierSquare-Medium.woff') format('woff'),
+        url('/fonts/BasierSquare-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Basier Circle';
+    src: url('/fonts/BasierCircle-MediumItalic.eot');
+    src: local('Basier Circle Medium Italic'), local('BasierCircle-MediumItalic'),
+        url('/fonts/BasierCircle-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/BasierCircle-MediumItalic.woff2') format('woff2'),
+        url('/fonts/BasierCircle-MediumItalic.woff') format('woff'),
+        url('/fonts/BasierCircle-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Basier Circle';
+    src: url('/fonts/BasierCircle-Italic.eot');
+    src: local('Basier Circle Italic'), local('BasierCircle-Italic'),
+        url('/fonts/BasierCircle-Italic.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/BasierCircle-Italic.woff2') format('woff2'),
+        url('/fonts/BasierCircle-Italic.woff') format('woff'),
+        url('/fonts/BasierCircle-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Basier Circle';
+    src: url('/fonts/BasierCircle-BoldItalic.eot');
+    src: local('Basier Circle Bold Italic'), local('BasierCircle-BoldItalic'),
+        url('/fonts/BasierCircle-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/BasierCircle-BoldItalic.woff2') format('woff2'),
+        url('/fonts/BasierCircle-BoldItalic.woff') format('woff'),
+        url('/fonts/BasierCircle-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Basier Circle';
+    src: url('/fonts/BasierCircle-Medium.eot');
+    src: local('Basier Circle Medium'), local('BasierCircle-Medium'),
+        url('/fonts/BasierCircle-Medium.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/BasierCircle-Medium.woff2') format('woff2'),
+        url('/fonts/BasierCircle-Medium.woff') format('woff'),
+        url('/fonts/BasierCircle-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Basier Circle';
+    src: url('/fonts/BasierCircle-Bold.eot');
+    src: local('Basier Circle Bold'), local('BasierCircle-Bold'),
+        url('/fonts/BasierCircle-Bold.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/BasierCircle-Bold.woff2') format('woff2'),
+        url('/fonts/BasierCircle-Bold.woff') format('woff'),
+        url('/fonts/BasierCircle-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Neue Haas Unica';
+    src: url('/fonts/NeueHaasUnica-ThinItalic.eot');
+    src: local('NeueHaasUnica-ThinItalic'),
+        url('/fonts/NeueHaasUnica-ThinItalic.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/NeueHaasUnica-ThinItalic.woff2') format('woff2'),
+        url('/fonts/NeueHaasUnica-ThinItalic.woff') format('woff'),
+        url('/fonts/NeueHaasUnica-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Neue Haas Unica';
+    src: url('/fonts/NeueHaasUnica-Regular.eot');
+    src: local('NeueHaasUnica-Regular'),
+        url('/fonts/NeueHaasUnica-Regular.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/NeueHaasUnica-Regular.woff2') format('woff2'),
+        url('/fonts/NeueHaasUnica-Regular.woff') format('woff'),
+        url('/fonts/NeueHaasUnica-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Neue Haas Unica';
+    src: url('/fonts/NeueHaasUnica-Thin.eot');
+    src: local('NeueHaasUnica-Thin'),
+        url('/fonts/NeueHaasUnica-Thin.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/NeueHaasUnica-Thin.woff2') format('woff2'),
+        url('/fonts/NeueHaasUnica-Thin.woff') format('woff'),
+        url('/fonts/NeueHaasUnica-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Neue Haas Unica ExtLt';
+    src: url('/fonts/NeueHaasUnica-LightItalic.eot');
+    src: local('NeueHaasUnica-LightItalic'),
+        url('/fonts/NeueHaasUnica-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/NeueHaasUnica-LightItalic.woff2') format('woff2'),
+        url('/fonts/NeueHaasUnica-LightItalic.woff') format('woff'),
+        url('/fonts/NeueHaasUnica-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Neue Haas Unica';
+    src: url('/fonts/NeueHaasUnica-ExtraLight.eot');
+    src: local('NeueHaasUnica-ExtraLight'),
+        url('/fonts/NeueHaasUnica-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/NeueHaasUnica-ExtraLight.woff2') format('woff2'),
+        url('/fonts/NeueHaasUnica-ExtraLight.woff') format('woff'),
+        url('/fonts/NeueHaasUnica-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Neue Haas Unica Med';
+    src: url('/fonts/NeueHaasUnica-Medium.eot');
+    src: local('NeueHaasUnica-Medium'),
+        url('/fonts/NeueHaasUnica-Medium.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/NeueHaasUnica-Medium.woff2') format('woff2'),
+        url('/fonts/NeueHaasUnica-Medium.woff') format('woff'),
+        url('/fonts/NeueHaasUnica-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Neue Haas Unica Med';
+    src: url('/fonts/NeueHaasUnica-MediumItalic.eot');
+    src: local('NeueHaasUnica-MediumItalic'),
+        url('/fonts/NeueHaasUnica-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/NeueHaasUnica-MediumItalic.woff2') format('woff2'),
+        url('/fonts/NeueHaasUnica-MediumItalic.woff') format('woff'),
+        url('/fonts/NeueHaasUnica-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Neue Haas Unica';
+    src: url('/fonts/NeueHaasUnica-Light.eot');
+    src: local('NeueHaasUnica-Light'),
+        url('/fonts/NeueHaasUnica-Light.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/NeueHaasUnica-Light.woff2') format('woff2'),
+        url('/fonts/NeueHaasUnica-Light.woff') format('woff'),
+        url('/fonts/NeueHaasUnica-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Neue Haas Unica';
+    src: url('/fonts/NeueHaasUnica-Italic.eot');
+    src: local('NeueHaasUnica-Italic'),
+        url('/fonts/NeueHaasUnica-Italic.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/NeueHaasUnica-Italic.woff2') format('woff2'),
+        url('/fonts/NeueHaasUnica-Italic.woff') format('woff'),
+        url('/fonts/NeueHaasUnica-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Neue Haas Unica ExtBlk';
+    src: url('/fonts/NeueHaasUnica-ExtBlkIta.eot');
+    src: local('NeueHaasUnica-ExtBlkIta'),
+        url('/fonts/NeueHaasUnica-ExtBlkIta.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/NeueHaasUnica-ExtBlkIta.woff2') format('woff2'),
+        url('/fonts/NeueHaasUnica-ExtBlkIta.woff') format('woff'),
+        url('/fonts/NeueHaasUnica-ExtBlkIta.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Neue Haas Unica ExtLt';
+    src: url('/fonts/NeueHaasUnica-ExtLtIta.eot');
+    src: local('NeueHaasUnica-ExtLtIta'),
+        url('/fonts/NeueHaasUnica-ExtLtIta.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/NeueHaasUnica-ExtLtIta.woff2') format('woff2'),
+        url('/fonts/NeueHaasUnica-ExtLtIta.woff') format('woff'),
+        url('/fonts/NeueHaasUnica-ExtLtIta.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Neue Haas Unica ExtBd';
+    src: url('/fonts/NeueHaasUnica-ExtraBold.eot');
+    src: local('NeueHaasUnica-ExtraBold'),
+        url('/fonts/NeueHaasUnica-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/NeueHaasUnica-ExtraBold.woff2') format('woff2'),
+        url('/fonts/NeueHaasUnica-ExtraBold.woff') format('woff'),
+        url('/fonts/NeueHaasUnica-ExtraBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Neue Haas Unica ExtBd';
+    src: url('/fonts/NeueHaasUnica-ExtraBoldItalic.eot');
+    src: local('NeueHaasUnica-ExtraBoldItalic'),
+        url('/fonts/NeueHaasUnica-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/NeueHaasUnica-ExtraBoldItalic.woff2') format('woff2'),
+        url('/fonts/NeueHaasUnica-ExtraBoldItalic.woff') format('woff'),
+        url('/fonts/NeueHaasUnica-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Neue Haas Unica ExtBlk';
+    src: url('/fonts/NeueHaasUnica-ExtraBlack.eot');
+    src: local('NeueHaasUnica-ExtraBlack'),
+        url('/fonts/NeueHaasUnica-ExtraBlack.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/NeueHaasUnica-ExtraBlack.woff2') format('woff2'),
+        url('/fonts/NeueHaasUnica-ExtraBlack.woff') format('woff'),
+        url('/fonts/NeueHaasUnica-ExtraBlack.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Neue Haas Unica';
+    src: url('/fonts/NeueHaasUnica-BoldItalic.eot');
+    src: local('NeueHaasUnica-BoldItalic'),
+        url('/fonts/NeueHaasUnica-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/NeueHaasUnica-BoldItalic.woff2') format('woff2'),
+        url('/fonts/NeueHaasUnica-BoldItalic.woff') format('woff'),
+        url('/fonts/NeueHaasUnica-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Neue Haas Unica';
+    src: url('/fonts/NeueHaasUnica-Bold.eot');
+    src: local('NeueHaasUnica-Bold'),
+        url('/fonts/NeueHaasUnica-Bold.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/NeueHaasUnica-Bold.woff2') format('woff2'),
+        url('/fonts/NeueHaasUnica-Bold.woff') format('woff'),
+        url('/fonts/NeueHaasUnica-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Neue Haas Unica';
+    src: url('/fonts/NeueHaasUnica-Black.eot');
+    src: local('NeueHaasUnica-Black'),
+        url('/fonts/NeueHaasUnica-Black.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/NeueHaasUnica-Black.woff2') format('woff2'),
+        url('/fonts/NeueHaasUnica-Black.woff') format('woff'),
+        url('/fonts/NeueHaasUnica-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Neue Haas Unica';
+    src: url('/fonts/NeueHaasUnica-BoldItalic_1.eot');
+    src: local('NeueHaasUnica-BoldItalic'),
+        url('/fonts/NeueHaasUnica-BoldItalic_1.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/NeueHaasUnica-BoldItalic_1.woff2') format('woff2'),
+        url('/fonts/NeueHaasUnica-BoldItalic_1.woff') format('woff'),
+        url('/fonts/NeueHaasUnica-BoldItalic_1.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+  }
+}

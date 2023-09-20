@@ -1,12 +1,8 @@
 <!-- handcoded with ♥︎  by ⚡️-𝙆𝙊𝘿𝞝𝙋𝞸𝞝𝙏-⚡️--->
+
 <script lang="ts">
   import '../app.css';
   import _ from 'lodash';
-
-  import '@fontsource/righteous';
-  import '@fontsource/marvel';
-  import '@fontsource/kalam';
-  import '@fontsource/material-icons';
 
   import { onMount }  from 'svelte';
   import { MetaTags } from 'svelte-meta-tags';
@@ -14,16 +10,18 @@
   
   import { Drawer, CloseButton } from 'flowbite-svelte';
 
-  import FluentHeader  from '$lib/layouts/FluentHeader.svelte';
+  // import FluentHeader  from '$lib/layouts/FluentHeader.svelte';
+  import FluentNav     from '$lib/layouts/FluentNav.svelte';
   import FluentSidebar from '$lib/layouts/FluentSidebar.svelte';
   import FluentFooter  from '$lib/layouts/FluentFooter.svelte';
 
   import type { PageData } from './$types';
-
   export let data: PageData; 
 
+  $: images    = data.images;
+
   let width: number;
-  let breakPoint: number    = 1024;
+  let breakPoint: number    = 2160;
   let backdrop: boolean     = false; 
   let drawerHidden: boolean = false;
   let activateClickOutside  = true;
@@ -100,9 +98,10 @@
 /> 
 
 <svelte:window bind:innerWidth={width} />
-<div class='flex flex-col w-full justify-between mb-auto mx-auto'> 
+<div class='flex flex-col w-full mb-auto mx-auto'> 
+
   <!-- @Header Content Slot --> 
-  <FluentHeader 
+  <FluentNav  
     bind:drawerHidden={drawerHidden} 
     on:toggleDrawer={toggleDrawer} />  
 
@@ -122,12 +121,12 @@
       <FluentSidebar on:toggleDrawer={toggleDrawer} {width} {...sidebarProps} /> 
   </Drawer> 
 
+  
   <!-- @Main Content Slot --> 
   <main class="container">
-    <slot />
+    <slot {images} />
     <!-- @Footer Content Slot --> 
     <FluentFooter /> 
   </main>
-
 </div>
 

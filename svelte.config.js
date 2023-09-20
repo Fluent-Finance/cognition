@@ -29,11 +29,20 @@ const config = {
       $images: 'src/lib/assets',
       $stores: 'src/lib/stores',
       $utils: 'src/lib/utils'
-    }
+    },
   }, 
 
   preprocess: [
     preprocess({
+      typescript: true,
+      experimental: {
+        dynamicCompileOptions({ filename, compileOptions }) {
+          // Dynamically set hydration per Svelte file
+          if (compileWithHydratable(filename) && !compileOptions.hydratable) {
+            return { hydratable: true };
+          }
+        }
+      },
       postcss: { 
         plugins: [
           postcssImport(),

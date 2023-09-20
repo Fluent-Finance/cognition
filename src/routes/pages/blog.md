@@ -1,7 +1,8 @@
 ---
 dir: pages
-title: Summary
+title: Blog
 icon: Envelope
+order: 2
 ---
 
 <script>
