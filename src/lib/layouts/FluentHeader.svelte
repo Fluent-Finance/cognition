@@ -139,19 +139,18 @@
 
   // const SPACE = '\u00A0';
   // let sidebarBtnClasses = _.join(_.concat( btnCss, btnBgCss ), SPACE);
+  //     <!-- <DotsVerticalOutline  -->
+  //     <!--   on:toggleDrawer  -->
+  //     <!--   on:click={toggleDrawer}  -->
+  //     <!--   data-drawer-target='sidebar'  -->
+  //     <!--   data-drawer-show='sidebar'  -->
+  //     <!--   aria-controls='sidebar'  -->
+  //     <!--   btnClass={sidebarBtnClasses} /> -->
 </script>
 
 <header class="z-index-50 sticky top-0" style='z-index: 50'>
   <Navbar let:hidden let:toggle fluid={false} {navClass} {navDivClass}>
     <NavBrand href="/">
-      <!-- <DotsVerticalOutline  -->
-      <!--   on:toggleDrawer  -->
-      <!--   on:click={toggleDrawer}  -->
-      <!--   data-drawer-target='sidebar'  -->
-      <!--   data-drawer-show='sidebar'  -->
-      <!--   aria-controls='sidebar'  -->
-      <!--   btnClass={sidebarBtnClasses} /> -->
-
       <Img src={logoIconStyle} class="mr-2 h-6 sm:h-7" alt="Fluent Logo" />
 
       <span class={logoSpanClasses}> 
@@ -162,9 +161,9 @@
     <div class="flex items-center lg:order-2">
       <Button 
         target="_blank" 
-        href={import.meta.env.VITE_FLUENT_CONSUMER_URL}
+        color="none"
         class={connectWalletClasses} 
-        color="none">
+        href={import.meta.env.VITE_FLUENT_CONSUMER_URL}>
           Consumer Portal
       </Button>
       <DarkMode class={darkModeClasses} />

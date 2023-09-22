@@ -12,6 +12,15 @@
 
   let clickOutsideModal = false;
 
+  let imgClass = `
+    flex flex-row
+    w-10
+    object-fit
+    md:w-15
+    lg:w-20
+    xl:w-25
+  `;
+
   function handleAnchorClick (event) {
 		event.preventDefault()
 		const link     = event.currentTarget
@@ -37,19 +46,19 @@
   <Modal title="Get USPlus today!" bind:open={clickOutsideModal} autoclose outsideclose>
     <div class="grid grid-cols-5 gap-2">
       <a href="https://www.bitrue.com/trade/usplus_usdt" target="_blank"> 
-        <Img src={bitrue} class="w-24" size="max-w-xl" alt="Bitrue" />
+        <Img src={bitrue} class={imgClass} size="max-w-xl" alt="Bitrue" />
       </a>  
       <a href="https://app.uniswap.org/pools/651885" target="_blank"> 
-        <Img src={arbitrum} class="w-24" size="max-w-xl" alt="Arbitrum" />
+        <Img src={arbitrum} class={imgClass} size="max-w-xl" alt="Arbitrum" />
       </a>  
       <a href="https://info.uniswap.org/#/celo/pools/0x7053060549aaad6ea733d053153bb9c00bfe42d2" target="_blank"> 
-        <Img src={celo} class="w-24" size="max-w-xl" alt="CELO" />
+        <Img src={celo} class={imgClass} size="max-w-xl" alt="CELO" />
       </a>  
       <a href="https://info.uniswap.org/#/pools/0x73d4c165472d38ca879b7cbd4f5f7ab218d49086" target="_blank"> 
-        <Img src={ethereum} class="w-24" size="max-w-xl" alt="Ethereum" />
+        <Img src={ethereum} class={imgClass} size="max-w-xl" alt="Ethereum" />
       </a>  
       <a href="https://analytics.xspswap.finance/token/0xc280ebcd651d2a0c8d4bb49151062c9eef55d370" target="_blank"> 
-        <Img src={xdc} class="w-24" size="max-w-xl" alt="XDC" />
+        <Img src={xdc} class={imgClass} size="max-w-xl" alt="XDC" />
       </a>  
     </div>
 

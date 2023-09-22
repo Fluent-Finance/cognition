@@ -21,12 +21,12 @@ order: 1
   let imgClass = `
     grayscale
     hover:grayscale-0
-    object-cover
-    w-25
+    min-w-lg
+    min-h-lg
+    object-fill
     rounded-xl
     shadow-xl
     xs:rounded-full
-    sm:rounded-none
   `;
 
   let members = [
@@ -36,7 +36,7 @@ order: 1
       alt: 'Bradley Allgood',
       name: 'Bradley Allgood',
       jobTitle: 'Chief Executive Officer',
-      description: 'Bradley drives the technical strategy of the fluent platform and brand.'
+      description: ''
     },
     {
       href: '/',
@@ -52,7 +52,7 @@ order: 1
       alt: 'John Buckle',
       name: 'John Buckle',
       jobTitle: 'Lead Backend Engineer',
-      description: 'John drives the technical strategy'
+      description: ''
     },
     {
       href: '/',
@@ -60,7 +60,7 @@ order: 1
       alt: 'Amrita Srivastava',
       name: 'Amrita Srivastava',
       jobTitle: 'Program Advisor',
-      description: 'Amrita drives the program strategy.'
+      description: ''
     },
     {
       href: '/',
@@ -76,7 +76,7 @@ order: 1
       alt: 'Armin Ranjbar',
       name: 'Armin Ranjbar',
       jobTitle: 'Chief Technology Officer',
-      description: 'Armin guides the technical strategy'
+      description: ''
     },
     {
       href: '/',
@@ -84,7 +84,7 @@ order: 1
       alt: 'Khaled Khan',
       name: 'Khaled Khan',
       jobTitle: 'Chief Strategy Officer',
-      description: 'Khaled drives the strategy.'
+      description: ''
     },
     {
       href: '/',
@@ -92,7 +92,7 @@ order: 1
       alt: 'Brent Tanner',
       name: 'Brent Tanner',
       jobTitle: 'Chief Operations Officer',
-      description: 'Brent guides the operations'
+      description: ''
     },
     {
       href: '/',
@@ -100,7 +100,7 @@ order: 1
       alt: 'William Hester',
       name: 'William Hester',
       jobTitle: 'Head of Engineering',
-      description: 'William heads up engineering.'
+      description: ''
     },
     {
       href: '/',
