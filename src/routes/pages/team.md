@@ -23,7 +23,6 @@ order: 1
     hover:grayscale-0
     object-cover
     w-25
-    h-25
     rounded-xl
     shadow-xl
     xs:rounded-full
@@ -105,7 +104,7 @@ order: 1
     },
     {
       href: '/',
-      src: '/images/team/09_team_member.png',
+      src: '/images/team/09_team_member.jpg',
       alt: 'anon',
       name: 'K. Poett',
       jobTitle: 'Sr. Lead Engineer',

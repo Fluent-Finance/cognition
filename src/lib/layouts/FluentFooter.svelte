@@ -62,23 +62,23 @@
 
     <div class="flex mt-4 space-x-6 sm:justify-center md:mt-0">
 
-      <FooterIcon target="_blank" href="https://discord.gg/22ywcEfU65">
+      <FooterIcon target="_blank" href={import.meta.env.VITE_FLUENT_DISCORD_URL}>
         <DiscordSolid class={iconClasses} /> 
       </FooterIcon>
 
-      <FooterIcon target="_blank" href="https://twitter.com/FluentDAO">
+      <FooterIcon target="_blank" href={import.meta.env.VITE_FLUENT_TWITTER_URL}>
         <TwitterSolid class={iconClasses} />
       </FooterIcon>
 
-      <FooterIcon target="_blank" href="https://www.linkedin.com/company/fluent-finance/">
+      <FooterIcon target="_blank" href={import.meta.env.VITE_FLUENT_LINKEDIN_URL}>
         <LinkedinSolid class={iconClasses} />
       </FooterIcon>
 
-      <FooterIcon target="_blank" href="https://etherscan.io/token/0xe2e15a27fd732a96534b9797bf8091f3d9849831">
+      <FooterIcon target="_blank" href={import.meta.env.VITE_FLUENT_ETHERSCAN_URL}>
         <LinkSolid class={iconClasses} />
       </FooterIcon>
 
-      <FooterIcon target="_blank" href="https://github.com/Fluent-Finance">
+      <FooterIcon target="_blank" href={import.meta.env.VITE_FLUENT_GITHUB_URL}>
         <GithubSolid class={iconClasses} />
       </FooterIcon>
     </div>

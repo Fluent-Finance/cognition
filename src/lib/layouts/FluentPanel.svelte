@@ -1,8 +1,8 @@
 <!-- handcoded with ♥︎  by ⚡️-𝙆𝙊𝘿𝞝𝙋𝞸𝞝𝙏-⚡️--->
 <script lang='ts'>
   import { Section, } from 'flowbite-svelte-blocks';
-  import { Img }      from "flowbite-svelte";
-  import tokenImage   from '$lib/assets/tokenInfra.png';
+  // import { Img }      from "flowbite-svelte";
+  // import tokenImage   from '$lib/assets/tokenInfra.png';
 </script> 
 
 <Section class="bg-white dark:bg-gray-900">
@@ -35,12 +35,12 @@
           </li>
         </ul>
       </div>
-      <Img class="hidden mb-4 w-full lg:mb-0 lg:flex rounded-lg" src={tokenImage}  alt="office feature image" />
+      <!-- <Img class="hidden mb-4 w-full lg:mb-0 lg:flex rounded-lg" src={tokenImage}  alt="office feature image" /> -->
     </div>
 
     <!-- Row -->
     <div class="gap-8 items-center lg:grid lg:grid-cols-2 xl:gap-16">
-      <Img class="hidden mb-4 w-lg opacity-60 lg:mb-0 lg:flex rounded-lg" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/features/feature-office-1.png" alt="office feature image 2" />
+      <!-- <Img class="hidden mb-4 w-lg opacity-60 lg:mb-0 lg:flex rounded-lg" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/features/feature-office-1.png" alt="office feature image 2" /> -->
       <div class="text-gray-500 sm:text-lg dark:text-gray-400">
         <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">On the Rise:</h2>
         <p class="mb-8 font-light lg:text-xl">

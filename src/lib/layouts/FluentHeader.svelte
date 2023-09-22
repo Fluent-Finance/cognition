@@ -137,20 +137,20 @@
     dark:text-neutral
   `;
 
-  const SPACE = '\u00A0';
-  let sidebarBtnClasses = _.join(_.concat( btnCss, btnBgCss ), SPACE);
+  // const SPACE = '\u00A0';
+  // let sidebarBtnClasses = _.join(_.concat( btnCss, btnBgCss ), SPACE);
 </script>
 
 <header class="z-index-50 sticky top-0" style='z-index: 50'>
   <Navbar let:hidden let:toggle fluid={false} {navClass} {navDivClass}>
     <NavBrand href="/">
-      <DotsVerticalOutline 
-        on:toggleDrawer 
-        on:click={toggleDrawer} 
-        data-drawer-target='sidebar' 
-        data-drawer-show='sidebar' 
-        aria-controls='sidebar' 
-        btnClass={sidebarBtnClasses} />
+      <!-- <DotsVerticalOutline  -->
+      <!--   on:toggleDrawer  -->
+      <!--   on:click={toggleDrawer}  -->
+      <!--   data-drawer-target='sidebar'  -->
+      <!--   data-drawer-show='sidebar'  -->
+      <!--   aria-controls='sidebar'  -->
+      <!--   btnClass={sidebarBtnClasses} /> -->
 
       <Img src={logoIconStyle} class="mr-2 h-6 sm:h-7" alt="Fluent Logo" />
 
@@ -161,8 +161,8 @@
 
     <div class="flex items-center lg:order-2">
       <Button 
-        href="https://app.fluent.finance" 
         target="_blank" 
+        href={import.meta.env.VITE_FLUENT_CONSUMER_URL}
         class={connectWalletClasses} 
         color="none">
           Consumer Portal
@@ -177,20 +177,20 @@
           active={activeUrl === '/'}> Home
         </NavLi>
         <NavLi 
-          href='/pages/about'
-          active={activeUrl === '/pages/about'}> About
-        </NavLi>
-        <NavLi 
           href='/pages/team'
           active={activeUrl === '/pages/team'}> Team
         </NavLi>
         <NavLi 
           target="_blank"
-          href='https://fluentfinance.medium.com'> Engagments
+          href={import.meta.env.VITE_FLUENT_TWITTER_URL}> About
         </NavLi>
         <NavLi 
           target="_blank"
-          href='https://docsend.com/view/4zjd678kaifqy7jf'> Whitepaper
+        href={import.meta.env.VITE_FLUENT_MEDIUM_URL}> Engagements
+        </NavLi>
+        <NavLi 
+          target="_blank"
+          href={import.meta.env.VITE_FLUENT_WHITEPAPER_URL}> Whitepaper 
         </NavLi>
     </NavUl>
   </Navbar>

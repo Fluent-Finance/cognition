@@ -22,14 +22,14 @@
   let width: number;
   let breakPoint: number    = 2160;
   let backdrop: boolean     = false; 
-  let drawerHidden: boolean = false;
+  let drawerHidden: boolean = true;
   let activateClickOutside  = true;
 
   $: drawerHidden = drawerHidden;
 
   $: if (width >= breakPoint) {
-    drawerHidden         = false;
-    activateClickOutside = false;
+    drawerHidden         = true;
+    activateClickOutside = true;
   } else {
     drawerHidden         = true;
     activateClickOutside = true;
@@ -37,8 +37,8 @@
 
   onMount(() => {
     if (width >= breakPoint) {
-      drawerHidden         = false;
-      activateClickOutside = false;
+      drawerHidden         = true;
+      activateClickOutside = true;
     } else {
       drawerHidden         = true;
       activateClickOutside = true;
