@@ -72,8 +72,8 @@
   `;
 
   let activeClass = `
-    text-primary 
-    bg-primary 
+    text-neutral 
+    bg-base-600 
     md:bg-transparent 
     md:text-primary 
     md:dark:text-base-800 
@@ -83,7 +83,7 @@
 
   let nonActiveClass = `
     text-gray-700 
-    hover:bg-primary 
+    hover:bg-base-400 
     md:hover:bg-transparent 
     md:border-0 
     md:hover:text-primary 

@@ -56,7 +56,7 @@
     </div>
 
     <div class="py-8 px-4 mt-96 min-h-screen max-w-screen-xl text-center sm:py-16 lg:px-6">
-      <h1 class="font-basier mb-10 text-2xl font-extrabold leading-none tracking-tighter text-base-600 dark:text-white lg:text-3xl xl:text-4xl 2xl:text-5xl">
+      <h1 class="font-basier mb-10 text-4xl font-extrabold leading-none tracking-tighter text-base-600 dark:text-white lg:text-4xl xl:text-5xl 2xl:text-6xl">
         Fluent's Live Pilot Project
       </h1> 
       <p class="text-gray-500 text-xl md:text-2xl dark:text-gray-400">

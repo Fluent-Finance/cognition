@@ -7,18 +7,132 @@ order: 1
 
 <script>
   import { Img, Heading, P } from 'flowbite-svelte'
+  import { 
+    Section, 
+    TeamWrapper, 
+    TeamHeader, 
+    TeamBody, 
+    TeamItem, 
+    Facebook, 
+    Github, 
+    Twitter
+  } from 'flowbite-svelte-blocks';
+
+  let imgClass = `
+    grayscale
+    hover:grayscale-0
+    object-cover
+    w-25
+    h-25
+    rounded-xl
+    shadow-xl
+    xs:rounded-full
+    sm:rounded-none
+  `;
+
+  let members = [
+    {
+      href: '/',
+      src: '/images/team/00_team_member.jpg',
+      alt: 'Bradley Allgood',
+      name: 'Bradley Allgood',
+      jobTitle: 'Chief Executive Officer',
+      description: 'Bradley drives the technical strategy of the fluent platform and brand.'
+    },
+    {
+      href: '/',
+      src: '/images/team/01_team_member.jpg',
+      alt: 'Greg Guedel',
+      name: 'Greg Guedel',
+      jobTitle: 'Chief Legal Officer',
+      description: ''
+    },
+    {
+      href: '/',
+      src: '/images/team/02_team_member.jpg',
+      alt: 'John Buckle',
+      name: 'John Buckle',
+      jobTitle: 'Lead Backend Engineer',
+      description: 'John drives the technical strategy'
+    },
+    {
+      href: '/',
+      src: '/images/team/03_team_member.jpg',
+      alt: 'Amrita Srivastava',
+      name: 'Amrita Srivastava',
+      jobTitle: 'Program Advisor',
+      description: 'Amrita drives the program strategy.'
+    },
+    {
+      href: '/',
+      src: '/images/team/04_team_member.jpg',
+      alt: 'Anthony Nixon',
+      name: 'Anthony Nixon',
+      jobTitle: 'Senior Software Engineer',
+      description: ''
+    },
+    {
+      href: '/',
+      src: '/images/team/05_team_member.jpg',
+      alt: 'Armin Ranjbar',
+      name: 'Armin Ranjbar',
+      jobTitle: 'Chief Technology Officer',
+      description: 'Armin guides the technical strategy'
+    },
+    {
+      href: '/',
+      src: '/images/team/06_team_member.jpg',
+      alt: 'Khaled Khan',
+      name: 'Khaled Khan',
+      jobTitle: 'Chief Strategy Officer',
+      description: 'Khaled drives the strategy.'
+    },
+    {
+      href: '/',
+      src: '/images/team/07_team_member.jpg',
+      alt: 'Brent Tanner',
+      name: 'Brent Tanner',
+      jobTitle: 'Chief Operations Officer',
+      description: 'Brent guides the operations'
+    },
+    {
+      href: '/',
+      src: '/images/team/08_team_member.jpg',
+      alt: 'William Hester',
+      name: 'William Hester',
+      jobTitle: 'Head of Engineering',
+      description: 'William heads up engineering.'
+    },
+    {
+      href: '/',
+      src: '/images/team/09_team_member.png',
+      alt: 'anon',
+      name: 'Kodepoet',
+      jobTitle: 'Sr. Lead Engineer',
+      description: 'Poet of code, not words.'
+    }
+  ];
 </script>
 
-<Img src="/images/image-1@2x.jpg" alt="sample 1" size="max-w-full" alignment="mx-auto" />
-
-<Heading class="p-8" tag="h1" customSize="text-3xl">{title}</Heading>
-
-<P class="px-8 py-4">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet cursus sit amet dictum sit. Quis enim lobortis scelerisque fermentum dui faucibus in. Mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan. Ipsum dolor sit amet consectetur adipiscing elit. Euismod nisi porta lorem mollis aliquam ut porttitor. Tortor consequat id porta nibh. Tortor condimentum lacinia quis vel eros donec ac odio. Elementum sagittis vitae et leo duis ut diam quam nulla. Vel turpis nunc eget lorem.
-</P>
-<P class="px-8 py-4">
-  Aliquet porttitor lacus luctus accumsan. Ac orci phasellus egestas tellus rutrum tellus. Non odio euismod lacinia at quis risus sed. Nam libero justo laoreet sit amet cursus sit amet. Arcu odio ut sem nulla pharetra diam sit amet nisl. Vulputate mi sit amet mauris commodo quis imperdiet. Malesuada nunc vel risus commodo viverra. Eget nulla facilisi etiam dignissim diam quis enim. Hac habitasse platea dictumst quisque. Ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim.
-</P>
-<P class="px-8 py-4">
-  Nec feugiat in fermentum posuere urna nec tincidunt praesent. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Eu turpis egestas pretium aenean pharetra magna. Ultricies lacus sed turpis tincidunt id. Urna nec tincidunt praesent semper feugiat nibh. Aliquam etiam erat velit scelerisque in dictum non consectetur. Suspendisse in est ante in nibh mauris cursus mattis molestie. Facilisi nullam vehicula ipsum a. Tellus pellentesque eu tincidunt tortor aliquam nulla facilisi. Libero justo laoreet sit amet cursus sit amet.
-</P>
+<Section name="team">
+  <TeamWrapper>
+    <TeamHeader>
+      <svelte:fragment slot="label">Fluent Team</svelte:fragment>
+      <p class="font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">Get to know us.</p>
+    </TeamHeader>
+    <TeamBody>
+      {#each members as { href, src, alt, name, jobTitle, description }}
+      <TeamItem {href} {src} {alt} {name} {jobTitle} {imgClass}>
+        <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">
+          {description}
+        </p>
+        <svelte:fragment slot="social">
+          <Facebook href="/" />
+          <Github href="/" />
+          <Twitter href="/" />
+        </svelte:fragment>
+      </TeamItem>
+      {/each}
+    </TeamBody>
+  </TeamWrapper>
+</Section>
