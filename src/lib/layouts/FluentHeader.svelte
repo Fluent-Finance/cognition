@@ -185,8 +185,8 @@
           active={activeUrl === '/pages/team'}> Team
         </NavLi>
         <NavLi 
-          href='/pages/engagements'
-          active={activeUrl === '/pages/engagements'}> Engagments
+          target="_blank"
+          href='https://fluentfinance.medium.com'> Engagments
         </NavLi>
         <NavLi 
           target="_blank"

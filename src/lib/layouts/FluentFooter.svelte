@@ -2,10 +2,13 @@
 <script lang='ts'>
   import { Footer, FooterIcon, FooterCopyright } from 'flowbite-svelte';
 
-  import GithubSolid  from 'flowbite-svelte-icons/GithubSolid.svelte';
-  import DiscordSolid from 'flowbite-svelte-icons/DiscordSolid.svelte';
-  import TwitterSolid from 'flowbite-svelte-icons/TwitterSolid.svelte';
-  import LinkSolid    from 'flowbite-svelte-icons/LinkSolid.svelte';
+  import {
+    LinkedinSolid,
+    GithubSolid,  
+    DiscordSolid, 
+    TwitterSolid,
+    LinkSolid, 
+  } from 'flowbite-svelte-icons';
 
   import { Img }        from 'flowbite-svelte';
   import theme          from '$lib/stores/ThemeStore';
@@ -58,19 +61,24 @@
     </span> 
 
     <div class="flex mt-4 space-x-6 sm:justify-center md:mt-0">
-      <FooterIcon href="https://discord.com/FluentFinance">
+
+      <FooterIcon target="_blank" href="https://discord.gg/22ywcEfU65">
         <DiscordSolid class={iconClasses} /> 
       </FooterIcon>
 
-      <FooterIcon href="https://twitter.com/FluentDAO">
+      <FooterIcon target="_blank" href="https://twitter.com/FluentDAO">
         <TwitterSolid class={iconClasses} />
       </FooterIcon>
 
-      <FooterIcon href="https://etherscan.io/token/0xe2e15a27fd732a96534b9797bf8091f3d9849831">
+      <FooterIcon target="_blank" href="https://www.linkedin.com/company/fluent-finance/">
+        <LinkedinSolid class={iconClasses} />
+      </FooterIcon>
+
+      <FooterIcon target="_blank" href="https://etherscan.io/token/0xe2e15a27fd732a96534b9797bf8091f3d9849831">
         <LinkSolid class={iconClasses} />
       </FooterIcon>
 
-      <FooterIcon href="https://github.com/Fluent-Finance/cognition">
+      <FooterIcon target="_blank" href="https://github.com/Fluent-Finance">
         <GithubSolid class={iconClasses} />
       </FooterIcon>
     </div>

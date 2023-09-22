@@ -16,11 +16,24 @@
     SidebarWrapper,
     SidebarDropdownWrapper
   } from 'flowbite-svelte';
+  import {
+    HomeSolid,
+    UserGroupSolid,
+    ChartMixedSolid,         
+    FileLinesSolid,
+    FileOutline,
+    DnaSolid,
+    MessagesSolid,
+  } from 'flowbite-svelte-icons';
 
-  import ChartMixedSolid         from 'flowbite-svelte-icons/ChartMixedSolid.svelte';
-  import WandSparklesSolid       from 'flowbite-svelte-icons/WandSparklesSolid.svelte';
-  import ChevronRightSolid       from 'flowbite-svelte-icons/ChevronRightSolid.svelte';
-  import ChervonDoubleRightSolid from 'flowbite-svelte-icons/ChervonDoubleRightSolid.svelte';
+  let icons = {
+    home: HomeSolid,
+    dashboard: ChartMixedSolid,
+    about: DnaSolid,
+    blog: FileLinesSolid,
+    team: UserGroupSolid,
+    engagements: MessagesSolid,
+  };
 
   export let data: PageData;
   export let width: number;
@@ -70,11 +83,10 @@
   let sideItemActiveClasses = _.join(_.concat( sideItemFlexCss, sideItemTextCss, sideItemBgCss ), SPACE);
 
   $: branding = {
-    name: '𝙐𝙎✚',
+    name: '',
     href: '/',
     img: logoIconStyle
   };
-
 </script> 
 
 <Sidebar {activeUrl} asideClass="w-54">
@@ -82,6 +94,16 @@
     <SidebarGroup>
 
       <SidebarBrand site={branding} /> 
+
+      <SidebarItem 
+        label="Home" 
+        href="/" 
+        on:click={toggleSide} 
+        active={activeUrl === `/`}>
+          <svelte:fragment slot="icon">
+            <HomeSolid size='md' class={sideIconClasses} /> 
+          </svelte:fragment>
+      </SidebarItem> 
 
       <SidebarItem 
         label="Dashboard" 
@@ -103,15 +125,15 @@
           active={activeUrl === `/pages/${path}`}
         > 
           <svelte:fragment slot="icon">
-            <ChervonDoubleRightSolid size='md' class={sideIconClasses} /> 
+            <svelte:component this={_.get(icons, _.lowerCase(meta?.title))} size='md' class={sideIconClasses} /> 
           </svelte:fragment>
         </SidebarItem> 
       {/each}
 
-      <SidebarDropdownWrapper label="Resources">
+      <SidebarDropdownWrapper label="Blog">
 
         <svelte:fragment slot="icon">
-          <WandSparklesSolid size='md' class={sideIconClasses} /> 
+          <FileLinesSolid size='md' class={sideIconClasses} /> 
         </svelte:fragment>
         {#each data.posts as { meta, path }}
           <SidebarItem
@@ -123,7 +145,7 @@
             active={activeUrl === `/blog/${path}`}
           >
             <svelte:fragment slot="icon">
-              <ChevronRightSolid size='md' class={sideIconClasses} /> 
+              <FileOutline size='md' class={sideIconClasses} /> 
             </svelte:fragment>
           </SidebarItem>
         {/each}

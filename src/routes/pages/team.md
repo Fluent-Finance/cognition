@@ -1,7 +1,7 @@
 ---
 dir: pages
 title: Team
-icon: Envelope
+icon: UserGroupSolid
 order: 1
 ---
 
@@ -107,7 +107,7 @@ order: 1
       href: '/',
       src: '/images/team/09_team_member.png',
       alt: 'anon',
-      name: 'Kodepoet',
+      name: 'K. Poett',
       jobTitle: 'Sr. Lead Engineer',
       description: 'Poet of code, not words.'
     }
@@ -117,19 +117,26 @@ order: 1
 <Section name="team">
   <TeamWrapper>
     <TeamHeader>
-      <svelte:fragment slot="label">Fluent Team</svelte:fragment>
-      <p class="font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">Get to know us.</p>
+      <svelte:fragment slot="label">Get to know the Fluent Team</svelte:fragment>
+      <P class="font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400"> 
+        Industry veterans and expert builders.
+        The team behind Fluent consists of executives, 
+        designers and innovators with decades of experience 
+        in everything from banking to engineering.
+        Before joining Fluent, they took their respective fields to new heights. 
+        And now that we’ve gathered them here, they’re doing it again.
+      </P> 
     </TeamHeader>
     <TeamBody>
       {#each members as { href, src, alt, name, jobTitle, description }}
       <TeamItem {href} {src} {alt} {name} {jobTitle} {imgClass}>
-        <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">
+        <P class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">
           {description}
-        </p>
+        </P>
         <svelte:fragment slot="social">
-          <Facebook href="/" />
-          <Github href="/" />
-          <Twitter href="/" />
+          <Facebook href="https://www.facebook.com/" />
+          <Github href="https://github.com/" />
+          <Twitter href="https://twitter.com/" />
         </svelte:fragment>
       </TeamItem>
       {/each}
