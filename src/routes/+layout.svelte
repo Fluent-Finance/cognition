@@ -10,15 +10,14 @@
   
   import { Drawer, CloseButton } from 'flowbite-svelte';
 
-  // import FluentHeader  from '$lib/layouts/FluentHeader.svelte';
-  import FluentNav     from '$lib/layouts/FluentNav.svelte';
+  import FluentHeader  from '$lib/layouts/FluentHeader.svelte';
   import FluentSidebar from '$lib/layouts/FluentSidebar.svelte';
   import FluentFooter  from '$lib/layouts/FluentFooter.svelte';
 
   import type { PageData } from './$types';
   export let data: PageData; 
 
-  $: images    = data.images;
+  $: images = data.images;
 
   let width: number;
   let breakPoint: number    = 2160;
@@ -101,7 +100,7 @@
 <div class='flex flex-col w-full mb-auto mx-auto'> 
 
   <!-- @Header Content Slot --> 
-  <FluentNav  
+  <FluentHeader  
     bind:drawerHidden={drawerHidden} 
     on:toggleDrawer={toggleDrawer} />  
 
@@ -121,7 +120,6 @@
       <FluentSidebar on:toggleDrawer={toggleDrawer} {width} {...sidebarProps} /> 
   </Drawer> 
 
-  
   <!-- @Main Content Slot --> 
   <main class="container">
     <slot {images} />

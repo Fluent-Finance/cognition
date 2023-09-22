@@ -6,6 +6,10 @@
   import FluentHero       from '$lib/layouts/FluentHero.svelte'
   import FluentPanel      from '$lib/layouts/FluentPanel.svelte';
   import FluentFinalPanel from '$lib/layouts/FluentFinalPanel.svelte';
+  // import FluentModal      from '$lib/components/FluentModal.svelte';
+
+  // let clickOutsideModal = false;
+
 </script>
 
 <div class='flex flex-col w-full h-full'> 

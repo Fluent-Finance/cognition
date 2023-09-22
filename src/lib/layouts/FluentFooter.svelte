@@ -13,7 +13,7 @@
   import footerImgLight from '$lib/assets/light_large_fluent_footer.png?w=2160&format=webp;png&as=run';
 
   $: currentTheme = $theme;
-  $: footerImage = (currentTheme === 'light' ? footerImgDark : footerImgLight);
+  $: footerImage = (currentTheme === 'light' ? footerImgLight : footerImgDark);
 
   let footerImgClasses = `
     bg-white 

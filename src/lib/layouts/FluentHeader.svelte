@@ -1,198 +1,197 @@
 <!-- handcoded with ♥︎  by ⚡️-𝙆𝙊𝘿𝞝𝙋𝞸𝞝𝙏-⚡️--->
 <script lang='ts'>
-  import _       from 'lodash';
-  import FluentLogoIconWhite from '$lib/assets/Logo-White.svg?component';
-  import FluentLogoIconBlack from '$lib/assets/Logo-Black.svg?component';
-  import FluentLogoIconColor from '$lib/assets/Logo-Color.svg?component';
-  import {
-    DarkMode,
-    Navbar,
-    NavBrand,
-    NavLi,
-    NavUl,
-    NavHamburger,
+  import { 
+    Img, 
+    DarkMode, 
+    Navbar, 
+    NavBrand, 
+    NavHamburger, 
+    NavUl, 
+    NavLi, 
+    Button 
   } from 'flowbite-svelte';
 
-  import theme                     from '$lib/stores/ThemeStore';
-  import { page }                  from '$app/stores';
+  import _                         from 'lodash';
   import { createEventDispatcher } from 'svelte';
+  import { page }                  from '$app/stores';
+  import theme                     from '$lib/stores/ThemeStore';
+  import FluentLogoIconColor       from '$lib/assets/Logo-Color.svg?url';
+  import FluentLogoIconWhite       from '$lib/assets/Logo-White.svg?url';
+  import { DotsVerticalOutline }   from 'flowbite-svelte-icons'
 
   const dispatch = createEventDispatcher();
-
-  $: currentTheme  = $theme;
-  $: logoIconStyle = (currentTheme === 'dark' ? FluentLogoIconWhite : FluentLogoIconColor);
-
   export let drawerHidden: boolean = false;
 
-  $: activeUrl    = $page.url.pathname;
-  $: drawerHidden = drawerHidden;
+  $: currentTheme  = $theme;
+  $: logoIconStyle = (currentTheme === 'light' ? FluentLogoIconColor : FluentLogoIconWhite);
+  $: activeUrl     = $page.url.pathname;
+  $: drawerHidden  = drawerHidden;
 
-  let toggleDrawer = () => { 
-    dispatch('toggleDrawer', drawerHidden);
-  };
+  let toggleDrawer = () => { dispatch('toggleDrawer', drawerHidden); };
 
-  let headerClasses = `
-    z-index-50
-    sticky top-0 
-    flex 
-    header w-full 
-    mb-auto mx-auto 
-    bg-white dark:bg-base-100
+  let navClass    = 'bg-white border-none px-4 lg:px-6 py-2.5 dark:bg-base-100';
+  let navDivClass = 'flex flex-wrap justify-between items-center mx-auto max-w-screen-xl';
+
+  let darkModeClasses = `
+    dark:hover:text-white 
+    hover:text-base-900
   `;
 
   let btnCss = `
-    focus:outline-none 
+    p-1.5 
+    m-0 mr-3 
+    xl:hidden
     whitespace-normal 
     rounded-lg 
-    focus:ring-2 
-    p-1.5 
-    focus:ring-gray-400
   `;
 
   let btnBgCss = `
     hover:bg-white
     dark:hover:bg-base-100 
-    m-0 mr-3 
-    xl:hidden
-  `;
-
-  let darkModeClasses = `
-    inline-block 
-    dark:hover:text-white 
-    hover:text-gray-900
-  `;
-
-  let navUlMarginCss = `
-    md:!pl-3 md:!py-2 
-    lg:!pl-0 
-    text-base-100
-  `;
-
-  let navUlFlexCss = `
-    md:!pl-3 md:!py-2 
-    lg:!pl-0 lg:text-primary-400 
-    text-white
-  `;
-
-  let navUlNonBgCss = `
-    hover:bg-base-100 
-    lg:hover:bg-transparent 
-    lg:border-0 
-    lg:hover:text-primary-700
-  `;
-
-  let navUlDarkBgCss = `
-    dark:text-white 
-    lg:dark:hover:text-primary-700 
-    dark:hover:bg-base-100 
-    dark:hover:text-white 
-    lg:dark:hover:bg-transparent
-  `;
-
-  let navUlBgCss = `
-    dark:text-white 
-    dark:lg:text-primary-500 
-    bg-primary-700 
-    lg:bg-transparent 
-    dark:bg-base-100 
-    cursor-default
-  `;
-
-  let brandSpanClasses = `
-    pl-3 self-center 
-    whitespace-nowrap
-    lg:text-2xl 
-    font-semibold
-    font-['Basier Circle Bold'] 
-    text-base-300
-    opacity-70
-    dark:text-neutral 
+    focus:ring-2 
+    focus:ring-gray-400
+    focus:outline-none 
   `;
 
   let divClass = `
-    m-auto 
-    items-center
-    justify between
-    text-center 
-    order-3 
-    xl:order-none
+    justify-between 
+    items-center 
+    w-full 
+    lg:flex 
+    lg:w-auto 
+    lg:order-1
   `;
 
-  let navbarClasses = `w-full bg-white dark:bg-base-100`;
-  let navLiClasses  = `px-0 lg:px-2 lg:mb-0`;
-  let ulFlexCss     = `flex flex-row py-7 my-3 mx-30`;
-  let ulBgCss       = `bg-white dark:bg-base-100 lg:border-0`;
-  let ulTextCss     = `text-sm lg:text-xl font-neuehaas font-medium gap-4`;
+  let ulClass = `
+    flex flex-col 
+    mt-4 
+    font-medium 
+    lg:flex-row 
+    lg:space-x-8 
+    lg:mt-0
+  `;
+
+  let activeClass = `
+    text-primary 
+    bg-primary 
+    md:bg-transparent 
+    md:text-primary 
+    md:dark:text-base-800 
+    dark:bg-base-800 
+    md:dark:bg-transparent
+  `;
+
+  let nonActiveClass = `
+    text-gray-700 
+    hover:bg-primary 
+    md:hover:bg-transparent 
+    md:border-0 
+    md:hover:text-primary 
+    dark:text-gray-400 
+    md:dark:hover:text-base-800 
+    dark:hover:bg-gray-700 
+    dark:hover:text-base-800 
+    md:dark:hover:bg-transparent
+  `;
+
+  let hamburgerClasses = `
+    inline-flex
+    items-center
+    p-2
+    ml-1
+    text-sm
+    text-gray-500
+    rounded-lg
+    lg:hidden
+    hover:bg-base-400
+    focus:outline-none
+    focus:ring-2
+    focus:ring-base-300
+    dark:text-base-400
+    dark:hover:bg-base-900
+    dark:focus:ring-gray-600
+  `;
+
+  let connectWalletClasses = `
+    mx-2
+    hidden
+    xs:py-2
+    sm:block
+    text-neutral
+    bg-primary
+    hover:bg-secondary
+    dark:hover:bg-base-700
+    dark:bg-base-800
+  `;
+
+  let logoSpanClasses = `
+    self-center
+    whitespace-nowrap
+    text-lg
+    sm:text-3xl
+    font-basier
+    font-bold
+    opacity-80
+    text-base-100
+    dark:opacity-100
+    dark:text-neutral
+  `;
 
   const SPACE = '\u00A0';
+  let sidebarBtnClasses = _.join(_.concat( btnCss, btnBgCss ), SPACE);
+</script>
 
-  let btnClasses            = _.join(_.concat( btnCss, btnBgCss ), SPACE);
-  let ulClass               = _.join(_.concat( ulFlexCss, ulTextCss, ulBgCss ), SPACE);
-  let navUlNonActiveClasses = _.join(_.concat( navUlMarginCss, navUlNonBgCss, navUlDarkBgCss ), SPACE);
-  let navUlActiveClasses    = _.join(_.concat( navUlFlexCss, navUlBgCss ), SPACE);
-</script> 
-
-<!-- @Header Content Slot --> 
-<header class={headerClasses} style='z-index: 50'>
-
-  <Navbar class={navbarClasses} let:hidden let:toggle>
-
-    <div class='justify-between items-center'>
-    <NavHamburger 
-      on:toggleDrawer 
-      on:click={toggleDrawer} 
-      data-drawer-target='sidebar' 
-      data-drawer-show='sidebar' 
-      aria-controls='sidebar' 
-      btnClass={btnClasses} />
-
+<header class="z-index-50 sticky top-0" style='z-index: 50'>
+  <Navbar let:hidden let:toggle fluid={false} {navClass} {navDivClass}>
     <NavBrand href="/">
-      <svelte:component this={logoIconStyle} width="32" height="32" /> 
-      <span class={brandSpanClasses}>
-        Fluent | 𝙐𝙎✚
+      <DotsVerticalOutline 
+        on:toggleDrawer 
+        on:click={toggleDrawer} 
+        data-drawer-target='sidebar' 
+        data-drawer-show='sidebar' 
+        aria-controls='sidebar' 
+        btnClass={sidebarBtnClasses} />
+
+      <Img src={logoIconStyle} class="mr-2 h-6 sm:h-7" alt="Fluent Logo" />
+
+      <span class={logoSpanClasses}> 
+        <span class="text-primary dark:text-base-800"> Fluent </span> Finance
       </span>
     </NavBrand>
 
-      <NavUl {hidden} {divClass} {ulClass}
-        nonActiveClass={navUlNonActiveClasses} 
-        activeClass={navUlActiveClasses}>
+    <div class="flex items-center lg:order-2">
+      <Button 
+        href="https://app.fluent.finance" 
+        target="_blank" 
+        class={connectWalletClasses} 
+        color="none">
+          Consumer Portal
+      </Button>
+      <DarkMode class={darkModeClasses} />
+      <NavHamburger on:click={toggle} btnClass={hamburgerClasses} />
+    </div>
 
+    <NavUl {activeUrl} {hidden} {divClass} {ulClass} {activeClass} {nonActiveClass}>
+        <NavLi 
+          href='/'
+          active={activeUrl === '/'}> Home
+        </NavLi>
         <NavLi 
           href='/pages/about'
-          class={navLiClasses} 
           active={activeUrl === '/pages/about'}> About
         </NavLi>
         <NavLi 
-          href='/'
-          class={navLiClasses} 
-          active={activeUrl === '/'}> Resources
-        </NavLi>
-
-        <NavLi 
-          href='/pages/engagements'
-          class={navLiClasses} 
-          active={activeUrl === '/pages/engagements'}> Engagments
-        </NavLi>
-
-        <NavLi 
           href='/pages/team'
-          class={navLiClasses} 
           active={activeUrl === '/pages/team'}> Team
         </NavLi>
-
         <NavLi 
-          href='/content/whitepaper' 
-          class={navLiClasses} 
-          active={activeUrl === '/content/whitepaper'}> Whitepaper
+          href='/pages/engagements'
+          active={activeUrl === '/pages/engagements'}> Engagments
         </NavLi>
-      </NavUl>
-
-    <div class="flex items-center ml-auto">
-      <DarkMode class={darkModeClasses} />
-    </div>
-
-    <NavHamburger on:click={toggle} btnClass="md:hidden lg:hidden xl:hidden" />
-    </div>
-
+        <NavLi 
+          target="_blank"
+          href='https://docsend.com/view/4zjd678kaifqy7jf'> Whitepaper
+        </NavLi>
+    </NavUl>
   </Navbar>
 </header>

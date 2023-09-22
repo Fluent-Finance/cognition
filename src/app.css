@@ -80,19 +80,6 @@
 
   @font-face {
     font-family: 'Basier Circle';
-    src: url('/fonts/BasierCircle-SemiBoldItalic.eot');
-    src: local('Basier Circle SemiBold Italic'), local('BasierCircle-SemiBoldItalic'),
-        url('/fonts/BasierCircle-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
-        url('/fonts/BasierCircle-SemiBoldItalic.woff2') format('woff2'),
-        url('/fonts/BasierCircle-SemiBoldItalic.woff') format('woff'),
-        url('/fonts/BasierCircle-SemiBoldItalic.ttf') format('truetype');
-    font-weight: 600;
-    font-style: italic;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: 'Basier Circle';
     src: url('/fonts/BasierCircle-SemiBold.eot');
     src: local('Basier Circle SemiBold'), local('BasierCircle-SemiBold'),
         url('/fonts/BasierCircle-SemiBold.eot?#iefix') format('embedded-opentype'),
@@ -101,19 +88,6 @@
         url('/fonts/BasierCircle-SemiBold.ttf') format('truetype');
     font-weight: 600;
     font-style: normal;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: 'Basier Square';
-    src: url('/fonts/BasierSquare-MediumItalic.eot');
-    src: local('Basier Square Medium Italic'), local('BasierSquare-MediumItalic'),
-        url('/fonts/BasierSquare-MediumItalic.eot?#iefix') format('embedded-opentype'),
-        url('/fonts/BasierSquare-MediumItalic.woff2') format('woff2'),
-        url('/fonts/BasierSquare-MediumItalic.woff') format('woff'),
-        url('/fonts/BasierSquare-MediumItalic.ttf') format('truetype');
-    font-weight: 500;
-    font-style: italic;
     font-display: swap;
   }
 
@@ -166,19 +140,6 @@
         url('/fonts/BasierSquare-Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: 'Basier Circle';
-    src: url('/fonts/BasierCircle-MediumItalic.eot');
-    src: local('Basier Circle Medium Italic'), local('BasierCircle-MediumItalic'),
-        url('/fonts/BasierCircle-MediumItalic.eot?#iefix') format('embedded-opentype'),
-        url('/fonts/BasierCircle-MediumItalic.woff2') format('woff2'),
-        url('/fonts/BasierCircle-MediumItalic.woff') format('woff'),
-        url('/fonts/BasierCircle-MediumItalic.ttf') format('truetype');
-    font-weight: 500;
-    font-style: italic;
     font-display: swap;
   }
 
@@ -274,32 +235,6 @@
   }
 
   @font-face {
-    font-family: 'Neue Haas Unica ExtLt';
-    src: url('/fonts/NeueHaasUnica-LightItalic.eot');
-    src: local('NeueHaasUnica-LightItalic'),
-        url('/fonts/NeueHaasUnica-LightItalic.eot?#iefix') format('embedded-opentype'),
-        url('/fonts/NeueHaasUnica-LightItalic.woff2') format('woff2'),
-        url('/fonts/NeueHaasUnica-LightItalic.woff') format('woff'),
-        url('/fonts/NeueHaasUnica-LightItalic.ttf') format('truetype');
-    font-weight: 300;
-    font-style: italic;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: 'Neue Haas Unica';
-    src: url('/fonts/NeueHaasUnica-ExtraLight.eot');
-    src: local('NeueHaasUnica-ExtraLight'),
-        url('/fonts/NeueHaasUnica-ExtraLight.eot?#iefix') format('embedded-opentype'),
-        url('/fonts/NeueHaasUnica-ExtraLight.woff2') format('woff2'),
-        url('/fonts/NeueHaasUnica-ExtraLight.woff') format('woff'),
-        url('/fonts/NeueHaasUnica-ExtraLight.ttf') format('truetype');
-    font-weight: 200;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  @font-face {
     font-family: 'Neue Haas Unica Med';
     src: url('/fonts/NeueHaasUnica-Medium.eot');
     src: local('NeueHaasUnica-Medium'),
@@ -308,32 +243,6 @@
         url('/fonts/NeueHaasUnica-Medium.woff') format('woff'),
         url('/fonts/NeueHaasUnica-Medium.ttf') format('truetype');
     font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: 'Neue Haas Unica Med';
-    src: url('/fonts/NeueHaasUnica-MediumItalic.eot');
-    src: local('NeueHaasUnica-MediumItalic'),
-        url('/fonts/NeueHaasUnica-MediumItalic.eot?#iefix') format('embedded-opentype'),
-        url('/fonts/NeueHaasUnica-MediumItalic.woff2') format('woff2'),
-        url('/fonts/NeueHaasUnica-MediumItalic.woff') format('woff'),
-        url('/fonts/NeueHaasUnica-MediumItalic.ttf') format('truetype');
-    font-weight: 500;
-    font-style: italic;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: 'Neue Haas Unica';
-    src: url('/fonts/NeueHaasUnica-Light.eot');
-    src: local('NeueHaasUnica-Light'),
-        url('/fonts/NeueHaasUnica-Light.eot?#iefix') format('embedded-opentype'),
-        url('/fonts/NeueHaasUnica-Light.woff2') format('woff2'),
-        url('/fonts/NeueHaasUnica-Light.woff') format('woff'),
-        url('/fonts/NeueHaasUnica-Light.ttf') format('truetype');
-    font-weight: 300;
     font-style: normal;
     font-display: swap;
   }
@@ -360,19 +269,6 @@
         url('/fonts/NeueHaasUnica-ExtBlkIta.woff') format('woff'),
         url('/fonts/NeueHaasUnica-ExtBlkIta.ttf') format('truetype');
     font-weight: 900;
-    font-style: italic;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: 'Neue Haas Unica ExtLt';
-    src: url('/fonts/NeueHaasUnica-ExtLtIta.eot');
-    src: local('NeueHaasUnica-ExtLtIta'),
-        url('/fonts/NeueHaasUnica-ExtLtIta.eot?#iefix') format('embedded-opentype'),
-        url('/fonts/NeueHaasUnica-ExtLtIta.woff2') format('woff2'),
-        url('/fonts/NeueHaasUnica-ExtLtIta.woff') format('woff'),
-        url('/fonts/NeueHaasUnica-ExtLtIta.ttf') format('truetype');
-    font-weight: normal;
     font-style: italic;
     font-display: swap;
   }
@@ -452,19 +348,6 @@
         url('/fonts/NeueHaasUnica-Black.ttf') format('truetype');
     font-weight: 900;
     font-style: normal;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: 'Neue Haas Unica';
-    src: url('/fonts/NeueHaasUnica-BoldItalic_1.eot');
-    src: local('NeueHaasUnica-BoldItalic'),
-        url('/fonts/NeueHaasUnica-BoldItalic_1.eot?#iefix') format('embedded-opentype'),
-        url('/fonts/NeueHaasUnica-BoldItalic_1.woff2') format('woff2'),
-        url('/fonts/NeueHaasUnica-BoldItalic_1.woff') format('woff'),
-        url('/fonts/NeueHaasUnica-BoldItalic_1.ttf') format('truetype');
-    font-weight: bold;
-    font-style: italic;
     font-display: swap;
   }
 }

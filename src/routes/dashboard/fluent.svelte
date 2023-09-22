@@ -13,12 +13,12 @@
   let paramargins = _.concat(paragraph, margins).join(SPACE);
 </script>
 
-<div class='w-full mt-40 pt-30'>
+<div class='w-full mt-20 pt-30'>
   <Heading 
     tag="h1" 
     class="font-neuehaas font-extrabold text-slate-800/[0.4] dark:text-slate-200/[0.4] justify-between w-full prose-h1 text-center p-9 mb-10" 
     customSize="text-xl lg:text-3xl xl:text-5xl">
-      <span class="text-base-100 dark:text-base-300/[0.4] mx-3">USPlus</span>Bank Reserves
+      <span class="text-base-200 dark:text-base-300/[0.4] mx-3">USPlus</span>Bank Reserves
   </Heading>
 
   <div class='grid grid-cols-4 grid-flow-row gap-10'>

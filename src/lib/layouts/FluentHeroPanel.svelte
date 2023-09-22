@@ -1,3 +1,4 @@
+<!-- handcoded with ♥︎  by ⚡️-𝙆𝙊𝘿𝞝𝙋𝞸𝞝𝙏-⚡️--->
 <script lang='ts'>
   // @ts-ignore 
   // @ts-nocheck

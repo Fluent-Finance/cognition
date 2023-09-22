@@ -22,9 +22,6 @@
   import ChevronRightSolid       from 'flowbite-svelte-icons/ChevronRightSolid.svelte';
   import ChervonDoubleRightSolid from 'flowbite-svelte-icons/ChervonDoubleRightSolid.svelte';
 
-  import FluentLogoIconColor from '$lib/assets/LogoFullSVG/Fluent-Logo-Color.svg?url';
-  import FluentLogoIconWhite from '$lib/assets/LogoFullSVG/Fluent-Logo-White.svg?url';
-
   export let data: PageData;
   export let width: number;
 
