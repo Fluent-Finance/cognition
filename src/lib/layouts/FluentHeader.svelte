@@ -12,14 +12,11 @@
   } from 'flowbite-svelte';
 
   import _                         from 'lodash';
-  import { createEventDispatcher } from 'svelte';
   import { page }                  from '$app/stores';
   import theme                     from '$lib/stores/ThemeStore';
   import FluentLogoIconColor       from '$lib/assets/Logo-Color.svg?url';
   import FluentLogoIconWhite       from '$lib/assets/Logo-White.svg?url';
-  import { DotsVerticalOutline }   from 'flowbite-svelte-icons'
 
-  const dispatch = createEventDispatcher();
   export let drawerHidden: boolean = false;
 
   $: currentTheme  = $theme;
@@ -27,30 +24,12 @@
   $: activeUrl     = $page.url.pathname;
   $: drawerHidden  = drawerHidden;
 
-  let toggleDrawer = () => { dispatch('toggleDrawer', drawerHidden); };
-
   let navClass    = 'bg-white border-none px-4 lg:px-6 py-2.5 dark:bg-base-100';
   let navDivClass = 'flex flex-wrap justify-between items-center mx-auto max-w-screen-xl';
 
   let darkModeClasses = `
     dark:hover:text-white 
     hover:text-base-900
-  `;
-
-  let btnCss = `
-    p-1.5 
-    m-0 mr-3 
-    xl:hidden
-    whitespace-normal 
-    rounded-lg 
-  `;
-
-  let btnBgCss = `
-    hover:bg-white
-    dark:hover:bg-base-100 
-    focus:ring-2 
-    focus:ring-gray-400
-    focus:outline-none 
   `;
 
   let divClass = `
@@ -136,16 +115,6 @@
     dark:opacity-100
     dark:text-neutral
   `;
-
-  // const SPACE = '\u00A0';
-  // let sidebarBtnClasses = _.join(_.concat( btnCss, btnBgCss ), SPACE);
-  //     <!-- <DotsVerticalOutline  -->
-  //     <!--   on:toggleDrawer  -->
-  //     <!--   on:click={toggleDrawer}  -->
-  //     <!--   data-drawer-target='sidebar'  -->
-  //     <!--   data-drawer-show='sidebar'  -->
-  //     <!--   aria-controls='sidebar'  -->
-  //     <!--   btnClass={sidebarBtnClasses} /> -->
 </script>
 
 <header class="z-index-50 sticky top-0" style='z-index: 50'>
@@ -161,9 +130,8 @@
     <div class="flex items-center lg:order-2">
       <Button 
         target="_blank" 
-        color="none"
-        class={connectWalletClasses} 
-        href={import.meta.env.VITE_FLUENT_CONSUMER_URL}>
+        class={connectWalletClasses}
+        href="https://app.fluent.finance">
           Consumer Portal
       </Button>
       <DarkMode class={darkModeClasses} />
@@ -181,15 +149,15 @@
         </NavLi>
         <NavLi 
           target="_blank"
-          href={import.meta.env.VITE_FLUENT_TWITTER_URL}> About
+          href='https://twitter.com/fluentdao'> About
         </NavLi>
         <NavLi 
           target="_blank"
-        href={import.meta.env.VITE_FLUENT_MEDIUM_URL}> Engagements
+          href='https://fluentfinance.medium.com'> Engagments
         </NavLi>
         <NavLi 
           target="_blank"
-          href={import.meta.env.VITE_FLUENT_WHITEPAPER_URL}> Whitepaper 
+          href='https://docsend.com/view/4zjd678kaifqy7jf'> Whitepaper
         </NavLi>
     </NavUl>
   </Navbar>
