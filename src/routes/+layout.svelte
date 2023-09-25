@@ -1,5 +1,4 @@
 <!-- handcoded with ♥︎  by ⚡️-𝙆𝙊𝘿𝞝𝙋𝞸𝞝𝙏-⚡️--->
-
 <script lang="ts">
   import '../app.css';
   import _ from 'lodash';
@@ -10,11 +9,11 @@
   
   import { Drawer, CloseButton } from 'flowbite-svelte';
 
-  import FluentHeader  from '$lib/layouts/FluentHeader.svelte';
-  import FluentSidebar from '$lib/layouts/FluentSidebar.svelte';
-  import FluentFooter  from '$lib/layouts/FluentFooter.svelte';
-
+  import FluentHeader      from '$lib/layouts/FluentHeader.svelte';
+  import FluentSidebar     from '$lib/layouts/FluentSidebar.svelte';
+  import FluentFooter      from '$lib/layouts/FluentFooter.svelte';
   import type { PageData } from './$types';
+
   export let data: PageData; 
 
   $: images = data.images;
@@ -99,7 +98,6 @@
 <svelte:window bind:innerWidth={width} />
 <div class='flex flex-col w-full mb-auto mx-auto'> 
 
-  <!-- @Header Content Slot --> 
   <FluentHeader  
     bind:drawerHidden={drawerHidden} 
     on:toggleDrawer={toggleDrawer} />  
@@ -123,7 +121,6 @@
   <!-- @Main Content Slot --> 
   <main class="container">
     <slot {images} />
-    <!-- @Footer Content Slot --> 
     <FluentFooter /> 
   </main>
 </div>

@@ -135,7 +135,6 @@
           </div>
         </div>
       </div>
-      <Img class="mb-4 w-full lg:mb-0 transition-all duration-300 rounded-lg blur-sm hover:blur-none" src={Image} alt="feature image" />
     </div>
   </Section>
 </div>
