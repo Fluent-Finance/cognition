@@ -15,7 +15,8 @@
   let imgClass = `
     flex flex-row
     w-10
-    object-fit
+    object-fit 
+    dark:invert
     md:w-15
     lg:w-20
     xl:w-25
@@ -71,17 +72,17 @@
       <div class="relative inline-flex items-center mx-auto align-middle">
         <div class="text-center">
           <h1 class="font-basier max-w-4xl text-3xl font-bold leading-none tracking-tighter dark:text-white text-neutral-600 md:text-6xl xl:text-8xl lg:text-7xl lg:max-w-5xl">
-            Financial Interoperability Infrastructure Bringing Banks On-Chain today!
+            Financial Interoperable Infrastructure Bringing Banks On-Chain
           </h1>
           <p class="font-neuehaas max-w-xl lg:text-1xl mx-auto mt-8 text-base leading-relaxed text-gray-500">
-            Deposit Token Infrastructure for Direct On-Chain Asset Issuance.
+            Deposit Token Infrastructure for Direct On-Chain Asset Issuance
           </p>
           <div class="flex justify-center w-full max-w-2xl gap-2 mx-auto mt-6">
             <div class="mt-3 rounded-lg sm:mt-0">
               
               <a href="#anchor-learnmore" on:click={handleAnchorClick}>
                 <button class="items-center block px-5 py-4 font-medium text-center text-white transition duration-500 ease-in-out transform bg-primary lg:px-10 rounded-xl hover:bg-accent dark:bg-base-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-                  Learn How
+                  Learn More
                 </button>
               </a> 
             </div>

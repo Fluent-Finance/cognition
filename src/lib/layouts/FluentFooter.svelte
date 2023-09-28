@@ -53,18 +53,6 @@
 </script>
 
 <div class={lowerFooterClasses}>
-  <span class='flex flex-col items-center text-center '>  
-    <Img src={footerImage} alt='Fluent Alt Logo Img' class={footerImgClasses} /> 
-  </span> 
-</div>
-
-<Footer footerType="sitemap" class='flex flex-row mb-10 bg-white dark:bg-base-100'>
-  <span class='min-w-fit'>  
-    <p class='prose prose-p text-xs justify-left'> 
-      Cognition™<br />Fluent Finance | 𝙐𝙎✚<br/>A superior, more reliable, stablecoin
-    </p>
-  </span> 
-
   <span class='w-full'> 
     <p class='mx-auto mb-5 prose prose-p text-center text-xs justify-center'> 
       <FooterCopyright spanClass="text-xs max-w-md text-gray-300 text-center justify-center sm:visible invisible" {by} />
@@ -75,8 +63,17 @@
       bridging Web2 to Web3 utilizing the Fluent Protocol. Our flagship product 
       is US Plus, the only fully verifiable cash and equivalent backed stablecoin.
     </p>
+  </span>
+</div>
+<Footer footerType="sitemap" class='flex flex-row mb-10 bg-white dark:bg-base-100'>
+  <span class='min-w-fit'>  
+    <p class='prose prose-p text-xs justify-left'> 
+      Cognition™<br />Fluent Finance | 𝙐𝙎✚<br/>A superior, more reliable, stablecoin
+    </p>
   </span> 
-
+  <span class='flex flex-col items-center text-center '>  
+    <Img src={footerImage} alt='Fluent Alt Logo Img' class={footerImgClasses} /> 
+  </span> 
   <div class="flex space-x-6 m-0 r-0 sm:justify-center">
     <FooterIcon target="_blank" href="https://discord.gg/22ywcEfU65">
       <DiscordSolid class={iconClasses} /> 
