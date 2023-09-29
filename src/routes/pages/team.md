@@ -13,7 +13,6 @@ order: 1
     TeamHeader, 
     TeamBody, 
     TeamItem, 
-    Facebook, 
     Github, 
     Twitter
   } from 'flowbite-svelte-blocks';
@@ -27,6 +26,16 @@ order: 1
     rounded-xl
     shadow-xl
     xs:rounded-full
+  `;
+
+  let divClass = ` 
+    items-center
+    bg-base-300
+    rounded-lg
+    shadow
+    sm:flex
+    dark:bg-base-100
+    dark:border-gray-700
   `;
 
   let members = [
@@ -114,10 +123,10 @@ order: 1
 </script>
 
 <Section name="team">
-  <TeamWrapper>
+  <TeamWrapper> 
     <TeamHeader>
       <svelte:fragment slot="label">Get to know the Fluent Team</svelte:fragment>
-      <P class="font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400"> 
+      <P class="font-light text-gray-500 lg:mb-16 text-xl md:text-4xl dark:text-gray-400"> 
         Industry veterans and expert builders.
         The team behind Fluent consists of executives, 
         designers and innovators with decades of experience 
@@ -128,16 +137,15 @@ order: 1
     </TeamHeader>
     <TeamBody>
       {#each members as { href, src, alt, name, jobTitle, description }}
-      <TeamItem {href} {src} {alt} {name} {jobTitle} {imgClass}>
-        <P class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">
-          {description}
-        </P>
-        <svelte:fragment slot="social">
-          <Facebook href="https://www.facebook.com/" />
-          <Github href="https://github.com/" />
-          <Twitter href="https://twitter.com/" />
-        </svelte:fragment>
-      </TeamItem>
+        <TeamItem {href} {src} {alt} {name} {jobTitle} {imgClass} {divClass}>
+          <P class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">
+            {description}
+          </P>
+          <svelte:fragment slot="social">
+            <Github href="https://github.com/" />
+            <Twitter href="https://twitter.com/" />
+          </svelte:fragment>
+        </TeamItem>
       {/each}
     </TeamBody>
   </TeamWrapper>

@@ -44,6 +44,9 @@ module.exports = {
         "neutral":         "#F7F3FC",
         "black":           "#222222",
 
+        "base-25":        "#131313",
+
+        "base-50":         "#7140e0",
         "base-100":        "#111111",
         "base-200":        "#4B4653",
         "base-300":        "#D5D1DB",
@@ -98,6 +101,9 @@ module.exports = {
       "neutral":  "#F7F3FC",
       "black":    "#111111",
 
+      "base-25":  "#131313",
+
+      "base-50":  "#7140e0",
       "base-100": "#222222",
       "base-200": "#4B4653",
       "base-300": "#D5D1DB",
@@ -112,7 +118,7 @@ module.exports = {
       xs: '478px',
       sm: '767px',
       md: '991px',
-      lg: '1440px',
+      lg: '1024px',
       xl: '1920px',
       '2xl': '2160px',
     },
@@ -140,6 +146,9 @@ module.exports = {
         '128': '32rem',
         '144': '36rem',
       },
+      backgroundImage: () => ({
+        'footer-texture': "url('/images/FooterCorner.svg')"
+      }),
       fontFamily: {
         neuehaas: ['Neue Haas Unica', 'Inter', ...fontFamily.sans], 
         basier:   ['Basier Circle', 'Inter', ...fontFamily.sans],

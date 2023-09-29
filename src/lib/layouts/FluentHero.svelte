@@ -22,6 +22,20 @@
     xl:w-25
   `;
 
+  let heroText = `
+    font-basier
+    font-extrabold
+    max-w-9xl
+    text-3xl
+    md:text-6xl
+    lg:text-7xl
+    xl:text-9xl
+    leading-none
+    tracking-tighter
+    dark:text-white
+    text-neutral-600
+  `;
+
   function handleAnchorClick (event) {
 		event.preventDefault()
 		const link     = event.currentTarget
@@ -39,7 +53,7 @@
     on:click={() => (clickOutsideModal = true)}
     class="p-0 m-0">
     <News>
-      <span class="text-sm bg-primary dark:bg-base-800 rounded-full text-white px-3 py-1 mr-3">New</span>
+      <span class="text-sm bg-base-50 dark:bg-base-800 rounded-full text-white px-3 py-1 mr-3">New</span>
       <span class="text-sm mx-1 px-1 font-bold opacity-80 text-base-100 dark:text-neutral">USPLUS is live!</span> 
       <span class="text-sm font-medium opacity-80 text-base-100 dark:text-neutral" >Take a look</span>
     </News>
@@ -71,17 +85,17 @@
     <div class="flex w-full mx-auto text-left">
       <div class="relative inline-flex items-center mx-auto align-middle">
         <div class="text-center">
-          <h1 class="font-basier max-w-4xl text-3xl font-bold leading-none tracking-tighter dark:text-white text-neutral-600 md:text-6xl xl:text-8xl lg:text-7xl lg:max-w-5xl">
+          <h1 class={heroText}>
             Financial Interoperable Infrastructure Bringing Banks On-Chain
           </h1>
-          <p class="font-neuehaas max-w-xl lg:text-1xl mx-auto mt-8 text-base leading-relaxed text-gray-500">
+          <p class="font-neuehaas max-w-full text-xs lg:text-xl xl:text-2xl mx-auto mt-8 leading-relaxed text-gray-500">
             Deposit Token Infrastructure for Direct On-Chain Asset Issuance
           </p>
           <div class="flex justify-center w-full max-w-2xl gap-2 mx-auto mt-6">
             <div class="mt-3 rounded-lg sm:mt-0">
               
               <a href="#anchor-learnmore" on:click={handleAnchorClick}>
-                <button class="items-center block px-5 py-4 font-medium text-center text-white transition duration-500 ease-in-out transform bg-primary lg:px-10 rounded-xl hover:bg-accent dark:bg-base-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                <button class="items-center block px-5 py-4 font-medium text-center text-white transition duration-500 ease-in-out transform bg-base-50 lg:px-10 rounded-xl hover:bg-primary dark:bg-base-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
                   Learn More
                 </button>
               </a> 
@@ -98,5 +112,7 @@
       </div>
     </div>
   </div>
+
   <FluentHeroPanel /> 
+
 </Section>

@@ -8,7 +8,7 @@
   import DoughnutGraph  from '$components/DoughnutGraph.svelte';
 </script>
 
-<div class='w-full mt-10 pt-20'>
+<div class='container w-full pt-10'>
   <Heading 
     tag="h1" 
     class="font-neuehaas font-extrabold text-slate-800/[0.4] dark:text-slate-200/[0.4] justify-between w-full prose-h1 text-center p-9 mb-10" 
@@ -26,9 +26,6 @@
     </div>
   </div>
 
-  <div class='grid grid-cols-4 grid-flow-row gap-3'>
-  </div> 
-
   <Heading 
     tag="h1" 
     class="font-basier text-slate-800/[0.4] dark:text-slate-200/[0.4] justify-between w-full font-bold prose-h1 text-center p-9 mb-10" 
@@ -37,13 +34,13 @@
   </Heading>
 
   <div class='grid grid-cols-4 grid-flow-col gap-10'>
-    <div class='col-span-full row-span-1 mb-10 md:col-span-3 lg:col-span-4'>
+    <div class='col-span-full row-span-1 mb-10'>
 
       <BarGraph /> 
 
       <div class='grid grid-cols-4 grid-flow-row gap-10'>
         <div class='row-span-3 col-span-4'>
-          <P class="font-['Proxima Nova'] xs:text-xs text-lg sm:text-sm md:text-lg lg:text-xl prose-2xl font-thin m-10 p-25">
+          <P class="font-['Proxima Nova'] text-xs md:text-xl lg:text-2xl xl:text-4xl prose-2xl font-thin m-10 p-25">
             At Fluent Finance, we’re driven by a simple philosophy: put the users first. 
             We’ve always believed the power of DeFi should be harnessed for the benefit 
             of those who contribute to its growth. That’s why we’re thrilled to announce 

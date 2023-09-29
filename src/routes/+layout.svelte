@@ -119,7 +119,7 @@
   </Drawer> 
 
   <!-- @Main Content Slot --> 
-  <main class="container">
+  <main class="">
     <slot {images} />
     <FluentFooter /> 
   </main>

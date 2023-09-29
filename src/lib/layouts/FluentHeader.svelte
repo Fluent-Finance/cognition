@@ -16,11 +16,12 @@
   import theme                     from '$lib/stores/ThemeStore';
   import FluentLogoIconColor       from '$lib/assets/Logo-Color.svg?url';
   import FluentLogoIconWhite       from '$lib/assets/Logo-White.svg?url';
+  import FluentLogoIconBlack       from '$lib/assets/Logo-Black.svg?url';
 
   export let drawerHidden: boolean = false;
 
   $: currentTheme  = $theme;
-  $: logoIconStyle = (currentTheme === 'light' ? FluentLogoIconColor : FluentLogoIconWhite);
+  $: logoIconStyle = (currentTheme === 'light' ? FluentLogoIconBlack : FluentLogoIconWhite);
   $: activeUrl     = $page.url.pathname;
   $: drawerHidden  = drawerHidden;
 
@@ -97,8 +98,8 @@
     xs:py-2
     sm:block
     text-neutral
-    bg-primary
-    hover:bg-secondary
+    bg-base-50
+    hover:bg-primary
     dark:hover:bg-base-700
     dark:bg-base-800
   `;
@@ -106,7 +107,7 @@
   let logoSpanClasses = `
     self-center
     whitespace-nowrap
-    text-lg
+    text-2xl
     sm:text-3xl
     font-basier
     font-bold
@@ -118,9 +119,9 @@
 </script>
 
 <header class="z-index-50 sticky top-0" style='z-index: 50'>
-  <Navbar let:hidden let:toggle fluid={false} {navClass} {navDivClass}>
+  <Navbar let:hidden let:toggle fluid={true} {navClass} {navDivClass}>
     <NavBrand href="/">
-      <Img src={logoIconStyle} class="mr-2 h-6 sm:h-7" alt="Fluent Logo" />
+      <Img src={logoIconStyle} class="mr-2 h-7 opacity-75 dark:invert-100" alt="Fluent Logo" />
 
       <span class={logoSpanClasses}> 
         <span class="text-primary dark:text-base-800"> Fluent </span> Finance
