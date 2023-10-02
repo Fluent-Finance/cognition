@@ -25,8 +25,8 @@
   $: activeUrl     = $page.url.pathname;
   $: drawerHidden  = drawerHidden;
 
-  let navClass    = 'bg-white border-none px-4 lg:px-6 py-2.5 dark:bg-base-100';
-  let navDivClass = 'flex flex-wrap justify-between items-center mx-auto max-w-screen-xl';
+  let navClass    = 'bg-white dark:bg-base-100 border-none px-4 lg:px-6 py-2.5';
+  let navDivClass = 'bg-white dark:bg-base-100 flex flex-wrap justify-between items-center mx-auto max-w-screen-xl';
 
   let darkModeClasses = `
     dark:hover:text-white 
@@ -119,7 +119,7 @@
 </script>
 
 <header class="z-index-50 sticky top-0" style='z-index: 50'>
-  <Navbar let:hidden let:toggle fluid={true} {navClass} {navDivClass}>
+  <Navbar class="bg-white dark:bg-base-100" let:hidden let:toggle fluid={true} {navClass} {navDivClass}>
     <NavBrand href="/">
       <Img src={logoIconStyle} class="mr-2 h-7 opacity-75 dark:invert-100" alt="Fluent Logo" />
 
