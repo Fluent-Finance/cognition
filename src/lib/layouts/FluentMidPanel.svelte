@@ -56,8 +56,8 @@
   };
 </script>
 
-<div class="container flex flex-col min-w-screen mx-auto">
-  <Section name="feature" class="bg-white dark:bg-gray-900">
+<div class="container flex flex-col min-w-full mx-auto">
+  <Section name="feature" class="bg-white dark:bg-base-100">
 
     <div class="min-h-screen"> 
       <HeroHeader {...classes}> 
@@ -111,10 +111,10 @@
       </FeatureDefault>
     </div> 
 
-    <div class="py-8 px-4 my-auto min-h-screen mx-auto sm:py-16 lg:px-6">
-      <div class="gap-8 py-8 px-4 mx-auto lg:grid lg:grid-cols-1 xl:gap-16 sm:py-16 lg:px-6 ">
+    <div class="py-8 px-4 my-auto min-h-screen min-w-full sm:py-16 lg:px-4">
+      <div class="gap-8 py-8 px-4 mx-auto xl:gap-16 sm:py-16 lg:px-6 ">
         <div class="text-gray-500 dark:text-gray-400 sm:text-lg">
-          <h2 class="mb-4 text-4xl lg:text-7xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+          <h2 class="mb-4 text-6xl xl:text-7xl tracking-tight font-extrabold text-gray-900 dark:text-white">
             Operating Principles
           </h2>
           <p class="mb-8 font-light text-xl lg:text-2xl">

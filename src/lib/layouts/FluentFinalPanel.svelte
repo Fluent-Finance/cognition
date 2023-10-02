@@ -8,7 +8,7 @@
   const classes = 'w-full mx-auto';
 </script> 
 
-<Section class="bg-white dark:bg-gray-900">
+<Section class="bg-white dark:bg-base-100">
   <div class="py-18 px-4 mt-86 min-h-screen max-w-screen-xl text-center sm:py-16 lg:px-6">
     <!-- <h1 class="font-basier mb-10 text-6xl font-extrabold leading-none tracking-tighter text-base-200 dark:text-white lg:text-6xl xl:text-7xl"> -->
     <!--   Live Pilot Project -->

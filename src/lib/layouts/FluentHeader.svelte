@@ -21,7 +21,7 @@
   export let drawerHidden: boolean = false;
 
   $: currentTheme  = $theme;
-  $: logoIconStyle = (currentTheme === 'light' ? FluentLogoIconBlack : FluentLogoIconWhite);
+  $: logoIconStyle = (currentTheme === 'light' ? FluentLogoIconColor : FluentLogoIconWhite);
   $: activeUrl     = $page.url.pathname;
   $: drawerHidden  = drawerHidden;
 

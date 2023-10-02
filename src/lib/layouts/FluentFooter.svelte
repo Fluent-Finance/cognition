@@ -104,7 +104,7 @@
 
   <Footer footerType="sitemap" class={footerClasses}>
 
-    <span class='hidden sm:flex min-w-fit pl-5 pr-20'>  
+    <span class='hidden sm:flex min-w-fit pl-20'>  
       <p class='prose prose-p text-xs justify-left'> 
         Cognition™<br />Fluent Finance | 𝙐𝙎✚<br/>A superior, more reliable, stablecoin
       </p>
@@ -114,7 +114,7 @@
       <FooterCopyright spanClass="text-xs max-w-md text-gray-300 text-center justify-center sm:visible invisible" {by} />
     </p>
 
-    <div class="flex space-x-4 sm:items-center justify-center sm:justify-end sm:pr-5">
+    <div class="flex space-x-4 sm:items-center justify-center sm:justify-end sm:pr-20">
       <FooterIcon target="_blank" href="https://discord.gg/22ywcEfU65">
         <DiscordSolid class={iconClasses} /> 
       </FooterIcon>
