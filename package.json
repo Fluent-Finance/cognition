@@ -2,7 +2,7 @@
   "name": "@fluent-finance/cognition",
   "author": "Fluent <devops@fluent.finance>",
   "license": "Apache-2.0",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Fluent Finance Cognition - Application to aggregate and display charted data metrics for the Fluent network;",
   "homepage": "https://github.com/Fluent-Finance/cognition#readme",
   "type": "module",
