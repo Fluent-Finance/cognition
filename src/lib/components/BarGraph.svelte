@@ -1,7 +1,5 @@
 <!-- handcoded with ♥︎  by ⚡️-𝙆𝙊𝘿𝞝𝙋𝞸𝞝𝙏-⚡️--->
 <script lang='ts'>
-  import { Spinner } from 'flowbite-svelte';
-
   import { Bar } from 'svelte-chartjs';
   import DataSet from '$lib/chartData/reserves';
   import {
@@ -51,7 +49,6 @@
 {#await promise}
   <div class='flex justify-between w-full text-center'> 
     <span class="text-center justify-between m-auto h-auto loading loading-infinity loading-lg"></span>
-    <!-- <Spinner size='8' color='pink' class='mr-3' /> -->
   </div> 
 {:then data}
   <Bar {data} {options} />
