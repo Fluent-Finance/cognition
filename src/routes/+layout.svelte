@@ -71,7 +71,7 @@
 
 <!-- Site MetaData OG Tags --> 
 <MetaTags 
-  title='Cognition'
+  title='Fluent Finance'
   description='Fluent Finance Data Charts.' 
   openGraph={{
     url: `${import.meta.env.VITE_URL}`,
