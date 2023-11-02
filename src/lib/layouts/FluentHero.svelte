@@ -23,8 +23,10 @@
   `;
 
   let heroText = `
+    text-slate-900 
+    text-[90px] 
+    leading-[112px]
     font-basier
-    font-extrabold
     max-w-9xl
     text-3xl
     md:text-6xl
@@ -34,6 +36,77 @@
     tracking-tighter
     dark:text-white
     text-neutral-600
+  `;
+
+  let onchain = `
+    ml-2 
+    text-base-50 
+    font-medium
+    font-basier 
+    leading-[112px]
+    max-w-9xl
+    text-3xl
+    md:text-6xl
+    lg:text-7xl
+    xl:text-9xl
+  `;
+
+  let btnColor = `
+    items-center
+    block
+    px-5
+    py-4
+    font-medium
+    text-center
+    text-white
+    transition
+    duration-500
+    ease-in-out
+    transform
+    bg-base-50
+    lg:px-10
+    rounded-xl
+    hover:bg-primary
+    dark:bg-base-800
+    focus:outline-none
+    focus:ring-2
+    focus:ring-offset-2
+    focus:ring-blue-500
+  `;
+
+  let btnPlain = `
+    items-center
+    block
+    px-5
+    lg:px-10
+    py-3.5
+    text-base
+    font-medium
+    text-center
+    text-secondary
+    dark:text-neutral
+    transition
+    duration-500
+    ease-in-out
+    transform
+    border-2
+    border-white
+    shadow-md
+    rounded-xl
+    focus:outline-none
+    focus:ring-2
+    focus:ring-offset-2
+    focus:ring-gray-500
+  `;
+
+  let lowerCopy = `
+    w-[589px]
+    h-20
+    text-slate-900
+    text-[32px]
+    font-light
+    font-basier
+    leading-10
   `;
 
   function handleAnchorClick (event) {
@@ -49,6 +122,7 @@
 </script>
 
 <Section name="heroDefault">
+
   <Button 
     on:click={() => (clickOutsideModal = true)}
     class="p-0 m-0">
@@ -83,26 +157,29 @@
 
   <div class="relative items-center min-h-screen w-full px-5 py-19 my-5 mx-auto md:px-12 lg:px-16 max-w-9xl lg:py-10">
     <div class="flex w-full mx-auto text-left">
-      <div class="relative inline-flex items-center mx-auto align-middle">
-        <div class="text-center">
-          <h1 class={heroText}>
-            Financial Interoperable Infrastructure Bringing Banks On-Chain
-          </h1>
-          <p class="font-neuehaas max-w-full text-xs lg:text-xl xl:text-2xl mx-auto mt-8 leading-relaxed text-gray-500">
+      <div class="relative inline-flex">
+        <div>
+          <div class="w-[883px] mb-9">
+            <span class={heroText}>
+              Interoperable Financial Infrastructure Bringing Banks  
+            </span>
+            <span class={onchain}>On-Chain</span>
+          </div>
+          <div class={lowerCopy}>
             Deposit Token Infrastructure for Direct On-Chain Asset Issuance
-          </p>
-          <div class="flex justify-center w-full max-w-2xl gap-2 mx-auto mt-6">
+          </div>
+
+          <div class="flex w-full gap-2 mx-auto mt-6">
             <div class="mt-3 rounded-lg sm:mt-0">
-              
               <a href="#anchor-learnmore" on:click={handleAnchorClick}>
-                <button class="items-center block px-5 py-4 font-medium text-center text-white transition duration-500 ease-in-out transform bg-base-50 lg:px-10 rounded-xl hover:bg-primary dark:bg-base-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                <button class={btnColor}>
                   Learn More
                 </button>
               </a> 
             </div>
             <div class="mt-3 rounded-lg sm:mt-0 sm:ml-3">
               <a href="/dashboard/fluent">
-                <button class="items-center block px-5 lg:px-10 py-3.5 text-base font-medium text-center text-secondary dark:text-neutral transition duration-500 ease-in-out transform border-2 border-white shadow-md rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
+                <button class={btnPlain}>
                   Dashboard
                 </button>
               </a> 

@@ -168,7 +168,7 @@ order: 1
           </P>
           <svelte:fragment slot="social">
             <Github href="https://github.com/" />
-            <Twitter href="https://twitter.com/" />
+            <Twitter href="https://x.com/" />
           </svelte:fragment>
         </TeamItem>
       {/each}
