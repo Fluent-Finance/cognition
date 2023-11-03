@@ -46,19 +46,21 @@ module.exports = {
 
         "base-25":         "#131313",
 
-        "base-50":         "#7140e0",
-        "base-60":         "#6200EE",
+        "base-20":         "#7140e0",
+        "base-50":         "#6200EE",
         "base-100":        "#111111",
         "base-200":        "#4B4653",
         "base-300":        "#D5D1DB",
         "base-400":        "#D5D9EC",
         "base-500":        "#F7F3FD",
-        "base-600":        "#590De5",
+        "base-550":      "#590De5",
+        "base-600":        "#6200EE",
         "base-700":        "#2A0066",
         "base-800":        "#C094FF",
         "base-900":        "#E7D6FF",
 
-        "primary":         "#590de5",
+        "primary":         "#6200EE",
+        "primary-50":      "#590de5",
         "secondary":       "#384073",
 
         "secondary-100":   "#0b001d",
@@ -104,13 +106,15 @@ module.exports = {
 
       "base-25":  "#131313",
 
-      "base-50":  "#7140e0",
+      "base-20":"#7140e0",
+      "base-50":  "#6200EE",
       "base-100": "#222222",
       "base-200": "#4B4653",
       "base-300": "#D5D1DB",
       "base-400": "#D5D9EC",
       "base-500": "#F7F3FD",
-      "base-600": "#590De5",
+      "base-600": "#6200EE",
+      "base-650":"#590De5",
       "base-700": "#2A0066",
       "base-800": "#C094FF",
       "base-900": "#E7D6FF",

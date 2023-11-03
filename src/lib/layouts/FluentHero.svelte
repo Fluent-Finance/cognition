@@ -23,10 +23,11 @@
   `;
 
   let heroText = `
-    text-slate-900 
+    text-black
     text-[90px] 
     leading-[112px]
     font-basier
+    font-medium
     max-w-9xl
     text-3xl
     md:text-6xl
@@ -35,7 +36,6 @@
     leading-none
     tracking-tighter
     dark:text-white
-    text-neutral-600
   `;
 
   let onchain = `
@@ -100,13 +100,14 @@
   `;
 
   let lowerCopy = `
+    mb-12
     w-[589px]
-    h-20
-    text-slate-900
-    text-[32px]
-    font-light
+    lg:w-[897px]
+    text-base-200
+    text-5xl 
+    font-medium
     font-basier
-    leading-10
+    leading-90
   `;
 
   function handleAnchorClick (event) {
@@ -127,8 +128,8 @@
     on:click={() => (clickOutsideModal = true)}
     class="p-0 m-0">
     <News>
-      <span class="text-sm bg-base-50 dark:bg-base-800 rounded-full text-white px-3 py-1 mr-3">New</span>
-      <span class="text-sm mx-1 px-1 font-bold opacity-80 text-base-100 dark:text-neutral">USPLUS is live!</span> 
+      <span class="text-sm bg-base-50 dark:bg-base-800 rounded-full text-white px-3 py-1 mr-3">USPlus</span>
+      <span class="text-sm mx-1 px-1 font-bold opacity-80 text-base-100 dark:text-neutral">is live!</span> 
       <span class="text-sm font-medium opacity-80 text-base-100 dark:text-neutral" >Take a look</span>
     </News>
   </Button>
@@ -155,11 +156,11 @@
     </svelte:fragment>
   </Modal>
 
-  <div class="relative items-center min-h-screen w-full px-5 py-19 my-5 mx-auto md:px-12 lg:px-16 max-w-9xl lg:py-10">
+  <div class="relative items-center min-h-screen w-full px-10 py-19 my-5 md:px-12 lg:px-16 max-w-9xl lg:py-10">
     <div class="flex w-full mx-auto text-left">
       <div class="relative inline-flex">
         <div>
-          <div class="w-[883px] mb-9">
+          <div class="w-[883px] lg:w-[1276px] mb-9">
             <span class={heroText}>
               Interoperable Financial Infrastructure Bringing Banks  
             </span>

@@ -14,19 +14,33 @@
   import _                         from 'lodash';
   import { page }                  from '$app/stores';
   import theme                     from '$lib/stores/ThemeStore';
-  import FluentLogoIconColor       from '$lib/assets/Logo-Color.svg?url';
+  // import FluentLogoIconColor       from '$lib/assets/Logo-Color.svg?url';
   import FluentLogoIconWhite       from '$lib/assets/Logo-White.svg?url';
   import FluentLogoIconBlack       from '$lib/assets/Logo-Black.svg?url';
 
   export let drawerHidden: boolean = false;
 
   $: currentTheme  = $theme;
-  $: logoIconStyle = (currentTheme === 'light' ? FluentLogoIconColor : FluentLogoIconWhite);
+  $: logoIconStyle = (currentTheme === 'light' ? FluentLogoIconBlack : FluentLogoIconWhite);
   $: activeUrl     = $page.url.pathname;
   $: drawerHidden  = drawerHidden;
 
-  let navClass    = 'bg-white dark:bg-base-100 border-none px-4 lg:px-6 py-2.5';
-  let navDivClass = 'bg-white dark:bg-base-100 flex flex-wrap justify-between items-center mx-auto max-w-full';
+  let navbarClass = `
+    bg-white
+    dark:bg-base-100
+    order-none
+    px-4
+    lg:px-6
+    py-2.5
+  `;
+
+  let navDivClass = `
+    flex
+    flex-wrap
+    bg-white
+    dark:bg-base-100
+    max-w-full
+  `;
 
   let darkModeClasses = `
     dark:hover:text-white 
@@ -34,12 +48,9 @@
   `;
 
   let divClass = `
-    justify-between 
-    items-center 
-    w-full 
     lg:flex 
     lg:w-auto 
-    lg:order-1
+    lg:order-2
   `;
 
   let ulClass = `
@@ -65,7 +76,7 @@
     text-gray-700 
     hover:bg-base-400 
     md:hover:bg-transparent 
-    md:border-0 
+    md:order-0 
     md:hover:text-primary 
     dark:text-gray-400 
     md:dark:hover:text-base-800 
@@ -110,7 +121,7 @@
     text-2xl
     sm:text-3xl
     font-basier
-    font-bold
+    font-medium
     opacity-80
     text-base-100
     dark:opacity-100
@@ -118,17 +129,19 @@
   `;
 </script>
 
-<header class="z-index-50 sticky top-0" style='z-index: 50'>
-  <Navbar class="bg-white dark:bg-base-100" let:hidden let:toggle fluid={true} {navClass} {navDivClass}>
+<header class="z-index-50 sticky top-0 px-20 mt-10" style='z-index: 50'>
+  <Navbar class="bg-white dark:bg-base-100" let:hidden let:toggle fluid={true} navClass={navbarClass} {navDivClass}>
     <NavBrand href="/">
       <Img src={logoIconStyle} class="mr-2 h-7 opacity-75 dark:invert-100" alt="Fluent Logo" />
 
       <span class={logoSpanClasses}> 
-        <span class="text-primary dark:text-base-800"> Fluent </span> Finance
+        Fluent Finance
       </span>
     </NavBrand>
 
-    <div class="flex items-center lg:order-2">
+    <div id="header-spacer" class="order-1 w-[700px] "></div>
+
+    <div class="flex items-center lg:order-3">
       <Button 
         target="_blank" 
         class={connectWalletClasses}
@@ -142,23 +155,27 @@
     <NavUl {activeUrl} {hidden} {divClass} {ulClass} {activeClass} {nonActiveClass}>
         <NavLi 
           href='/'
-          active={activeUrl === '/'}> Home
+          active={activeUrl === '/'}> About
+        </NavLi>
+        <NavLi 
+          href='/'
+          active={activeUrl === '/pages/resources'}> Resources
+        </NavLi>
+        <NavLi 
+          href='/'
+          active={activeUrl === '/pages/press'}> Press & Media
+        </NavLi>
+        <NavLi 
+          href='/blog/compliance-news'
+          active={activeUrl === '/pages/usplus'}> USPlus
         </NavLi>
         <NavLi 
           href='/pages/team'
           active={activeUrl === '/pages/team'}> Team
         </NavLi>
         <NavLi 
-          target="_blank"
-          href='https://twitter.com/fluentdao'> About
-        </NavLi>
-        <NavLi 
-          target="_blank"
-          href='https://fluentfinance.medium.com'> Engagments
-        </NavLi>
-        <NavLi 
-          target="_blank"
-          href='https://docsend.com/view/4zjd678kaifqy7jf'> Whitepaper
+          href='/blog/fluent-opsec-2023'
+          active={activeUrl === '/blog'}> Blog
         </NavLi>
     </NavUl>
   </Navbar>
