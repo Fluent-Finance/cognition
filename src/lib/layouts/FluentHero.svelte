@@ -156,7 +156,7 @@
     </svelte:fragment>
   </Modal>
 
-  <div class="relative items-center min-h-screen w-full px-10 py-19 my-5 md:px-12 lg:px-16 max-w-9xl lg:py-10">
+  <div class="relative items-center min-h-screen w-full mx-15 px-5 py-19 my-5 md:px-12 lg:px-16 max-w-9xl lg:py-10">
     <div class="flex w-full mx-auto text-left">
       <div class="relative inline-flex">
         <div>

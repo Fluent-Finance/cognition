@@ -14,7 +14,6 @@
   import _                         from 'lodash';
   import { page }                  from '$app/stores';
   import theme                     from '$lib/stores/ThemeStore';
-  // import FluentLogoIconColor       from '$lib/assets/Logo-Color.svg?url';
   import FluentLogoIconWhite       from '$lib/assets/Logo-White.svg?url';
   import FluentLogoIconBlack       from '$lib/assets/Logo-Black.svg?url';
 
@@ -39,7 +38,6 @@
     flex-wrap
     bg-white
     dark:bg-base-100
-    max-w-full
   `;
 
   let darkModeClasses = `
@@ -129,8 +127,8 @@
   `;
 </script>
 
-<header class="z-index-50 sticky top-0 px-20 mt-10" style='z-index: 50'>
-  <Navbar class="bg-white dark:bg-base-100" let:hidden let:toggle fluid={true} navClass={navbarClass} {navDivClass}>
+<header class="z-index-50 sticky top-0 px-2 mt-10" style='z-index: 50'>
+  <Navbar class="bg-white dark:bg-base-100" let:hidden let:toggle fluid={false} navClass={navbarClass} {navDivClass}>
     <NavBrand href="/">
       <Img src={logoIconStyle} class="mr-2 h-7 opacity-75 dark:invert-100" alt="Fluent Logo" />
 
