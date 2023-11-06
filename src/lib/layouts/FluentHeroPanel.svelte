@@ -55,8 +55,8 @@
   `;
 </script> 
 
-<Section id="anchor-learn" class="bg-white dark:bg-transparent">
-  <div class="bg-neutral rounded-3xl min-h-fit max-w-screen-xl text-center py-8 px-8 mx-8">
+<Section class="bg-white dark:bg-transparent">
+  <div id="anchor-learn" class="bg-neutral rounded-3xl min-h-fit max-w-screen-xl text-center py-8 px-8 mx-8">
 
     <div class="flex w-xl py-20 mx-30">
       <h1 class={h1classes}>
