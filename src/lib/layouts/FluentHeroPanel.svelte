@@ -4,6 +4,8 @@
   import Fingerprint from '$lib/utils/icons/Fingerprint.svelte';
   import Clipboard   from '$lib/utils/icons/Clipboard.svelte';
 
+  import { Section } from 'flowbite-svelte-blocks';
+
   export let classes = 'mx-auto mb-4 w-15 h-15 text-primary-600 dark:text-primary-500';
 
   let pclasses = `
@@ -53,8 +55,8 @@
   `;
 </script> 
 
-<section class="bg-white dark:bg-transparent">
-  <div id="anchor-learnmore" class="bg-neutral rounded-2xl py-8 px-15 mx-15 min-h-fit max-w-screen-xl text-center sm:py-16 lg:px-6">
+<Section id="anchor-learn" class="bg-white dark:bg-transparent">
+  <div class="bg-neutral rounded-3xl min-h-fit max-w-screen-xl text-center py-8 px-8 mx-8">
 
     <div class="flex w-xl py-20 mx-30">
       <h1 class={h1classes}>
@@ -62,6 +64,7 @@
         for a Fragmented Financial System
       </h1> 
     </div>
+
     <div class="flex w-lg px-40 mx-20">
       <p class={pclasses}>
         Public blockchains, digital native systems, and digital assets are here to stay. 
@@ -95,4 +98,4 @@
       </div>
     </div>
   </div>
-</section>
+</Section>

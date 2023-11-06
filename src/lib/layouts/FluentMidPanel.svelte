@@ -1,5 +1,11 @@
 <!-- handcoded with ♥︎  by ⚡️-𝙆𝙊𝘿𝞝𝙋𝞸𝞝𝙏-⚡️--->
 <script lang="ts">
+  import Inoutcircle from '$lib/utils/icons/Inoutcircle.svelte';
+  import Fingerprint from '$lib/utils/icons/Fingerprint.svelte';
+  import Clipboard   from '$lib/utils/icons/Clipboard.svelte';
+
+  import { Hr } from 'flowbite-svelte';
+
   import { 
     Section, 
     HeroHeader, 
@@ -15,6 +21,37 @@
     RocketSolid,
     CogOutline
   } from 'flowbite-svelte-icons';
+
+  let pclasses = `
+    font-normal 
+    font-neuehass
+    leading-loose
+    text-center
+    align-center
+    my-10
+    mx-20
+    px-20
+    text-lg
+    md:text-lg  
+    lg:text-lg 
+    xl:text-xl
+    text-base-300
+    dark:text-gray-400
+  `;
+
+  let h1classes = `
+    mx-5
+    font-basier 
+    font-semibold
+    leading-none
+    tracking-tight
+    text-white
+    dark:text-white
+    text-2xl
+    md:text-5xl
+    lg:text-6xl
+    xl:text-7xl
+  `; 
 
   let h3Class = `
     text-sm
@@ -49,73 +86,103 @@
     md:p-8
   `;
   
-  let classes = {
-    class:   "max-w-full mb-8 lg:mb-16",
-    h2Class: "mb-4 text-4xl lg:text-6xl xl:text-7xl tracking-tight font-extrabold text-gray-900 dark:text-white",
-    pClass:  "text-gray-500 text-xl sm:text-2xl lg:text-3xl xl:text-4xl dark:text-gray-400",
+  let headerclasses = {
+    class:   "max-w-full",
+    h2Class: "mb-9 text-4xl lg:text-6xl xl:text-5xl tracking-tight font-medium text-neutral dark:text-white",
+    pClass:  "text-neutral font-normal font-neuehass text-lg dark:text-gray-400",
   };
+
+  let deposit = `
+    text-neutral-50
+    text-[64px]
+    font-bold
+    font-['Basier
+    Circle']
+    leading-[64px]
+  `;
+
+  let token = `
+    text-purple-400
+    text-[64px]
+    font-bold
+    font-['Basier
+    Circle']
+    leading-[64px]
+  `;
+
+  let shader = ` 
+    text-base-800 
+    font-basier 
+  `;
+
+  let classes = 'mx-auto mb-4 w-15 h-15 text-primary-600 dark:text-primary-500';
 </script>
 
-<div class="container flex flex-col min-w-full mx-auto">
-  <Section name="feature" class="bg-white dark:bg-base-100">
+<Section id="anchor-deposit" name="feature" class="bg-white dark:bg-base-100">
+  <div class="bg-base-600 rounded-3xl text-center justify-center min-h-fit max-w-screen-xl text-center py-10 px-8 mx-12 my-0">
 
-    <div class="min-h-screen"> 
-      <HeroHeader {...classes}> 
-        <svelte:fragment slot="h2">Deposit Token Infrastructure</svelte:fragment>
-        <svelte:fragment slot="paragraph">
-          Deposit tokens are stable-valued, regulatory-compliant digital assets interoperable with core banking systems. 
-          With Fluent, banks may issue fiat-equivalent tokens directly to public blockchains 
-          based on outstanding customer deposits and central bank-issued CBDCs.
-        </svelte:fragment>
-      </HeroHeader>
-      <FeatureDefault>
-        <div class="flex flex-grow"> 
-          <FeatureItem class={featureItemClass} {h3Class} {iconClass}>
-            <svelte:fragment slot="icon"><DollarSolid size="xl" /></svelte:fragment>
-            <svelte:fragment slot="h3">1-Click Issuance & Redemption</svelte:fragment>
-          </FeatureItem>
-          <FeatureItem class={featureItemClass} {h3Class} {iconClass}>
-            <svelte:fragment slot="icon"><CogOutline size="xl" /></svelte:fragment>
-            <svelte:fragment slot="h3">Regulated & Compliant</svelte:fragment>
-          </FeatureItem>
-          <FeatureItem class={featureItemClass} {h3Class} {iconClass}>
-            <svelte:fragment slot="icon"><LandmarkSolid size="xl" /></svelte:fragment>
-            <svelte:fragment slot="h3">Federated Custody</svelte:fragment>
-          </FeatureItem>
+    <HeroHeader {...headerclasses}> 
+      <svelte:fragment slot="h2">
+        <div class="py-20 mx-10">
+          <h1 class={h1classes}>
+            Deposit <span class={shader}>Token</span>
+            Infrastructure
+          </h1>
+        </div>
+      </svelte:fragment>
+      <svelte:fragment slot="paragraph">
+        <div class="flex w-lg px-40 mx-20">
+          <p class={pclasses}>
+            Deposit tokens are stable-valued, regulatory-compliant digital 
+            assets interoperable with core banking systems. With Fluent, 
+            banks may issue fiat-equivalent tokens directly to public blockchains 
+            based on outstanding customer deposits and central bank-issued CBDCs.
+          </p>
         </div> 
-      </FeatureDefault>
-    </div> 
+      </svelte:fragment>
+    </HeroHeader>
 
-    <div class="min-h-screen"> 
-      <HeroHeader {...classes}> 
+    <FeatureDefault>
+      <div class="flex w-xl mt-1 px-20 mx-80">
+        <div class="my-10 lg:my-12 space-y-8 md:grid md:grid-cols-3 md:gap-12 md:space-y-0">
+          <div>
+            <Inoutcircle class={classes} color="white" />
+            <h3 class="mb-2 text-lg font-bold dark:text-white">1-Click Issuance & Redemption</h3>
+          </div>
+          <div>
+            <Inoutcircle class={classes} color="white" />
+            <h3 class="mb-2 text-xl font-bold dark:text-white">Regulated & Compliant</h3>
+          </div>
+          <div>
+            <Inoutcircle class={classes} color="white" />
+            <h3 class="mb-2 text-xl font-bold dark:text-white">Federated Custody</h3>
+          </div>
+        </div>
+      </div>
+    </FeatureDefault>
+
+    <Hr classHr="my-10 mx-80 justify-center" /> 
+
+    <div class="my-20">
+      <HeroHeader {...headerclasses}> 
         <svelte:fragment slot="h2">On the Rise</svelte:fragment>
         <svelte:fragment slot="paragraph">
-          Deposit tokens already produce unprecedented efficiencies in cross-border transactions and humanitarian aid delivery.
+          Deposit tokens already produce unprecedented efficiencies 
+          in cross-border transactions and humanitarian aid delivery.
         </svelte:fragment>
-      </HeroHeader>
-      <FeatureDefault>
-        <div class="flex flex-grow"> 
-          <FeatureItem class={featureItemClass} {h3Class} {iconClass}>
-            <svelte:fragment slot="icon"><ChartSolid size="xl" /></svelte:fragment>
-            <svelte:fragment slot="h3">Reserve Transparancy</svelte:fragment>
-          </FeatureItem>
-          <FeatureItem class={featureItemClass} {h3Class} {iconClass}>
-            <svelte:fragment slot="icon"><BriefcaseSolid size="xl" /></svelte:fragment>
-            <svelte:fragment slot="h3">Cross Border Transmission</svelte:fragment>
-          </FeatureItem>
-          <FeatureItem class={featureItemClass} {h3Class} {iconClass}>
-            <svelte:fragment slot="icon"><RocketSolid size="xl" /></svelte:fragment>
-            <svelte:fragment slot="h3">CBDC Bank Compatibility</svelte:fragment>
-          </FeatureItem>
-        </div> 
-      </FeatureDefault>
+      </HeroHeader> 
     </div> 
 
-    <div class="py-8 px-4 my-auto min-h-screen min-w-full sm:py-16 lg:px-4">
+  </div>
+</Section>
+
+<Section id="anchor-principles" class="bg-white dark:bg-base-100 mt-0">
+  <div class="bg-base-100 rounded-3xl text-center justify-center min-h-fit max-w-screen-xl text-center py-10 px-8 mx-12">
+    <div class="py-8 px-4 min-w-full">
       <div class="gap-8 py-8 px-4 mx-auto xl:gap-16 sm:py-16 lg:px-6 ">
-        <div class="text-gray-500 dark:text-gray-400 sm:text-lg">
-          <h2 class="mb-4 text-6xl xl:text-7xl tracking-tight font-extrabold text-gray-900 dark:text-white">
-            Operating Principles
+        <!-- <div class="text-gray-500 dark:text-gray-400 sm:text-lg"> -->
+          <h2 class="mb-4 text-6xl xl:text-7xl tracking-tight font-semibold font-extrabold text-white dark:text-white">
+            Operating <span class={shader}>Principles</span>
           </h2>
           <p class="mb-8 font-light text-xl lg:text-2xl">
             Fluent’s engineering and business development efforts are grounded 
@@ -153,8 +220,8 @@
               </div>
             </div>
           </div>
-        </div>
+        <!-- </div> -->
       </div>
-    </div>
-  </Section>
-</div>
+    <!-- </div> -->
+  </div>
+</Section>

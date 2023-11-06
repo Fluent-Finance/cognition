@@ -48,7 +48,7 @@ module.exports = {
 
         "base-20":         "#7140e0",
         "base-50":         "#6200EE",
-        "base-100":        "#111111",
+        "base-100":        "#171b2f",
         "base-200":        "#4B4653",
         "base-300":        "#D5D1DB",
         "base-400":        "#D5D9EC",
@@ -56,7 +56,8 @@ module.exports = {
         "base-550":      "#590De5",
         "base-600":        "#6200EE",
         "base-700":        "#2A0066",
-        "base-800":        "#C094FF",
+        "base-800":        "#b996f8",
+        "base-850":        "#C094FF",
         "base-900":        "#E7D6FF",
 
         "primary":         "#6200EE",
