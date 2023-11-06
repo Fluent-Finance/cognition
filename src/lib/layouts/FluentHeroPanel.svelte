@@ -41,6 +41,13 @@
     xl:text-7xl
   `; 
 
+  let h3classes = `
+    mb-2 
+    text-lg 
+    font-normal  
+    text-black 
+    dark:text-white
+  `;
   let onchain = `
     ml-2 
     text-base-50 
@@ -74,26 +81,26 @@
       </p>
     </div>
 
-    <div class="flex w-lg px-40 mx-20">
+    <div class="flex w-lg px-40 mx-40">
       <h2 class="font-basier text-center my-10 mx-30 px-20 text-3xl font-medium text-base-200 dark:text-base-300 xl:text-5xl">
         Fluent’s proprietary infrastructure 
         enables banks and FIs to enter the on-chain world
       </h2> 
     </div>
 
-    <div class="flex w-xl mt-10 px-20 mx-80">
-      <div class="my-10 lg:my-12 space-y-8 md:grid md:grid-cols-3 md:gap-12 md:space-y-0">
+    <div class="w-xl mt-6 mb-10 px-20 mx-10">
+      <div class="my-10 mx-10 space-y-8 md:grid md:grid-cols-3 md:gap-20 md:space-y-0">
         <div>
           <Fingerprint class={classes} />
-          <h3 class="mb-2 text-lg font-bold dark:text-white">Tokenize Off-Chain Assets</h3>
+          <h3 class={h3classes}>Tokenize Off-Chain Assets</h3>
         </div>
         <div>
           <Clipboard class={classes} />
-          <h3 class="mb-2 text-xl font-bold dark:text-white">Leverage Off-Chain Collateral</h3>
+          <h3 class={h3classes}>Leverage Off-Chain Collateral</h3>
         </div>
         <div>
           <Inoutcircle class={classes} />
-          <h3 class="mb-2 text-xl font-bold dark:text-white">Issue & Redeem Instantly</h3>
+          <h3 class={h3classes}>Issue & Redeem Instantly</h3>
         </div>
       </div>
     </div>

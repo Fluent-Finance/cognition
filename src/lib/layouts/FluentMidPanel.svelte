@@ -123,7 +123,7 @@
 
     <HeroHeader {...headerclasses}> 
       <svelte:fragment slot="h2">
-        <div class="py-20 mx-10">
+        <div class="py-10 mx-10">
           <h1 class={h1classes}>
             Deposit <span class={shader}>Token</span>
             Infrastructure
@@ -143,25 +143,25 @@
     </HeroHeader>
 
     <FeatureDefault>
-      <div class="flex w-xl mt-1 px-20 mx-80">
-        <div class="my-10 lg:my-12 space-y-8 md:grid md:grid-cols-3 md:gap-12 md:space-y-0">
+    <div class="w-xl mt-6 mb-10 px-30 mx-20">
+      <div class="my-10 mx-10 space-y-8 md:grid md:grid-cols-3 md:gap-10 md:space-y-0">
           <div>
             <Inoutcircle class={classes} color="white" />
-            <h3 class="mb-2 text-lg font-bold dark:text-white">1-Click Issuance & Redemption</h3>
+            <h3 class="mb-2 text-lg font-normal dark:text-white">1-Click Issuance & Redemption</h3>
           </div>
           <div>
             <Inoutcircle class={classes} color="white" />
-            <h3 class="mb-2 text-xl font-bold dark:text-white">Regulated & Compliant</h3>
+            <h3 class="mb-2 text-xl font-normal dark:text-white">Regulated & Compliant</h3>
           </div>
           <div>
             <Inoutcircle class={classes} color="white" />
-            <h3 class="mb-2 text-xl font-bold dark:text-white">Federated Custody</h3>
+            <h3 class="mb-2 text-xl font-normal dark:text-white">Federated Custody</h3>
           </div>
         </div>
       </div>
     </FeatureDefault>
 
-    <Hr classHr="my-10 mx-80 justify-center" /> 
+    <Hr classHr="my-10 mx-40" /> 
 
     <div class="my-20">
       <HeroHeader {...headerclasses}> 
