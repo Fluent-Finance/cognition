@@ -3,9 +3,9 @@
   import '../app.css';
   import _ from 'lodash';
 
-  import { onMount }  from 'svelte';
-  import { MetaTags } from 'svelte-meta-tags';
-  import { sineIn }   from 'svelte/easing';
+  import { onMount }     from 'svelte';
+  import { MetaTags }    from 'svelte-meta-tags';
+  import { sineIn }      from 'svelte/easing';
   
   import { Drawer, CloseButton } from 'flowbite-svelte';
 
