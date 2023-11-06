@@ -35,16 +35,16 @@ bun install
 . ./bootstrap.env 
 ```
 
-### :vertical_traffic_light: Run
-
-```bash
-bun go
-```
-
 ### :hammer: Build
 
 ```bash
 bun do
+```
+
+### :vertical_traffic_light: Run
+
+```bash
+bun go
 ```
 
 ### :checkered_flag: Preview (production)
