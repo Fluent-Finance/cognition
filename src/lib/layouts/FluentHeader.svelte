@@ -12,52 +12,54 @@
   } from 'flowbite-svelte';
 
   import _                         from 'lodash';
+  import { onMount }               from 'svelte';
   import { page }                  from '$app/stores';
   import theme                     from '$lib/stores/ThemeStore';
   import FluentLogoIconWhite       from '$lib/assets/Logo-White.svg?url';
   import FluentLogoIconBlack       from '$lib/assets/Logo-Black.svg?url';
 
-  export let drawerHidden: boolean = false;
+  let width: number;
+  let isFluid: boolean   = false;
+  let breakPoint: number = 2160;
 
   $: currentTheme  = $theme;
   $: logoIconStyle = (currentTheme === 'light' ? FluentLogoIconBlack : FluentLogoIconWhite);
   $: activeUrl     = $page.url.pathname;
-  $: drawerHidden  = drawerHidden;
+  $: isFluid       = isFluid;
 
-  let navbarClass = `
-    bg-white
-    dark:bg-base-100
-    order-none
-    px-4
-    lg:px-6
-    py-2.5
-  `;
+  $: if (width >= breakPoint) {
+    isFluid = true;
+  } else {
+    isFluid = false;
+  }
 
-  let navDivClass = `
-    flex
-    flex-wrap
-    bg-white
-    dark:bg-base-100
-  `;
-
+  onMount(() => {
+    if (width >= breakPoint) {
+      isFluid = true;
+    } else {
+      isFluid = false;
+    }
+  });
+ 
   let darkModeClasses = `
     dark:hover:text-white 
     hover:text-base-900
   `;
 
   let divClass = `
-    lg:flex 
-    lg:w-auto 
-    lg:order-2
+    mx-3
+    md:flex
+    order-0
   `;
 
   let ulClass = `
-    flex flex-col 
     mt-4 
-    font-medium 
-    lg:flex-row 
-    lg:space-x-8 
     lg:mt-0
+    flex 
+    flex-col 
+    md:flex-row 
+    font-medium 
+    md:space-x-7 
   `;
 
   let activeClass = `
@@ -114,6 +116,7 @@
   `;
 
   let logoSpanClasses = `
+    order-1
     self-center
     whitespace-nowrap
     text-2xl
@@ -127,30 +130,18 @@
   `;
 </script>
 
-<header class="z-index-50 sticky top-0 px-2 mt-10" style='z-index: 50'>
-  <Navbar class="bg-white dark:bg-base-100" let:hidden let:toggle fluid={false} navClass={navbarClass} {navDivClass}>
+<header class="realative px-1 z-index-50 sticky mx-0 px-0 top-0 mt-10" style='z-index: 50'>
+  <Navbar class="px-1 bg-white dark:bg-base-100" let:hidden let:toggle fluid={isFluid}>
+
     <NavBrand href="/">
       <Img src={logoIconStyle} class="mr-2 h-7 opacity-75 dark:invert-100" alt="Fluent Logo" />
-
       <span class={logoSpanClasses}> 
         Fluent Finance
       </span>
     </NavBrand>
 
-    <div id="header-spacer" class="order-1 w-[700px] "></div>
-
-    <div class="flex items-center lg:order-3">
-      <Button 
-        target="_blank" 
-        class={connectWalletClasses}
-        href="https://app.fluent.finance">
-          Consumer Portal
-      </Button>
-      <DarkMode class={darkModeClasses} />
-      <NavHamburger on:click={toggle} btnClass={hamburgerClasses} />
-    </div>
-
-    <NavUl {activeUrl} {hidden} {divClass} {ulClass} {activeClass} {nonActiveClass}>
+    <div class="flex items-center lg:order-2">
+      <NavUl {activeUrl} {hidden} {divClass} {ulClass} {activeClass} {nonActiveClass}>
         <NavLi 
           href='/'
           active={activeUrl === '/'}> About
@@ -175,6 +166,16 @@
           href='/blog/fluent-opsec-2023'
           active={activeUrl === '/blog'}> Blog
         </NavLi>
-    </NavUl>
+      </NavUl>
+
+      <Button 
+        target="_blank" 
+        class={connectWalletClasses}
+        href="https://app.fluent.finance">
+          Consumer Portal
+      </Button>
+      <DarkMode class={darkModeClasses} />
+      <NavHamburger on:click={toggle} btnClass={hamburgerClasses} />
+    </div>
   </Navbar>
 </header>

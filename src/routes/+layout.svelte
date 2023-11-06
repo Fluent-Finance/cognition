@@ -18,7 +18,7 @@
   export let data: PageData; 
 
   let width: number;
-  let breakPoint: number    = 2160;
+  let breakPoint: number    = 1280;
   let backdrop: boolean     = false; 
   let drawerHidden: boolean = true;
   let activateClickOutside  = true;
@@ -100,10 +100,9 @@
 /> 
 
 <svelte:window bind:innerWidth={width} />
-<div class='flex flex-col w-full mb-auto mx-auto'> 
+<div class='flex flex-col w-full'> 
 
   <FluentHeader  
-    bind:drawerHidden={drawerHidden} 
     on:toggleDrawer={toggleDrawer} />  
 
   <Drawer
