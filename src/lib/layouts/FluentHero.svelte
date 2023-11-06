@@ -22,35 +22,6 @@
     xl:w-25
   `;
 
-  let heroText = `
-    text-black
-    text-[90px] 
-    leading-[112px]
-    font-basier
-    font-medium
-    max-w-9xl
-    text-3xl
-    md:text-6xl
-    lg:text-7xl
-    xl:text-9xl
-    leading-none
-    tracking-tighter
-    dark:text-white
-  `;
-
-  let onchain = `
-    ml-2 
-    text-base-50 
-    font-medium
-    font-basier 
-    leading-[112px]
-    max-w-9xl
-    text-3xl
-    md:text-6xl
-    lg:text-7xl
-    xl:text-9xl
-  `;
-
   let btnColor = `
     items-center
     block
@@ -101,14 +72,73 @@
 
   let lowerCopy = `
     mb-12
-    w-[589px]
-    lg:w-[897px]
+    w-[387px]
+    xs:w-[487px]
+    sm:w-[637px]
+    md:w-[797px]
+    lg:w-[797px]
     text-base-200
-    text-5xl 
+    text-2xl 
+    xs:text-3xl 
+    sm:text-4xl 
+    md:text-5xl 
+    lg:text-5xl 
+    xl:text-5xl 
     font-medium
     font-basier
     leading-90
   `;
+
+  let divHeroTextClass = `
+    my-12
+    w-[583px] 
+    xs:w-[733px] 
+    sm:w-[883px] 
+    md:w-[983px] 
+    lg:w-[1276px] 
+  `;
+  let divHeroClass = `
+    relative
+    min-h-screen
+    max-w-9xl
+    mx-10
+    px-5
+    my-5
+    py-19
+    md:px-12
+    lg:px-16
+    lg:py-10
+  `;
+
+  let shader = `
+    text-base-50 
+    xs:text-6xl
+    sm:text-7xl
+    md:text-8xl
+    lg:text-9xl
+  `;
+
+  let heroText = `
+    text-black
+    leading-[40px]
+    xs:leading-[58px]
+    sm:leading-[72px]
+    md:leading-[90px]
+    lg:leading-[112px]
+    xl:leading-[112px]
+    font-basier
+    font-medium
+    max-w-9xl
+    text-[50px] 
+    xs:text-6xl
+    sm:text-7xl
+    md:text-8xl
+    lg:text-9xl
+    xl:text-9xl
+    tracking-tighter
+    dark:text-white
+  `;
+
 
   function handleAnchorClick (event) {
 		event.preventDefault()
@@ -156,15 +186,15 @@
     </svelte:fragment>
   </Modal>
 
-  <div class="relative items-center min-h-screen w-full mx-15 px-5 py-19 my-5 md:px-12 lg:px-16 max-w-9xl lg:py-10">
-    <div class="flex w-full mx-auto text-left">
+  <div class={divHeroClass}>
+    <div class="flex text-left">
       <div class="relative inline-flex">
         <div>
-          <div class="w-[883px] lg:w-[1276px] mb-9">
+          <div class={divHeroTextClass}>
             <span class={heroText}>
               Interoperable Financial Infrastructure Bringing Banks  
+              <span class={shader}>On-Chain</span>
             </span>
-            <span class={onchain}>On-Chain</span>
           </div>
           <div class={lowerCopy}>
             Deposit Token Infrastructure for Direct On-Chain Asset Issuance
