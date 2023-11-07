@@ -8,34 +8,25 @@
 
   export let classes = 'mx-auto mb-4 w-15 h-15 text-primary-600 dark:text-primary-500';
 
-  let pclasses = `
-    font-normal 
-    font-neuehass
-    leading-loose
-    text-center
-    align-center
-    my-10
-    mx-20
-    px-20
-    text-lg
-    md:text-lg  
-    lg:text-lg 
-    xl:text-xl
-    text-gray-500
-    dark:text-gray-400
-  `;
-
   let h1classes = `
     font-basier 
     font-semibold
-    my-0
-    mx-20
-    px-40
+    leading-none
+    tracking-tight
+    my-10
+    mx-1
+    sm:mx-20
+    md:mx-20
+    lg:mx-10
+    lg:px-40
     max-w-full
+    text-[30px]
     text-center
     text-black
     dark:text-white
-    text-2xl
+    text-3xl
+    xs:text-3xl
+    sm:text-4xl
     md:text-5xl
     lg:text-6xl
     xl:text-7xl
@@ -48,31 +39,101 @@
     text-black 
     dark:text-white
   `;
-  let onchain = `
-    ml-2 
+
+  let shader = `
     text-base-50 
-    font-medium
-    font-basier 
-    leading-[112px]
-    max-w-9xl
-    text-2xl
-    md:text-5xl
-    lg:text-6xl
-    xl:text-7xl
   `;
+
+  let anchorClasses = `
+    flex
+    flex-col 
+    bg-neutral
+    rounded-3xl
+    min-h-fit
+    text-center
+    py-8
+    px-8
+    mx-8
+  `;
+
+  let pDivClasses = `
+    font-normal 
+    font-neuehass
+    leading-loose
+    text-center
+    align-center
+    px-0
+    mx-0
+    xs:mx-5 
+    sm:mx-10 
+    md:mx-20 
+    lg:mx-30 
+    xs:px-10 
+    sm:px-20 
+    md:px-30 
+    lg:px-40 
+  `;
+
+  let pclasses = `
+    my-0
+    mx-10
+    xs:px-0
+    sm:px-3
+    md:px-10
+    lg:px-2
+    text-sm
+    md:text-lg  
+    lg:text-xl  
+    xl:text-2xl
+    text-gray-500
+    dark:text-gray-400
+  `;
+
+  let h2Classes = `
+    font-basier
+    text-center
+    text-xl
+    xs:text-2xl
+    sm:text-3xl
+    md:text-4xl
+    lg:text-4xl
+    xl:text-6xl
+    my-20
+    xs:px-2 
+    sm:px-5 
+    md:px-10 
+    lg:px-20 
+    font-medium
+    text-base-200
+    dark:text-base-300
+  `;
+
+  let lowerCopy = `
+    px-1 
+    mx-1
+    xs:mx-10 
+    sm:mx-20 
+    md:mx-30 
+    lg:mx-40 
+    xs:px-2 
+    sm:px-20 
+    md:px-30 
+    lg:px-0 
+  `;
+
 </script> 
 
 <Section class="bg-white dark:bg-transparent">
-  <div id="anchor-learn" class="bg-neutral rounded-3xl min-h-fit max-w-screen-xl text-center py-8 px-8 mx-8">
+  <div id="anchor-learn" class={anchorClasses}>
 
-    <div class="flex w-xl py-20 mx-30">
+    <div class="lg:py-10 lg:mx-30">
       <h1 class={h1classes}>
-        Interoperable <span class={onchain}>Infrastructure</span>
+        Interoperable <span class={shader}>Infrastructure</span>
         for a Fragmented Financial System
       </h1> 
     </div>
 
-    <div class="flex w-lg px-40 mx-20">
+    <div class={pDivClasses}>
       <p class={pclasses}>
         Public blockchains, digital native systems, and digital assets are here to stay. 
         Traditional financial institutions, banks, and custodians are too. 
@@ -81,14 +142,14 @@
       </p>
     </div>
 
-    <div class="flex w-lg px-40 mx-40">
-      <h2 class="font-basier text-center my-10 mx-30 px-20 text-3xl font-medium text-base-200 dark:text-base-300 xl:text-5xl">
+    <div class={lowerCopy}>
+      <h2 class={h2Classes}>
         Fluent’s proprietary infrastructure 
         enables banks and FIs to enter the on-chain world
       </h2> 
     </div>
 
-    <div class="w-xl mt-6 mb-10 px-20 mx-10">
+    <div class="mt-6 mb-10 lg:px-20 lg:mx-10">
       <div class="my-10 mx-10 space-y-8 md:grid md:grid-cols-3 md:gap-20 md:space-y-0">
         <div>
           <Fingerprint class={classes} />
