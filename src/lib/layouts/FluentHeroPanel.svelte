@@ -6,7 +6,16 @@
 
   import { Section } from 'flowbite-svelte-blocks';
 
-  export let classes = 'mx-auto mb-4 w-15 h-15 text-primary-600 dark:text-primary-500';
+  export let iconClasses = `
+    mx-auto
+    mb-4
+    w-10
+    h-10
+    xs:w-15
+    xs:h-15
+    text-primary-600
+    dark:text-primary-500
+  `;
 
   let h1classes = `
     font-basier 
@@ -18,7 +27,7 @@
     mx-0
     xs:mx-2
     sm:mx-3
-    md:mx-20
+    md:mx-2
     lg:mx-3
     xl:mx-0
 
@@ -29,10 +38,10 @@
 
     w-full 
     text-[30px]
+    xs:text-[40px]
     text-center
     text-black
     dark:text-white
-    text-xl
     xs:text-3xl
     sm:text-5xl
     md:text-6xl
@@ -42,7 +51,11 @@
 
   let h3classes = `
     mb-2 
-    text-lg 
+    text-xs 
+    xs:text-sm 
+    sm:text-md 
+    md:text-lg 
+    lg:text-xl  
     font-normal  
     text-black 
     dark:text-white
@@ -81,11 +94,11 @@
     px-0
     mx-0
     xs:mx-5 
-    sm:mx-10 
+    sm:mx-5 
     md:mx-20 
     lg:mx-30 
     xs:px-10 
-    sm:px-20 
+    sm:px-10 
     md:px-30 
     lg:px-40 
   `;
@@ -131,12 +144,12 @@
     px-1 
     mx-1
     xs:mx-10 
-    sm:mx-20 
+    sm:mx-10 
     md:mx-30 
     lg:mx-60 
     xl:mx-40 
     xs:px-2 
-    sm:px-20 
+    sm:px-10 
     md:px-30 
     lg:px-5 
     xl:px-0 
@@ -151,11 +164,11 @@
       sm:py-10
       lg:py-10 
 
-      sm:px-10
+      sm:px-3
       md:px-0
 
       xs:mx-10
-      sm:mx-20
+      sm:mx-10
       md:mx-0
       lg:mx-30
       xl:mx-10">
@@ -182,17 +195,18 @@
     </div>
 
     <div class="mt-0 mb-10 xs:mt-6 lg:px-20 lg:mx-10">
-      <div class="my-10 mx-10 space-y-8 xs:my-1 xs:grid xs:grid-cols-3 xs:gap-20 xs:space-y-0">
+      <!-- <div class="my-10 mx-10 space-y-8 xs:my-1 xs:grid xs:grid-cols-3 xs:gap-20 xs:space-y-0"> -->
+      <div class="my-5 p-1 mx-1 sm:mx-10 grid grid-cols-3 gap-5 xs:gap-10 space-y-0">
         <div>
-          <Fingerprint class={classes} />
+          <Fingerprint class={iconClasses} />
           <h3 class={h3classes}>Tokenize Off-Chain Assets</h3>
         </div>
         <div>
-          <Clipboard class={classes} />
+          <Clipboard class={iconClasses} />
           <h3 class={h3classes}>Leverage Off-Chain Collateral</h3>
         </div>
         <div>
-          <Inoutcircle class={classes} />
+          <Inoutcircle class={iconClasses} />
           <h3 class={h3classes}>Issue & Redeem Instantly</h3>
         </div>
       </div>

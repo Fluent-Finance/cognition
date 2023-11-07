@@ -10,29 +10,6 @@
     LinkSolid, 
   } from 'flowbite-svelte-icons';
 
-  import { Img }        from 'flowbite-svelte';
-  import theme          from '$lib/stores/ThemeStore';
-  import footerImgDark  from '$lib/assets/dark_large_fluent_footer.png?w=2160&format=webp;png&as=run';
-  import footerImgLight from '$lib/assets/light_large_fluent_footer.png?w=2160&format=webp;png&as=run';
-
-  $: currentTheme = $theme;
-  $: footerImage = (currentTheme === 'light' ? footerImgLight : footerImgDark);
-
-  let footerImgClasses = `
-    bg-white 
-    dark:bg-transparent 
-    dark:hover:invert-0 
-    max-w-full 
-    mt-0 mx-auto mb-auto
-    text-center 
-    justify-between 
-    transition-all 
-    filter 
-    invert-0 
-    dark:invert 
-    grayscale 
-    hover:grayscale-0`;
-
   let iconClasses = `
     w-6 h-6 
     text-gray-500 
@@ -85,7 +62,6 @@
     Fluent Finance Inc. & Fluent Federation Corp. 
   `);
 </script>
-
 
 <div class={backgroundClasses}>  
   <div class={lowerFooterClasses}>

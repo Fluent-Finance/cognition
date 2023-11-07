@@ -73,7 +73,7 @@
   let lowerCopy = `
     mb-12
     min-w-[200px]
-    max-w-[387px]
+    max-w-[337px]
     xs:max-w-[487px]
     sm:max-w-[637px]
     md:max-w-[797px]
