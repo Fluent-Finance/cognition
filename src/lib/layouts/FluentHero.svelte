@@ -92,7 +92,7 @@
   let divHeroClass = `
     relative
     min-h-screen
-    max-w-9xl
+    max-w-full
 
     my-5
 
@@ -111,11 +111,16 @@
 
   let divHeroTextClass = `
     my-12
-    w-full  
-    xs:w-[733px] 
-    sm:w-[883px] 
+    max-w-[483px]
+    xs:max-w-[583px]
+    sm:max-w-[733px]
+    md:max-w-[983px]
+    lg:max-w-[1283px]
+    xs:w-[583px]
+    sm:w-[733px] 
     md:w-[983px] 
-    lg:w-[1276px] 
+    lg:w-[1283px] 
+    xl:w-[1476px] 
   `;
 
   let shader = `
@@ -194,7 +199,7 @@
   </Modal>
 
   <div class={divHeroClass}>
-    <div class="flex text-left">
+    <div class="text-left">
       <div class="max-w-screen-xl relative">
         <div>
           <div class={divHeroTextClass}>

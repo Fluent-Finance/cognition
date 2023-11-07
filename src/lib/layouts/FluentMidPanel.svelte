@@ -134,11 +134,12 @@
     bg-base-600
     rounded-3xl
     min-h-fit
-    max-w-xl   
+    max-w-full    
     text-center
-    py-1
-    px-1
-    mx-1
+    my-0
+    py-0
+    px-3
+    mx-3
     xs:py-8
     xs:px-8
     xs:mx-8
@@ -153,9 +154,8 @@
     bg-base-100
     rounded-3xl
     min-h-fit
-    w-full
     text-center
-    py-1
+    py-0
     px-1
     mx-1
     xs:py-8
@@ -242,8 +242,12 @@
 <Section id="anchor-principles" class="bg-white dark:bg-base-100 mt-0">
   <div class={lowerAnchorClasses}>
   <div class="">
-    <div class="py-8 px-4">
-      <div class="gap-8 py-8 px-4 mx-auto xl:gap-16 sm:py-6 lg:px-6 ">
+    <div class="
+        py-0
+        px-0
+        xs:py-8 
+        xs:px-4">
+      <div class="gap-8 py-0 sm:py-8 sm:px-4 xl:gap-16 sm:py-6 lg:px-6 ">
           <h2 class="mb-4 text-6xl xl:text-7xl tracking-tight font-semibold font-extrabold text-white dark:text-white">
             Operating <span class={shader}>Principles</span>
           </h2>

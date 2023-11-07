@@ -15,7 +15,7 @@
     tracking-tight
     my-10
 
-    mx-2
+    mx-0
     xs:mx-2
     sm:mx-3
     md:mx-20
@@ -27,7 +27,7 @@
     lg:px-30
     xl:px-0
 
-    max-w-full
+    w-full 
     text-[30px]
     text-center
     text-black
@@ -58,11 +58,12 @@
     bg-neutral
     rounded-3xl
     min-h-fit
-    w-full  
+    max-w-full 
+    max-w-screen-xl
     text-center
     py-1
-    px-1
-    mx-1
+    px-0
+    mx-0
     xs:py-8
     xs:px-8
     xs:mx-8
