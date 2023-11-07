@@ -89,25 +89,33 @@
     leading-90
   `;
 
-  let divHeroTextClass = `
-    my-12
-    w-[583px] 
-    xs:w-[733px] 
-    sm:w-[883px] 
-    md:w-[983px] 
-    lg:w-[1276px] 
-  `;
   let divHeroClass = `
     relative
     min-h-screen
     max-w-9xl
-    mx-10
-    px-5
+
     my-5
-    py-19
+
+    mx-0
+    xs:mx-5
+    md:mx-10
+
+    px-0
+    xs:px-10
     md:px-12
     lg:px-16
+
+    py-19
     lg:py-10
+  `;
+
+  let divHeroTextClass = `
+    my-12
+    w-[483px] 
+    xs:w-[733px] 
+    sm:w-[883px] 
+    md:w-[983px] 
+    lg:w-[1276px] 
   `;
 
   let shader = `
@@ -129,7 +137,7 @@
     font-basier
     font-medium
     max-w-9xl
-    text-[50px] 
+    text-[40px] 
     xs:text-6xl
     sm:text-7xl
     md:text-8xl
