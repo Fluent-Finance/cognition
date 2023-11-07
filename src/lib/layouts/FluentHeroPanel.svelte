@@ -32,7 +32,7 @@
     text-center
     text-black
     dark:text-white
-    text-2xl
+    text-xl
     xs:text-3xl
     sm:text-5xl
     md:text-6xl
@@ -58,10 +58,17 @@
     bg-neutral
     rounded-3xl
     min-h-fit
+    w-full  
     text-center
-    py-8
-    px-8
-    mx-8
+    py-1
+    px-1
+    mx-1
+    xs:py-8
+    xs:px-8
+    xs:mx-8
+    sm:py-8
+    sm:px-8
+    sm:mx-8
   `;
 
   let pDivClasses = `
@@ -102,13 +109,14 @@
   let h2Classes = `
     font-basier
     text-center
-    text-xl
+    text-md
     xs:text-2xl
     sm:text-3xl
     md:text-4xl
     lg:text-4xl
     xl:text-6xl
-    my-20
+    my-10
+    sm:my-20
     xs:px-2 
     sm:px-5 
     md:px-10 

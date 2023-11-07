@@ -111,7 +111,7 @@
 
   let divHeroTextClass = `
     my-12
-    w-[483px] 
+    w-full  
     xs:w-[733px] 
     sm:w-[883px] 
     md:w-[983px] 
@@ -146,7 +146,6 @@
     tracking-tighter
     dark:text-white
   `;
-
 
   function handleAnchorClick (event) {
 		event.preventDefault()
@@ -196,7 +195,7 @@
 
   <div class={divHeroClass}>
     <div class="flex text-left">
-      <div class="relative inline-flex">
+      <div class="max-w-screen-xl relative">
         <div>
           <div class={divHeroTextClass}>
             <span class={heroText}>

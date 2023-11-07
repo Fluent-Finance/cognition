@@ -28,7 +28,7 @@
     leading-loose
     text-center
     align-center
-    my-1
+    my-0
     mx-2
     px-2
     md:my-10
@@ -36,7 +36,8 @@
     md:px-20
     lg:px-20
     lg:mx-10
-    text-lg
+    text-[16px]
+    xs:text-md    
     sm:text-lg    
     md:text-xl   
     lg:text-2xl  
@@ -46,6 +47,7 @@
   `;
 
   let h1classes = `
+    py-2
     mx-0
     xs:mx-5
     font-basier 
@@ -54,7 +56,7 @@
     tracking-tight
     text-white
     dark:text-white
-    text-3xl
+    text-2xl
     xs:text-4xl
     sm:text-5xl
     md:text-6xl
@@ -125,15 +127,57 @@
   `;
 
   let classes = 'mx-auto mb-4 w-15 h-15 text-primary-600 dark:text-primary-500';
+
+  let anchorClasses = `
+    flex
+    flex-col 
+    bg-base-600
+    rounded-3xl
+    min-h-fit
+    max-w-xl   
+    text-center
+    py-1
+    px-1
+    mx-1
+    xs:py-8
+    xs:px-8
+    xs:mx-8
+    sm:py-8
+    sm:px-8
+    sm:mx-8
+  `;
+
+  let lowerAnchorClasses = `
+    flex
+    flex-col 
+    bg-base-100
+    rounded-3xl
+    min-h-fit
+    w-full
+    text-center
+    py-1
+    px-1
+    mx-1
+    xs:py-8
+    xs:px-8
+    xs:mx-8
+    sm:py-8
+    sm:px-8
+    sm:mx-8
+  `;
 </script>
 
 <Section id="anchor-deposit" name="feature" class="bg-white dark:bg-base-100">
-  <div class="bg-base-600 rounded-3xl text-center justify-center min-h-fit max-w-screen-xl text-center py-10 px-8 mx-12 my-0">
+  <div class={anchorClasses}>
 
     <HeroHeader {...headerclasses}> 
       <svelte:fragment slot="h2">
         <div class="
-          py-10 mx-10">
+          mt-10
+          py-2 
+          my-2 
+          lg:py-10 
+          lg:mx-10">
           <h1 class={h1classes}>
             Deposit <span class={shader}>Token</span>
             Infrastructure
@@ -162,25 +206,25 @@
     </HeroHeader>
 
     <FeatureDefault>
-    <div class="w-xl mt-6 mb-10 px-30 mx-20">
-      <div class="my-10 mx-5 sm:mx-10 space-y-8 xs:grid xs:grid-cols-3 xs:gap-10 xs:space-y-0">
+      <div class="w-xl px-5 mx-5 mt-6 mb-10 md:px-30 md:mx-20">
+        <div class="my-10 p-0 mx-0 sm:mx-10 grid grid-cols-3 gap-10 space-y-0">
           <div>
             <Inoutcircle class={classes} color="white" />
-            <h3 class="mb-2 text-lg font-normal dark:text-white">1-Click Issuance & Redemption</h3>
+            <h3 class="mb-2 text-sm xs:text-lg font-normal dark:text-white">1-Click Issuance & Redemption</h3>
           </div>
           <div>
             <Inoutcircle class={classes} color="white" />
-            <h3 class="mb-2 text-xl font-normal dark:text-white">Regulated & Compliant</h3>
+            <h3 class="mb-2 text-sm xs:text-lg md:text-xl font-normal dark:text-white">Regulated & Compliant</h3>
           </div>
           <div>
             <Inoutcircle class={classes} color="white" />
-            <h3 class="mb-2 text-xl font-normal dark:text-white">Federated Custody</h3>
+            <h3 class="mb-2 text-sm xs:text-lg md:text-xl font-normal dark:text-white">Federated Custody</h3>
           </div>
         </div>
       </div>
     </FeatureDefault>
 
-    <Hr classHr="my-10 mx-40" /> 
+    <Hr classHr="my-1 mx-5 md:my-10 md:mx-40" /> 
 
     <div class="my-20 mx-10">
       <HeroHeader {...headerclasses}> 
@@ -196,10 +240,10 @@
 </Section>
 
 <Section id="anchor-principles" class="bg-white dark:bg-base-100 mt-0">
-  <div class="bg-base-100 rounded-3xl text-center justify-center min-h-fit max-w-screen-xl text-center py-10 px-8 mx-12">
-    <div class="py-8 px-4 min-w-full">
+  <div class={lowerAnchorClasses}>
+  <div class="">
+    <div class="py-8 px-4">
       <div class="gap-8 py-8 px-4 mx-auto xl:gap-16 sm:py-6 lg:px-6 ">
-        <!-- <div class="text-gray-500 dark:text-gray-400 sm:text-lg"> -->
           <h2 class="mb-4 text-6xl xl:text-7xl tracking-tight font-semibold font-extrabold text-white dark:text-white">
             Operating <span class={shader}>Principles</span>
           </h2>
@@ -239,8 +283,6 @@
               </div>
             </div>
           </div>
-        <!-- </div> -->
       </div>
-    <!-- </div> -->
   </div>
 </Section>
