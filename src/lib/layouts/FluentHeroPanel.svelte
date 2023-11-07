@@ -14,22 +14,30 @@
     leading-none
     tracking-tight
     my-10
-    mx-1
-    sm:mx-20
+
+    mx-2
+    xs:mx-2
+    sm:mx-3
     md:mx-20
-    lg:mx-10
-    lg:px-40
+    lg:mx-3
+    xl:mx-0
+
+    sm:px-3
+    md:px-20
+    lg:px-30
+    xl:px-0
+
     max-w-full
     text-[30px]
     text-center
     text-black
     dark:text-white
-    text-3xl
+    text-2xl
     xs:text-3xl
-    sm:text-4xl
-    md:text-5xl
-    lg:text-6xl
-    xl:text-7xl
+    sm:text-5xl
+    md:text-6xl
+    lg:text-7xl
+    xl:text-8xl
   `; 
 
   let h3classes = `
@@ -82,8 +90,10 @@
     md:px-10
     lg:px-2
     text-sm
-    md:text-lg  
-    lg:text-xl  
+    xs:text-lg  
+    sm:text-xl   
+    md:text-xl   
+    lg:text-2xl  
     xl:text-2xl
     text-gray-500
     dark:text-gray-400
@@ -114,11 +124,13 @@
     xs:mx-10 
     sm:mx-20 
     md:mx-30 
-    lg:mx-40 
+    lg:mx-60 
+    xl:mx-40 
     xs:px-2 
     sm:px-20 
     md:px-30 
-    lg:px-0 
+    lg:px-5 
+    xl:px-0 
   `;
 
 </script> 
@@ -126,7 +138,18 @@
 <Section class="bg-white dark:bg-transparent">
   <div id="anchor-learn" class={anchorClasses}>
 
-    <div class="lg:py-10 lg:mx-30">
+    <div class="
+      sm:py-10
+      lg:py-10 
+
+      sm:px-10
+      md:px-0
+
+      xs:mx-10
+      sm:mx-20
+      md:mx-0
+      lg:mx-30
+      xl:mx-10">
       <h1 class={h1classes}>
         Interoperable <span class={shader}>Infrastructure</span>
         for a Fragmented Financial System
@@ -149,8 +172,8 @@
       </h2> 
     </div>
 
-    <div class="mt-6 mb-10 lg:px-20 lg:mx-10">
-      <div class="my-10 mx-10 space-y-8 md:grid md:grid-cols-3 md:gap-20 md:space-y-0">
+    <div class="mt-0 mb-10 xs:mt-6 lg:px-20 lg:mx-10">
+      <div class="my-10 mx-10 space-y-8 xs:my-1 xs:grid xs:grid-cols-3 xs:gap-20 xs:space-y-0">
         <div>
           <Fingerprint class={classes} />
           <h3 class={h3classes}>Tokenize Off-Chain Assets</h3>

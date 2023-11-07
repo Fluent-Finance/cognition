@@ -28,29 +28,38 @@
     leading-loose
     text-center
     align-center
-    my-10
-    mx-20
-    px-20
+    my-1
+    mx-2
+    px-2
+    md:my-10
+    md:mx-20
+    md:px-20
+    lg:px-20
+    lg:mx-10
     text-lg
-    md:text-lg  
-    lg:text-lg 
-    xl:text-xl
+    sm:text-lg    
+    md:text-xl   
+    lg:text-2xl  
+    xl:text-3xl
     text-base-300
     dark:text-gray-400
   `;
 
   let h1classes = `
-    mx-5
+    mx-0
+    xs:mx-5
     font-basier 
     font-semibold
     leading-none
     tracking-tight
     text-white
     dark:text-white
-    text-2xl
-    md:text-5xl
-    lg:text-6xl
-    xl:text-7xl
+    text-3xl
+    xs:text-4xl
+    sm:text-5xl
+    md:text-6xl
+    lg:text-7xl
+    xl:text-8xl
   `; 
 
   let h3Class = `
@@ -88,8 +97,8 @@
   
   let headerclasses = {
     class:   "max-w-full",
-    h2Class: "mb-9 text-4xl lg:text-6xl xl:text-5xl tracking-tight font-medium text-neutral dark:text-white",
-    pClass:  "text-neutral font-normal font-neuehass text-lg dark:text-gray-400",
+    h2Class: "mb-9 text-4xl lg:text-6xl xl:text-7xl tracking-tight font-medium text-neutral dark:text-white",
+    pClass:  "text-neutral font-normal font-neuehass text-xl lg:text-2xl dark:text-gray-400",
   };
 
   let deposit = `
@@ -123,7 +132,8 @@
 
     <HeroHeader {...headerclasses}> 
       <svelte:fragment slot="h2">
-        <div class="py-10 mx-10">
+        <div class="
+          py-10 mx-10">
           <h1 class={h1classes}>
             Deposit <span class={shader}>Token</span>
             Infrastructure
@@ -131,7 +141,16 @@
         </div>
       </svelte:fragment>
       <svelte:fragment slot="paragraph">
-        <div class="flex w-lg px-40 mx-20">
+        <div class="
+          py-5
+          px-1
+          mx-1
+          xs:px-5
+          xs:mx-5
+          sm:px-9
+          sm:mx-9
+          lg:px-30 
+          lg:mx-20">
           <p class={pclasses}>
             Deposit tokens are stable-valued, regulatory-compliant digital 
             assets interoperable with core banking systems. With Fluent, 
@@ -144,7 +163,7 @@
 
     <FeatureDefault>
     <div class="w-xl mt-6 mb-10 px-30 mx-20">
-      <div class="my-10 mx-10 space-y-8 md:grid md:grid-cols-3 md:gap-10 md:space-y-0">
+      <div class="my-10 mx-5 sm:mx-10 space-y-8 xs:grid xs:grid-cols-3 xs:gap-10 xs:space-y-0">
           <div>
             <Inoutcircle class={classes} color="white" />
             <h3 class="mb-2 text-lg font-normal dark:text-white">1-Click Issuance & Redemption</h3>
@@ -163,7 +182,7 @@
 
     <Hr classHr="my-10 mx-40" /> 
 
-    <div class="my-20">
+    <div class="my-20 mx-10">
       <HeroHeader {...headerclasses}> 
         <svelte:fragment slot="h2">On the Rise</svelte:fragment>
         <svelte:fragment slot="paragraph">
@@ -179,7 +198,7 @@
 <Section id="anchor-principles" class="bg-white dark:bg-base-100 mt-0">
   <div class="bg-base-100 rounded-3xl text-center justify-center min-h-fit max-w-screen-xl text-center py-10 px-8 mx-12">
     <div class="py-8 px-4 min-w-full">
-      <div class="gap-8 py-8 px-4 mx-auto xl:gap-16 sm:py-16 lg:px-6 ">
+      <div class="gap-8 py-8 px-4 mx-auto xl:gap-16 sm:py-6 lg:px-6 ">
         <!-- <div class="text-gray-500 dark:text-gray-400 sm:text-lg"> -->
           <h2 class="mb-4 text-6xl xl:text-7xl tracking-tight font-semibold font-extrabold text-white dark:text-white">
             Operating <span class={shader}>Principles</span>
