@@ -72,13 +72,18 @@
 
   let lowerCopy = `
     mb-12
-    w-[387px]
+    min-w-[200px]
+    max-w-[387px]
+    xs:max-w-[487px]
+    sm:max-w-[637px]
+    md:max-w-[797px]
+    lg:max-w-[797px]
     xs:w-[487px]
     sm:w-[637px]
     md:w-[797px]
     lg:w-[797px]
     text-base-200
-    text-2xl 
+    text-xl 
     xs:text-3xl 
     sm:text-4xl 
     md:text-5xl 
@@ -111,7 +116,7 @@
 
   let divHeroTextClass = `
     my-12
-    max-w-[483px]
+    max-w-[383px]
     xs:max-w-[583px]
     sm:max-w-[733px]
     md:max-w-[983px]
@@ -142,7 +147,7 @@
     font-basier
     font-medium
     max-w-9xl
-    text-[40px] 
+    text-[35px] 
     xs:text-6xl
     sm:text-7xl
     md:text-8xl
