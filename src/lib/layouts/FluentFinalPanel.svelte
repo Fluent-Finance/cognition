@@ -4,10 +4,13 @@
   import { Img }      from "flowbite-svelte";
   import Src          from '$lib/assets/USPlus-Logo-Text.svg?url';
 
+  import FluentCarousel from './FluentCarousel.svelte';
+
   const alt     = 'USPlus Logo';
   const classes = 'w-full my-0 py-0 mx-auto';
 </script> 
 
+<FluentCarousel />
 <Section class="bg-white dark:bg-base-100">
   <div class="
   py-18

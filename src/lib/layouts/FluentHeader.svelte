@@ -15,23 +15,25 @@
   import { onMount }               from 'svelte';
   import { page }                  from '$app/stores';
   import theme                     from '$lib/stores/ThemeStore';
+  import FluentLogoIconColor       from '$lib/assets/Logo-Color.svg?url';
   import FluentLogoIconWhite       from '$lib/assets/Logo-White.svg?url';
   import FluentLogoIconBlack       from '$lib/assets/Logo-Black.svg?url';
 
   let width: number;
-  let isFluid: boolean   = false;
-  let breakPoint: number = 2160;
+  let isFluid: boolean   = true;
+  let breakPoint: number = 1280;
 
   $: currentTheme  = $theme;
-  $: logoIconStyle = (currentTheme === 'light' ? FluentLogoIconBlack : FluentLogoIconWhite);
+  $: logoIconStyle = (currentTheme === 'dark' ? FluentLogoIconColor : FluentLogoIconBlack);
   $: activeUrl     = $page.url.pathname;
-  $: isFluid       = isFluid;
 
   $: if (width >= breakPoint) {
     isFluid = true;
   } else {
     isFluid = false;
   }
+
+  $: isFluid = isFluid;
 
   onMount(() => {
     if (width >= breakPoint) {

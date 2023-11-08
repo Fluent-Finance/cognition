@@ -64,7 +64,18 @@
   <div class='relative w-full my-10'>
 
     <div class="flex items-center space-x-3 align-middle sm:pr-20">
-      <h1 class='mx-1 mt-5 xs:mx-3 my-0 text-black min-w-[80px] text-lg md:text-3xl align-middle items-center'>
+
+      <h1 class="
+      mx-1 
+      mt-5 
+      xs:mx-3 
+      my-0 
+      text-black 
+      min-w-[80px] 
+      text-lg 
+      md:text-3xl 
+      align-middle 
+      items-center">
         Follow Us
       </h1>
 
@@ -104,9 +115,7 @@
           href="https://app.fluent.finance">
             Consumer Portal
         </Button>
-          
       </div>
     </div>
   </div>
-
 </Footer>
