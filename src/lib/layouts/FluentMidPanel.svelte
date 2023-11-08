@@ -281,12 +281,12 @@
   <div class="w-full text-center my-10">
     <h2 class="
     w-full
-    text-3xl 
-    xs:text-5xl
-    sm:text-6xl
-    md:text-7xl
-    lg:text-8xl
-    xl:text-9xl
+    text-xl 
+    xs:text-4xl
+    sm:text-5xl
+    md:text-6xl
+    lg:text-7xl
+    xl:text-8xl
     tracking-loose
     font-semibold
     text-gray-900

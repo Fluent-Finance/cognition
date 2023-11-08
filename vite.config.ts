@@ -64,6 +64,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
+      $styles:     resolve('src/lib/styles'),
       $components: resolve('src/lib/components'),
       $icons:      resolve('src/lib/icons'),
       $images:     resolve('src/lib/images'),

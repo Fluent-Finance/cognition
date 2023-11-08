@@ -159,19 +159,16 @@
 
 <Section class="bg-white dark:bg-transparent">
   <div id="anchor-learn" class={anchorClasses}>
-
     <div class="
-      sm:py-10
-      lg:py-10 
-
-      sm:px-3
-      md:px-0
-
-      xs:mx-10
-      sm:mx-10
-      md:mx-0
-      lg:mx-30
-      xl:mx-10">
+    sm:py-10
+    lg:py-10 
+    sm:px-3
+    md:px-0
+    xs:mx-10
+    sm:mx-10
+    md:mx-0
+    lg:mx-30
+    xl:mx-10">
       <h1 class={h1classes}>
         Interoperable <span class={shader}>Infrastructure</span>
         for a Fragmented Financial System

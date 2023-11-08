@@ -1,6 +1,13 @@
 <!-- handcoded with ♥︎  by ⚡️-𝙆𝙊𝘿𝞝𝙋𝞸𝞝𝙏-⚡️--->
 <script lang='ts'>
-  import { Footer, FooterIcon, FooterCopyright } from 'flowbite-svelte';
+
+  import { 
+    Hr,
+    Button, 
+    Footer, 
+    FooterIcon, 
+    FooterCopyright 
+  } from 'flowbite-svelte';
 
   import {
     LinkedinSolid,
@@ -10,12 +17,7 @@
     LinkSolid, 
   } from 'flowbite-svelte-icons';
 
-  let iconClasses = `
-    w-6 h-6 
-    text-gray-500 
-    dark:text-gray-500 
-    hover:text-gray-900 
-    dark:hover:text-white`;
+  import FluentStyles from '$styles/FluentStyles';
 
   let lowerFooterClasses = `
     py-2 px-4 
@@ -27,27 +29,6 @@
     md:items-center 
     md:justify-between`;
 
-  let footerClasses = `
-    grid
-    grid-cols-1
-    xs:flex
-    xs:flex-wrap
-    sm:grid-cols-2
-    md:grid-cols-3
-    min-h-60
-    h-80
-    justify-center
-    items-center
-    bg-gradient-to-t
-    from-base-500
-    via-neutral
-    to-white
-    bg-opacity-5
-    dark:from-base-100
-    dark:via-base-100
-    dark:to-base-100
-  `;
-
   let backgroundClasses = `
     grid
     grid-cols-1
@@ -58,9 +39,11 @@
     bg-footer-texture
   `;
 
-  let by = (`
-    Fluent Finance Inc. & Fluent Federation Corp. 
-  `);
+  let by = (`Fluent Finance Inc. & Fluent Federation Corp.`);
+
+  let buttonClasses: string = FluentStyles.processStyles({el: 'footer.button'});
+  let iconClasses:   string = FluentStyles.processStyles({el: 'footer.icon'});
+  let footerClasses: string = FluentStyles.processStyles({el: 'footer.div'});
 </script>
 
 <div class={backgroundClasses}>  
@@ -72,25 +55,19 @@
         bridging Web2 to Web3 utilizing the Fluent Protocol. Our flagship product 
         is US Plus, the only fully verifiable cash and equivalent backed stablecoin.
       </p>
-      <p class='mx-auto mt-10 mb-5 prose prose-p text-center text-xs justify-center'> 
-        <FooterCopyright spanClass="text-xs text-gray-300 text-center justify-center visible sm:invisible" {by} />
-      </p>
     </span>
   </div>
+</div>
 
-  <Footer footerType="sitemap" class={footerClasses}>
+<Footer footerType="sitemap" class={footerClasses}>
 
-    <span class='hidden sm:flex min-w-fit pl-20'>  
-      <p class='prose prose-p text-xs justify-left'> 
-        Cognition™<br />Fluent Finance | 𝙐𝙎✚<br/>A superior, more reliable, stablecoin
-      </p>
-    </span> 
+  <div class='relative w-full my-10'>
 
-    <p class='mx-auto mb-5 prose prose-p text-center text-xs justify-center'> 
-      <FooterCopyright spanClass="text-xs max-w-md text-gray-300 text-center justify-center sm:visible invisible" {by} />
-    </p>
+    <div class="flex items-center space-x-3 align-middle sm:pr-20">
+      <h1 class='mx-1 mt-5 xs:mx-3 my-0 text-black min-w-[80px] text-lg md:text-3xl align-middle items-center'>
+        Follow Us
+      </h1>
 
-    <div class="flex space-x-4 sm:items-center justify-center sm:justify-end sm:pr-20">
       <FooterIcon target="_blank" href="https://discord.gg/22ywcEfU65">
         <DiscordSolid class={iconClasses} /> 
       </FooterIcon>
@@ -107,5 +84,29 @@
         <GithubSolid class={iconClasses} />
       </FooterIcon>
     </div>
-  </Footer>
-</div>
+
+    <Hr class='mx-2 px-10' />
+
+    <div> 
+      <p class='my-5 ml-3 text-base-200 prose prose-p text-[10px] xs:text-sm'> 
+        Fluent Finance is the fintech infrastructure company responsible for 
+        developing the connections from core banking to public layers, 
+        bridging Web2 to Web3 utilizing the Fluent Protocol. Our flagship product 
+        is US Plus, the only fully verifiable cash and equivalent backed stablecoin.
+      </p>
+
+      <FooterCopyright spanClass="ml-3 my-5 text-[6px] xs:text-xs max-w-xl text-base-200" {by} />
+
+      <div class='my-5 max-w-sm'>
+        <Button 
+          target="_blank" 
+          class={buttonClasses}
+          href="https://app.fluent.finance">
+            Consumer Portal
+        </Button>
+          
+      </div>
+    </div>
+  </div>
+
+</Footer>

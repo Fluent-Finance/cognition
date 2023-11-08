@@ -23,6 +23,7 @@ const config = {
     }),
 		serviceWorker: { register: true },
     alias: {
+      $styles: 'src/lib/styles',
       $actions: 'src/lib/actions',
       $components: 'src/lib/components',
       $icons: 'src/lib/icons',
