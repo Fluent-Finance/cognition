@@ -7,19 +7,13 @@ import autoprefixer     from 'autoprefixer';
 import svg              from '@poppanator/sveltekit-svg'
 import topLevelAwait    from "vite-plugin-top-level-await";
 
-
-// import { sveltekit }    from '@sveltejs/kit/vite';
-// import { defineConfig } from 'vitest/config';
-// import { resolve }      from 'node:path';
-// import tailwindcss      from 'npm:tailwindcss';
-// import nesting          from 'npm:postcss-nesting';
-// import autoprefixer     from 'npm:autoprefixer';
-// import svg              from 'npm:@poppanator/sveltekit-svg'
-// import topLevelAwait    from "npm:vite-plugin-top-level-await";
-
 /** @type {import('vite').UserConfig} */
 export default defineConfig({
+  optimizeDeps: {
+    include: ['lodash.get', 'lodash.isequal', 'lodash.clonedeep']
+  },
   plugins: [ 
+    sveltekit(), 
     topLevelAwait({
       // The export name of top-level await promise for each chunk module
       promiseExportName: "__tla",
@@ -40,7 +34,6 @@ export default defineConfig({
         ],
       },
     }),
-    sveltekit(), 
   ],
   test: {
     include: ['src/**/*.{test,spec}.{js,ts}']

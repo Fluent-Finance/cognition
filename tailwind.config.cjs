@@ -5,6 +5,7 @@ module.exports = {
   mode: 'jit',
   content: [
     './src/**/*.{html,js,svelte,ts,css}', 
+    './node_modules/flowbite/**/*.js',
     './node_modules/flowbite-svelte-icons/**/*.{html,js,svelte,ts}',
     './node_modules/flowbite-svelte/**/*.{html,js,svelte,ts}'
   ],
@@ -39,7 +40,6 @@ module.exports = {
     darkTheme: 'dark',
     themes: [{
       fluent: {
-
         "white":           "#FAFAFA",
         "neutral":         "#F7F3FC",
         "black":           "#222222",

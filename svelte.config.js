@@ -71,6 +71,10 @@ const config = {
     mdsvex(mdsvexConfig),
 
     vitePreprocess({
+
+      optimizeDeps: {
+        include: ['lodash.get', 'lodash.isequal', 'lodash.clonedeep']
+      },
       onwarn: (warning, handler) => {
         const { code } = warning;
         if (code === "css-unused-selector")
