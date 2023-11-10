@@ -140,11 +140,6 @@ module.exports = {
         '2xl': '12rem',
       },
     },
-    fontFamily: {
-      sans:  ['Inter', 'Righteous', ...fontFamily.sans],
-      serif: ['Marval',             ...fontFamily.serif],
-      icons: ['material-icons',     ...fontFamily.serif],
-    },
     extend: {
       spacing: {
         '13': '3.25rem',
