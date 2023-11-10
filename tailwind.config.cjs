@@ -148,6 +148,7 @@ module.exports = {
         '144': '36rem',
       },
       backgroundImage: () => ({
+        'usplus-bg': "url('/images/USPlus-Logo-Text.svg')",
         'footer-texture': "url('/images/FooterCorner.svg')"
       }),
       fontFamily: {

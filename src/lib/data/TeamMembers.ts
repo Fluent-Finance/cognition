@@ -77,7 +77,7 @@ const TeamMembers = [
     href: '#',
     src: '/images/team/09_team_member.jpg',
     alt: 'anon',
-    name: 'K. Poett',
+    name: 'K. Poet',
     jobTitle: 'Sr. Lead Engineer',
     description: ''
   } 

@@ -1,18 +1,21 @@
 <!-- handcoded with ♥︎  by ⚡️-𝙆𝙊𝘿𝞝𝙋𝞸𝞝𝙏-⚡️--->
 <script lang='ts'>
-  import { Section, } from 'flowbite-svelte-blocks';
-  import { Img }      from "flowbite-svelte";
-  import Src          from '$lib/assets/USPlus-Logo-Text.svg?url';
+  import { Section } from 'flowbite-svelte-blocks';
+  import { P }       from "flowbite-svelte";
+  import Src         from '$lib/assets/USPlus-Logo-Text.svg?url';
 
   let title     = 'USPlus';
   const alt     = 'USPlus Logo';
-  const classes = 'h-[850px] my-0 py-0 mx-auto';
+
+  const classes = `
+    my-0 
+    py-0 
+    mx-auto
+  `;
 
   let divPanel = `
-    w-full
-    grid
-    grid-cols-1
-    gap-4
+    flex-col 
+    justify-center
     align-middle
     content-center
     items-center
@@ -21,24 +24,70 @@
 
 <Section class="bg-white dark:bg-base-100">
   <div class="
+  flex-col
   py-0
   my-0
   px-4
-  mt-[-190px]
   min-h-fit
   max-w-screen-xl
   text-center
   lg:px-6">
 
-    <Img src={Src} {alt} class={classes} />
+    <!-- USPlus Background Image -->
+    <div class={`
+    w-full 
+    h-[300px]
+    bg-usplus-bg 
+    object-fill 
+    bg-cover
+    bg-no-repeat
+    bg-clip-padding 
+    bg-center
+      `}>
+    </div>
+    <!-- USPlus Background Image -->
 
-    <div class="w-full my-30 h-[136px] text-center">
-      <span class="mr-7 text-black text-[90px] font-semibold font-basier leading-[72px]">Fluent’s</span>
-      <span class="mr-7 text-base-50 text-[90px] font-semibold font-basier leading-[72px]"> Live</span>
-      <span class="text-black text-[90px] font-semibold font-basier leading-[72px]"> Pilot Project</span>
+    <div class="
+    my-1 
+    md:my-10
+    text-4xl 
+    xs:text-5xl 
+    sm:text-6xl 
+    md:text-7xl 
+    lg:text-8xl 
+    font-semibold 
+    font-basier 
+    leading-[42px]
+    md:leading-[72px]
+    text-center">
+      <span class="mr-1 md:mr-7 text-black">Fluent’s</span>
+      <span class="mr-1 md:mr-7 text-base-50"> Live</span>
+      <span class="text-black"> Pilot Project</span>
     </div>
      
-    <div class="mb-40 mx-40 px-40 w-lg h-[43px] text-center text-base-200 text-[22px] font-normal font-neuehaas leading-loose">
+    <div class="
+    m-10
+    px-2
+    py-10
+    md:m-10
+    md:mx-20
+    md:px-20
+    md:py-10
+    lg:m-20
+    lg:mx-10
+    lg:px-40
+    text-sm  
+    xs:text-lg  
+    sm:text-xl 
+    md:text-2xl 
+    content-center
+    items-center
+    justify-center
+    text-center
+    text-base-200
+    font-normal
+    font-neuehaas
+    leading-loose">
       The USPlus stablecoin showcases the basic viability and broader 
       potential of the Fluent tech stack. In order to resolve the inherent 
       flaws of web3-native stablecoins, USPlus issuance is led by a network of 
@@ -49,9 +98,8 @@
     </div>
 
     <div class="
-    flex-col
     mx-auto
-    w-[350px]
+    w-md
     h-15
     px-8
     py-6
@@ -64,34 +112,32 @@
     items-center
     gap-2
     inline-flex">
-      <div class="text-center text-neutral-900 text-xl font-medium font-basier leading-loose">
+      <div class="text-center text-neutral-900 text-md xs:text-lg md:text-xl  font-medium font-basier leading-loose">
         USPlus Analytics Dashboards
       </div>
     </div>
 
     <div class={divPanel}>
-      <div class="align-middle justify-center content-center items-center mx-auto py-3">
-        <div class="h-[395px] flex-col items-center gap-14 inline-flex">
-
-
-          <div class="mt-20 text-center text-black text-5xl font-medium font-basier leading-9">
+      <div class="flex justify-center align-middle justify-center content-center items-center py-10">
+        <div class="flex min-h-[30vh] flex-col items-center gap-14 mx-auto">
+          <div class="mt-20 mx-5 px-2 md:mx-20 md:px-40 text-center text-black text-xl sm:text-2xl lg:text-5xl font-medium font-basier leading-9">
             <span class="font-bold">
               USPlus 
             </span>
             is available on leading crypto exchanges
           </div>
 
-          <div class="my-10 justify-start items-start gap-6 inline-flex">
-            <div class="flex-col justify-start items-start gap-2 inline-flex">
+          <div class="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-6 my-10">
+            <div class="">
               <div class="w-[271px] h-[104px] bg-neutral-50 rounded-[10px] shadow"></div>
             </div>
-            <div class="flex-col justify-start items-start gap-2 inline-flex">
+            <div class="">
               <div class="w-[271px] h-[104px] bg-neutral-50 rounded-[10px] shadow"></div>
             </div>
-            <div class="flex-col justify-start items-start gap-2 inline-flex">
+            <div class="">
               <div class="w-[271px] h-[104px] bg-neutral-50 rounded-[10px] shadow"></div>
             </div>
-            <div class="flex-col justify-start items-start gap-2 inline-flex">
+            <div class="">
               <div class="w-[271px] h-[104px] bg-neutral-50 rounded-[10px] shadow"></div>
             </div>
           </div>
