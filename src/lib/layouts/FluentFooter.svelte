@@ -21,9 +21,9 @@
 
   let by = (`Fluent Finance Inc. & Fluent Federation Corp.`);
 
-  let iconClasses:   string = FluentStyles.processStyles({el: 'footer.icon'});
-  let footerClasses: string = FluentStyles.processStyles({el: 'footer.div'});
-  let buttonClasses: string = FluentStyles.processStyles({el: 'footer.button'});
+  let iconClasses:   string = FluentStyles.processStyles('footer.icon');
+  let footerClasses: string = FluentStyles.processStyles('footer.div');
+  let buttonClasses: string = FluentStyles.processStyles('footer.button');
 </script>
 
 <Footer footerType="sitemap" class={footerClasses}>
