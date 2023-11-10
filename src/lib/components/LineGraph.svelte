@@ -40,5 +40,5 @@
     <span class="text-center justify-between m-auto h-auto loading loading-infinity loading-lg"></span>
   </div> 
 {:then data}
-  <Line {data} {options} />
+  <Line {data} {options} class="text-2xl mx-1 my-10"/>
 {/await}

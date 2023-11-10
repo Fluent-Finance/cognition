@@ -112,7 +112,7 @@
     sm:block
     text-neutral
     bg-base-50
-    hover:bg-primary
+    hover:bg-800
     dark:hover:bg-base-700
     dark:bg-base-800
   `;

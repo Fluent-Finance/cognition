@@ -37,5 +37,5 @@
     <span class="text-center justify-between m-auto h-auto loading loading-infinity loading-lg"></span>
   </div> 
 {:then data}
-  <Bar {data} {options} />
+  <Bar {data} {options} class="mx-1 my-12"/>
 {/await}

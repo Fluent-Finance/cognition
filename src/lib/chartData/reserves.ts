@@ -64,7 +64,8 @@ class DataSet implements DataSetType {
   }
 
   formatNumber = (num: number) => { return num.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,'); }
-  formatString = (x: any[])    => { return `${x[0]} - $${this.formatNumber(x[2])}`;  }
+  formatString = (x: any[])    => { return `$${this.formatNumber(x[2])} : ${x[0]}`;  }
+  formatBanks  = (x: any[])    => { return `${_.truncate(x[1], {length: 9})} : ${x[0]}`; }
 
   formatLabels =()=> {
     if (_.isEmpty(this.data)) { this.fetch(); this.parse(); }
@@ -86,10 +87,12 @@ class DataSet implements DataSetType {
     const borderColor     = _.get(this, 'borderColor');
     const backgroundColor = _.get(this, 'backgroundColor');
 
+    const title = _.uniq(_.map(_.zip(this.types, this.names, this.balances), this.formatBanks));
+
     _.set(this, 'rendered', {
       labels,
       datasets: [{
-        label: 'Total US+ Reserves',
+        label: `Total US+ : \n ${_.join(title, '  |  ')}`,
         data,
         borderWidth,
         backgroundColor,

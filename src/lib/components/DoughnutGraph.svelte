@@ -31,9 +31,9 @@
 
 
 {#await dada}
-  <div class='flex justify-between w-full text-center'> 
+  <div class='flex justify-center text-center'> 
     <span class="text-center justify-between m-auto h-auto loading loading-infinity loading-lg"></span>
   </div> 
 {:then data}
-  <Doughnut {data} {options} />
+  <Doughnut {data} {options} class="align-middle mt-10 mx-4 p-0" />
 {/await}

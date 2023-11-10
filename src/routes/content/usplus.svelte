@@ -1,17 +1,11 @@
 <!-- handcoded with ♥︎  by ⚡️-𝙆𝙊𝘿𝞝𝙋𝞸𝞝𝙏-⚡️--->
 <script lang='ts'>
   import { Section } from 'flowbite-svelte-blocks';
-  import { P }       from "flowbite-svelte";
-  import Src         from '$lib/assets/USPlus-Logo-Text.svg?url';
 
-  let title     = 'USPlus';
-  const alt     = 'USPlus Logo';
-
-  const classes = `
-    my-0 
-    py-0 
-    mx-auto
-  `;
+  import LineGraph      from '$components/LineGraph.svelte';
+  import BarGraph       from '$components/BarGraph.svelte';
+  import PieGraph       from '$components/PieGraph.svelte';
+  import DoughnutGraph  from '$components/DoughnutGraph.svelte';
 
   let divPanel = `
     flex-col 
@@ -113,14 +107,29 @@
     gap-2
     inline-flex">
       <div class="text-center text-neutral-900 text-md xs:text-lg md:text-xl  font-medium font-basier leading-loose">
-        USPlus Analytics Dashboards
+        <a href="/dashboard/fluent">
+          USPlus Analytics Dashboards
+        </a>
       </div>
     </div>
 
     <div class={divPanel}>
       <div class="flex justify-center align-middle justify-center content-center items-center py-10">
         <div class="flex min-h-[30vh] flex-col items-center gap-14 mx-auto">
-          <div class="mt-20 mx-5 px-2 md:mx-20 md:px-40 text-center text-black text-xl sm:text-2xl lg:text-5xl font-medium font-basier leading-9">
+          <div class="
+          mt-20
+          mx-5
+          px-2
+          md:mx-20
+          md:px-40
+          text-center
+          text-black
+          text-xl
+          sm:text-2xl
+          lg:text-5xl
+          font-medium
+          font-basier
+          leading-9">
             <span class="font-bold">
               USPlus 
             </span>
