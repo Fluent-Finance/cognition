@@ -21,9 +21,9 @@
     <div class="
     flex-col
     mx-auto
-    w-[525px]
-    h-20
-    px-8
+    min-h-20
+    max-w-[596px] 
+    px-1
     py-6
     content-center
     align-middle
@@ -31,14 +31,15 @@
     border-2
     border-black
     justify-center
-    items-center
-    gap-2
-    inline-flex">
-
+    items-center">
       <div class="
       text-center
       text-neutral-900
-      text-xl
+      text-sm  
+      xs:text-md
+      sm:text-lg 
+      md:text-xl
+      lg:text-2xl
       font-medium
       font-basier
       leading-loose">

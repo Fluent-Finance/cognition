@@ -10,8 +10,15 @@
   const handleNextClick = () => { carousel.goToNext() }
 
   let divPanel = `
+    container
+    flex
     w-full  
-    min-h-[40vh]
+    min-h-[50vh]
+    text-2xl
+    xs:text-2xl
+    sm:text-3xl
+    md:text-4xl
+    lg:text-5xl
     grid
     grid-cols-1
     gap-4
@@ -26,7 +33,7 @@
     flex
     flex-col 
     rounded-3xl
-    min-h-fit
+    min-h-[50vh]
     max-w-full    
     text-center
     my-0
@@ -61,10 +68,34 @@
     bind:this={carousel}>
 
       <div id={`panel-${currentPageIndex}`} class={divPanel}>
-        <div class="align-middle justify-center content-center items-center mx-auto py-3">
-          <div class="h-[395px] flex-col items-center gap-14 inline-flex">
+        <div class="
+        flex
+        flex-col 
+        align-middle
+        justify-center
+        content-center
+        items-center
+        mx-auto
+        py-3">
+          <div class="
+          flex
+          flex-col
+          items-center
+          gap-14
+          inline-flex">
 
-            <div class="mt-1 text-center text-black text-5xl font-medium font-basier leading-9">
+            <div class="
+            mt-1
+            text-center
+            text-black
+            text-2xl
+            xs:text-2xl
+            sm:text-3xl
+            md:text-4xl
+            lg:text-5xl
+            font-medium
+            font-basier
+            leading-9">
               High-Quality Assets and Managers
             </div>
 
