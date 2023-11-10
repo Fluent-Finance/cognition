@@ -157,24 +157,39 @@
       </svelte:fragment>
     </HeroHeader>
 
-    <FeatureDefault>
-      <div class="px-1 mx-1 xs:px-5 xs:mx-5 mt-6 mb-10 md:px-30 md:mx-20">
-        <div class="my-10 p-1 mx-0 xs:mx-10 grid grid-cols-3 gap-5 xs:gap-10 space-y-0">
-          <div>
-            <Inoutcircle class={iconClasses} color="white" />
-            <h3 class={h3TextClass}>1-Click Issuance & Redemption</h3>
-          </div>
-          <div>
-            <Inoutcircle class={iconClasses} color="white" />
-            <h3 class={h3TextClass}>Regulated & Compliant</h3>
-          </div>
-          <div>
-            <Inoutcircle class={iconClasses} color="white" />
-            <h3 class={h3TextClass}>Federated Custody</h3>
-          </div>
+    <div class="     
+    px-1
+    mx-1
+    xs:px-5
+    xs:mx-5
+    mt-6
+    mb-10
+    md:px-30
+    md:mx-20">
+      <div class="
+      p-1
+      my-10
+      mx-0
+      grid
+      grid-cols-3
+      gap-5
+      xs:gap-20
+      xs:mx-10
+      space-y-0">
+        <div>
+          <Inoutcircle class={iconClasses} color="white" />
+          <h3 class={h3TextClass}>1-Click Issuance & Redemption</h3>
+        </div>
+        <div>
+          <Inoutcircle class={iconClasses} color="white" />
+          <h3 class={h3TextClass}>Regulated & Compliant</h3>
+        </div>
+        <div>
+          <Inoutcircle class={iconClasses} color="white" />
+          <h3 class={h3TextClass}>Federated Custody</h3>
         </div>
       </div>
-    </FeatureDefault>
+    </div>
 
     <Hr classHr="my-1 mx-5 md:my-10 md:mx-40" /> 
 
@@ -206,32 +221,32 @@
       sm:py-6 
       lg:mx-8
       lg:px-8">
-          <h2 class="
-          mb-10 
-          tracking-tight
-          font-semibold
-          font-extrabold
-          text-5xl
-          xs:text-3xl
-          sm:text-5xl
-          md:text-6xl
-          lg:text-7xl
-          xl:text-8xl
-          text-white
-          dark:text-white">
+        <h2 class="
+        mb-10 
+        tracking-tight
+        font-semibold
+        font-extrabold
+        text-5xl
+        xs:text-3xl
+        sm:text-5xl
+        md:text-6xl
+        lg:text-7xl
+        xl:text-8xl
+        text-white
+        dark:text-white">
             Operating <span class={shader}>Principles</span>
-          </h2>
-          <p class={pLowerClasses}>
-            Fluent’s engineering and business development efforts are grounded 
-            in a common belief that decentralized mechanics enable fairer, 
-            open systems, whether using on-chain environments, 
-            traditional environments, or across both.
-          </p>
-          <br />
-          <p class={pLowerClasses}>
-            Decentralized systems are characterized by 4 defining principles that 
-            must be upheld in both the development process and ongoing operations.
-          </p>
+        </h2>
+        <p class={pLowerClasses}>
+          Fluent’s engineering and business development efforts are grounded 
+          in a common belief that decentralized mechanics enable fairer, 
+          open systems, whether using on-chain environments, 
+          traditional environments, or across both.
+        </p>
+        <br />
+        <p class={pLowerClasses}>
+          Decentralized systems are characterized by 4 defining principles that 
+          must be upheld in both the development process and ongoing operations.
+        </p>
       </div>
       <div class="
       px-1

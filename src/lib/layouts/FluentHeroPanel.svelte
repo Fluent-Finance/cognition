@@ -158,7 +158,7 @@
 </script> 
 
 <Section class="bg-white dark:bg-transparent">
-  <div id="anchor-learn" class={anchorClasses}>
+  <div class={anchorClasses}>
     <div class="
     sm:py-10
     lg:py-10 
@@ -191,8 +191,7 @@
       </h2> 
     </div>
 
-    <div class="mt-0 mb-10 xs:mt-6 lg:px-20 lg:mx-10">
-      <!-- <div class="my-10 mx-10 space-y-8 xs:my-1 xs:grid xs:grid-cols-3 xs:gap-20 xs:space-y-0"> -->
+    <div id="anchor-learn" class="mt-0 mb-10 xs:mt-6 lg:px-20 lg:mx-10">
       <div class="my-5 p-1 mx-1 sm:mx-10 grid grid-cols-3 gap-5 xs:gap-10 space-y-0">
         <div>
           <Fingerprint class={iconClasses} />

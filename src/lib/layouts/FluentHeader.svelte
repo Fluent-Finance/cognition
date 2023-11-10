@@ -15,7 +15,7 @@
   import { onMount }               from 'svelte';
   import { page }                  from '$app/stores';
   import theme                     from '$lib/stores/ThemeStore';
-  import FluentLogoIconColor       from '$lib/assets/Logo-Color.svg?url';
+  // import FluentLogoIconColor       from '$lib/assets/Logo-Color.svg?url';
   import FluentLogoIconWhite       from '$lib/assets/Logo-White.svg?url';
   import FluentLogoIconBlack       from '$lib/assets/Logo-Black.svg?url';
 
@@ -24,7 +24,7 @@
   let breakPoint: number = 1280;
 
   $: currentTheme  = $theme;
-  $: logoIconStyle = (currentTheme === 'dark' ? FluentLogoIconColor : FluentLogoIconBlack);
+  $: logoIconStyle = (currentTheme === 'dark' ? FluentLogoIconWhite : FluentLogoIconBlack);
   $: activeUrl     = $page.url.pathname;
 
   $: if (width >= breakPoint) {
@@ -66,9 +66,9 @@
 
   let activeClass = `
     text-neutral 
-    bg-base-600 
+    bg-base-50 
     md:bg-transparent 
-    md:text-primary 
+    md:text-base-50 
     md:dark:text-base-800 
     dark:bg-base-800 
     md:dark:bg-transparent
@@ -149,16 +149,16 @@
           active={activeUrl === '/'}> About
         </NavLi>
         <NavLi 
-          href='/'
-          active={activeUrl === '/pages/resources'}> Resources
+          href='/content/resources'
+          active={activeUrl === '/content/resources'}> Resources
         </NavLi>
         <NavLi 
-          href='/'
-          active={activeUrl === '/pages/press'}> Press & Media
+          href='/content/press-media'
+          active={activeUrl === '/content/press-media'}> Press & Media
         </NavLi>
         <NavLi 
-          href='/blog/compliance-news'
-          active={activeUrl === '/pages/usplus'}> USPlus
+          href='/content/usplus'
+          active={activeUrl === '/content/usplus'}> USPlus
         </NavLi>
         <NavLi 
           href='/pages/team'

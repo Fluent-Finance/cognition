@@ -19,45 +19,12 @@
 
   import FluentStyles from '$styles/FluentStyles';
 
-  let lowerFooterClasses = `
-    py-2 px-4 
-    bg-neutral 
-    dark:bg-base-100 
-    brightness-110
-    dark:brightness-100
-    md:flex 
-    md:items-center 
-    md:justify-between`;
-
-  let backgroundClasses = `
-    grid
-    grid-cols-1
-    bg-contain
-    bg-right-bottom
-    bg-no-repeat
-    bg-rotate-180
-    bg-footer-texture
-  `;
-
   let by = (`Fluent Finance Inc. & Fluent Federation Corp.`);
 
-  let buttonClasses: string = FluentStyles.processStyles({el: 'footer.button'});
   let iconClasses:   string = FluentStyles.processStyles({el: 'footer.icon'});
   let footerClasses: string = FluentStyles.processStyles({el: 'footer.div'});
+  let buttonClasses: string = FluentStyles.processStyles({el: 'footer.button'});
 </script>
-
-<div class={backgroundClasses}>  
-  <div class={lowerFooterClasses}>
-    <span class='w-full pt-40 h-60'> 
-      <p class='mx-auto mb-0 prose prose-p text-center text-xs justify-center'> 
-        Fluent Finance is the fintech infrastructure company responsible for 
-        developing the connections from core banking to public layers, 
-        bridging Web2 to Web3 utilizing the Fluent Protocol. Our flagship product 
-        is US Plus, the only fully verifiable cash and equivalent backed stablecoin.
-      </p>
-    </span>
-  </div>
-</div>
 
 <Footer footerType="sitemap" class={footerClasses}>
 

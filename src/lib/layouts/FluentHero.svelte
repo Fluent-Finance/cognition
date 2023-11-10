@@ -219,7 +219,7 @@
 
           <div class="flex w-full gap-2 mx-auto mt-6">
             <div class="mt-3 rounded-lg sm:mt-0">
-              <a href="#anchor-learn" on:click={handleAnchorClick}>
+              <a href="/#anchor-learn" on:click={handleAnchorClick}>
                 <button class={btnColor}>
                   Learn More
                 </button>

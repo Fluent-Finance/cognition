@@ -5,7 +5,11 @@ import type { EntryGenerator } from './$types';
 export const prerender = true; 
 
 export const entries: EntryGenerator = () => {
-  return [{ slug: 'whitepaper' }, { slug: 'profile' }];
+  return [
+    { slug: 'resources' }, 
+    { slug: 'press-media' }, 
+    { slug: 'usplus' }
+  ];
 };
 
 export async function load({ params }) {

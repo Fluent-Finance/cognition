@@ -9,10 +9,9 @@
   
   const handleNextClick = () => { carousel.goToNext() }
 
-
   let divPanel = `
-    w-full
-    h-[70vh]
+    w-full  
+    min-h-[40vh]
     grid
     grid-cols-1
     gap-4
@@ -23,11 +22,36 @@
     items-center
   `;
 
+  let anchorClasses = `
+    flex
+    flex-col 
+    rounded-3xl
+    min-h-fit
+    max-w-full    
+    text-center
+    my-0
+    py-0
+    px-3
+    mx-3
+    xs:py-8
+    xs:px-8
+    xs:mx-8
+    sm:py-8
+    sm:px-8
+    sm:mx-8
+  `;
+
+  let lowerAnchorClasses = `
+    ${anchorClasses} 
+    bg-neutral
+    dark:bg-white
+  `;
 </script>
 
-<Section class="flex h-40 h-[100vh] bg-white dark:bg-base-100">
+<Section class="flex bg-white dark:bg-base-100">
 
   {#if browser}
+  <div class={lowerAnchorClasses}>
     <Carousel 
     let:currentPageIndex
     let:pagesCount
@@ -172,7 +196,7 @@
         </div>
       </div>
 
-      <div class="absolute b-0 mt-[50%] h-[12px]" slot="dots">
+      <div class="relative h-[12px]" slot="dots">
         <div class="w-[172.25px] h-1 relative">
           <div class="w-[35.74px] h-1 left-0 top-[4px] absolute bg-base-50 rounded-3xl"></div>
           <div class="w-[35.74px] h-1 left-[45.70px] top-[4px] absolute bg-base-300 rounded-3xl"></div>
@@ -181,6 +205,7 @@
         </div>
       </div>
     </Carousel>
+  </div>
   {/if}
 
 </Section>
