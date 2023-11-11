@@ -15,7 +15,6 @@
   import { onMount }               from 'svelte';
   import { page }                  from '$app/stores';
   import theme                     from '$lib/stores/ThemeStore';
-  // import FluentLogoIconColor       from '$lib/assets/Logo-Color.svg?url';
   import FluentLogoIconWhite       from '$lib/assets/Logo-White.svg?url';
   import FluentLogoIconBlack       from '$lib/assets/Logo-Black.svg?url';
 
@@ -23,8 +22,7 @@
   let isFluid: boolean   = true;
   let breakPoint: number = 1280;
 
-  $: currentTheme  = $theme;
-  $: logoIconStyle = (currentTheme === 'dark' ? FluentLogoIconWhite : FluentLogoIconBlack);
+  $: logoIconStyle = ($theme === 'dark' ? FluentLogoIconWhite : FluentLogoIconBlack);
   $: activeUrl     = $page.url.pathname;
 
   $: if (width >= breakPoint) {
@@ -136,7 +134,7 @@
   <Navbar class="px-1 bg-white dark:bg-base-100" let:hidden let:toggle fluid={isFluid}>
 
     <NavBrand href="/">
-      <Img src={logoIconStyle} class="mr-2 h-7 opacity-75 dark:invert-100" alt="Fluent Logo" />
+      <Img src={logoIconStyle} class="mr-2 h-7 dark:invert" alt="Fluent Logo" />
       <span class={logoSpanClasses}> 
         Fluent Finance
       </span>
