@@ -26,7 +26,7 @@ const FluentStyles: FluentStyleThemeType ={
     font :{},
     text :{
       breaks :{
-        all :`text-2xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl`,
+        all :`text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl`,
       },
     },
   },

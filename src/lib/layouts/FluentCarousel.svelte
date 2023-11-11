@@ -11,31 +11,32 @@
   let carousel: any; 
   const handleNextClick = () => { carousel.goToNext() }
 
-
   let textBreaks  = FS.processStyles('global.text.breaks');
   let center      = FS.processStyles('global.center');
   let flexCol     = FS.processStyles('global.flex');
   let gridCols    = FS.processStyles('global.grid');
   let backgrounds = FS.processStyles('global.color');
 
-  let indicatorBase = `absolute w-[35.74px] h-1 top-[4px] rounded-3xl bg-base-300`;
+  let h1Headers     = `my-0 py-0 mx-4 px-4 md:mt-10 mb-0 text-black font-medium font-basier leading-9`;
+  let spaceCopy     = `my-1 mx-5 py-0 px-5 md:my-20 md:mx-10 md:px-20`;
+  let indicatorBase = `absolute w-[35.74px] h-1 top-[-20px] md:top-[4px] rounded-3xl bg-base-300`;
   let placeholder   = `w-[271px] h-[104px] bg-neutral-50 rounded-[10px] shadow`;
   let neuehaasCopy  = `text-[22px] font-normal font-neuehaas leading-loose`;
 
   let divPanel = `
     flex
-    min-h-[50vh]
+    min-h-[20vh]
+    md:min-h-[50vh]
+    md:max-h-[60vh]
     bg-neutral
     rounded-3xl
     ${textBreaks}
     ${center}
   `;
 
-  console.log(gridCols);
   let anchorClasses = `
     ${flexCol}
     rounded-3xl
-    min-h-[50vh]
     max-w-full    
     text-center
     py-0
@@ -77,16 +78,12 @@
           ${flexCol}`}>
 
             <div class={`
-            mt-1
-            text-black
-            font-medium
-            font-basier
-            leading-9
+            ${h1Headers}
             ${textBreaks}`}>
               High-Quality Assets and Managers
             </div>
 
-            <div class={`h-[43px] text-center text-slate-900 ${neuehaasCopy}`}>
+            <div class={`${spaceCopy} text-center text-slate-900 ${neuehaasCopy}`}>
               Fluent’s deposit token infrastructure directly plugs into core banking APIs.
             </div>
 
@@ -103,58 +100,32 @@
         </div>
           
         <div id={`panel-${currentPageIndex}`} class={divPanel}>
-          <div class="align-middle justify-center content-center items-center mx-auto py-3">
-            <div class="h-[395px] flex-col items-center gap-14 inline-flex">
+          <div class={`
+          py-3
+          mx-auto
+          gap-14
+          ${flexCol}`}>
 
-              <div class="mt-1 text-center text-black text-5xl font-medium font-basier leading-9">
-                Elite Enterprise Service Providers
-              </div>
-
-              <div class={`h-[43px] text-center text-slate-900 ${neuehaasCopy}`}>
-                Fluent’s tech stack integrates elite distributed ledger technology solutions and service providers.
-              </div>
-
-              <div class={`mx-auto ${center} ${gridCols}`}> 
-                <div class="">
-                  <div class={`${placeholder}`}></div>
-                </div>
-                <div class="">
-                  <div class={`${placeholder}`}></div>
-                </div>
-              </div>
-
+            <div class={`
+            ${h1Headers}
+            ${textBreaks}`}>
+              Elite Enterprise Service Providers
             </div>
-          </div>
-        </div>
 
-        <div id={`panel-${currentPageIndex}`} class={divPanel}>
-          <div class="align-middle justify-center content-center items-center mx-auto py-3">
-            <div class="h-[395px] flex-col items-center gap-14 inline-flex">
-
-              <div class="mt-1 text-center text-black text-5xl font-medium font-basier leading-9">
-                Third-Party Audits
-              </div>
-
-              <div class={`px-20 h-[43px] text-center text-slate-900 ${neuehaasCopy}`}>
-
-                <span class={`text-slate-900 ${neuehaasCopy}`}>
-                  In addition to earning a SOC 2 Type 1 certification, all of Fluent’s
-                </span>
-                <span class={`text-base-50 underline ${neuehaasCopy}`}>
-                  smart contracts have passed security audits
-                </span>
-                <span class={`text-slate-900 ${neuehaasCopy}`}> 
-                  and remain open source.
-                </span>
-              </div>
-
-              <div class={`mx-auto ${center} ${gridCols} xs:grid-cols-1`}> 
-                <div class="">
-                  <div class={`${placeholder}`}></div>
-                </div>
-              </div>
-
+            <div class={`${spaceCopy} text-center text-slate-900 ${neuehaasCopy}`}>
+              Fluent’s tech stack integrates elite distributed 
+              ledger technology solutions and service providers.
             </div>
+
+            <div class={`mx-auto ${center} ${gridCols}`}> 
+              <div class="">
+                <div class={`${placeholder}`}></div>
+              </div>
+              <div class="">
+                <div class={`${placeholder}`}></div>
+              </div>
+            </div>
+
           </div>
         </div>
 
@@ -165,18 +136,67 @@
           gap-14
           ${flexCol}`}>
 
-            <div class="mt-1 text-center text-black text-5xl font-medium font-basier leading-9">
+            <div class={`
+            ${h1Headers}
+            ${textBreaks}`}>
+              Third-Party Audits
+            </div>
+
+            <div class={`${spaceCopy} text-center text-slate-900 ${neuehaasCopy}`}>
+
+              <span class={`text-slate-900 ${neuehaasCopy}`}>
+                In addition to earning a SOC 2 Type 1 certification, all of Fluent’s
+              </span>
+              <span class={`text-base-50 underline ${neuehaasCopy}`}>
+                smart contracts have passed security audits
+              </span>
+              <span class={`text-slate-900 ${neuehaasCopy}`}> 
+                and remain open source.
+              </span>
+            </div>
+
+            <div class={`mx-auto ${center} ${gridCols} xs:grid-cols-1`}> 
+              <div class="">
+                <div class={`${placeholder}`}></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div id={`panel-${currentPageIndex}`} class={divPanel}>
+          <div class={`
+          my-10
+          py-20
+          md:py-3
+          mx-auto
+          gap-14
+          ${flexCol}`}>
+
+            <div class={`
+            ${h1Headers}
+            ${textBreaks}`}>
               Industry Experts and Agile Innovators
             </div>
 
-            <div class={`mb-10 mx-40 px-40 w-lg h-[43px] text-center text-slate-900 ${neuehaasCopy}`}>
+            <div class={`
+            my-1
+            py-1
+            mx-5
+            px-5
+            md:my-10
+            md:mx-10
+            md:px-40
+            text-center
+            text-slate-900
+            ${neuehaasCopy}`}>
               Fluent’s core team includes seasoned executives, 
               system architects, innovators, and entrepreneurs with 
               deep backgrounds in global banking, traditional finance, 
               digital assets, and core engineering.
             </div>
 
-            <div class={`mx-auto ${center} ${gridCols} md:grid-cols-4`}> 
+            <div class={`my-2 md:my-10 mx-auto ${center} ${gridCols} md:grid-cols-4`}> 
               <div class="">
                 <div class={`${placeholder}`}></div>
               </div>
@@ -189,9 +209,6 @@
               <div class="">
                 <div class={`${placeholder}`}></div>
               </div>
-            </div>
-
-            <div class={`mx-auto ${center} ${gridCols} md:grid-cols-4`}> 
               <div class="">
                 <div class={`${placeholder}`}></div>
               </div>
@@ -217,6 +234,7 @@
             <div class={`${indicatorBase} left-[136.51px]`}></div>
           </div>
         </div>
+
       </Carousel>
     </div>
   {/if}

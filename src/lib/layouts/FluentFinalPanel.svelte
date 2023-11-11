@@ -32,6 +32,7 @@
     border-black
     justify-center
     items-center">
+
       <div class="
       text-center
       text-neutral-900
@@ -43,7 +44,9 @@
       font-medium
       font-basier
       leading-loose">
-        Learn more about the Fluent Team and Advisors
+        <a href="/pages/team">
+          Learn more about the Fluent Team and Advisors
+        </a>
       </div>
     </div>
   </div>
