@@ -97,7 +97,7 @@ module.exports = {
     debugScreens: {
       ignore: ['dark'],
     },
-    darkmode: 'class',
+    darkMode: 'class',
     resize:     ['responsive', 'hover', 'focus'],
     appearance: ['responsive', 'hover', 'focus'],
     colors: {
