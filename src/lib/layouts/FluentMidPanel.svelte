@@ -110,10 +110,11 @@
   `;
 
   let h3TextClass = `
-    mb-2
     text-xs
-    xs:text-lg
-    md:text-xl
+    xs:text-sm
+    md:text-md 
+    lg:text-lg  
+    xl:text-xl   
     font-normal
     dark:text-white
   `;
@@ -193,7 +194,7 @@
 
     <Hr classHr="my-1 mx-5 md:my-10 md:mx-40" /> 
 
-    <div class="my-20 mx-10">
+    <div class="my-20 mx-10 px-60 xs:px-40">
       <HeroHeader {...headerclasses}> 
         <svelte:fragment slot="h2">On the Rise</svelte:fragment>
         <svelte:fragment slot="paragraph">

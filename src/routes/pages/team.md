@@ -161,10 +161,10 @@ order: 1
             space-x-4 
             sm:mt-0">
               <li>
-                <Github href="https://github.com/" />
+                <Github href="https://github.com/Fluent-Finance" />
               </li>
               <li>
-                <Twitter href="https://x.com/" />
+                <Twitter href="https://x.com/FluentDAO" />
               </li>
             </ul>
           </div>
