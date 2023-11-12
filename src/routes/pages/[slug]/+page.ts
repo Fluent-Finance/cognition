@@ -6,6 +6,7 @@ import type { EntryGenerator } from './$types';
 export const entries: EntryGenerator = () => {
   return [
     { slug: 'about' }, 
+    { slug: 'blog' }, 
     { slug: 'team' }
   ];
 };
@@ -14,7 +15,7 @@ export const prerender = true;
 
 /** @type {import('./$types').PageLoad} */
 export async function load({ params }) {
-  const post     = await import(`../${params.slug}.md`);
+  const post     = await import(`../${params.slug}.svelte.md`);
   const contents = post.default;
 
   if (!contents) 

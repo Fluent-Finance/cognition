@@ -53,7 +53,7 @@ module.exports = {
         "base-300":        "#D5D1DB",
         "base-400":        "#D5D9EC",
         "base-500":        "#F7F3FD",
-        "base-550":      "#590De5",
+        "base-550":        "#590De5",
         "base-600":        "#6200EE",
         "base-700":        "#2A0066",
         "base-800":        "#b996f8",
@@ -107,7 +107,7 @@ module.exports = {
 
       "base-25":  "#131313",
 
-      "base-20":"#7140e0",
+      "base-20":  "#7140e0",
       "base-50":  "#6200EE",
       "base-100": "#222222",
       "base-200": "#4B4653",
@@ -115,7 +115,7 @@ module.exports = {
       "base-400": "#D5D9EC",
       "base-500": "#F7F3FD",
       "base-600": "#6200EE",
-      "base-650":"#590De5",
+      "base-650": "#590De5",
       "base-700": "#2A0066",
       "base-800": "#C094FF",
       "base-900": "#E7D6FF",

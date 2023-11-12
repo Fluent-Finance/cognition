@@ -38,6 +38,7 @@
       xs:mx-3 
       my-0 
       text-black 
+      dark:text-base-900 
       min-w-[80px] 
       text-lg 
       md:text-3xl 

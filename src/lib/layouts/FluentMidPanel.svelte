@@ -32,7 +32,7 @@
     lg:text-2xl  
     xl:text-3xl
     text-base-300
-    dark:text-gray-400
+    dark:text-neutral
   `;
 
   let pLowerClasses = `
@@ -42,6 +42,7 @@
     xs:px-10
     xs:mx-10
     md:px-20
+    dark:text-gray-600
   `;
 
   let h1classes = `
@@ -106,7 +107,7 @@
   let lowerAnchorClasses = `
     ${anchorClasses} 
     bg-base-100
-    dark:bg-white
+    dark:transparent
   `;
 
   let h3TextClass = `
@@ -116,7 +117,6 @@
     lg:text-lg  
     xl:text-xl   
     font-normal
-    dark:text-white
   `;
 </script>
 
@@ -218,12 +218,13 @@
       py-10 
       sm:py-8 
       sm:px-4 
-      xl:gap-16 
       sm:py-6 
+      md:py-7 
       lg:mx-8
-      lg:px-8">
+      lg:px-8
+      xl:gap-16">
         <h2 class="
-        mb-10 
+        mb-40 
         tracking-tight
         font-semibold
         font-extrabold
@@ -234,7 +235,7 @@
         lg:text-7xl
         xl:text-8xl
         text-white
-        dark:text-white">
+        dark:text-neutral">
             Operating <span class={shader}>Principles</span>
         </h2>
         <p class={pLowerClasses}>

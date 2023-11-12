@@ -126,6 +126,7 @@
 
   let shader = `
     text-base-50 
+    dark:text-base-800
     xs:text-6xl
     sm:text-7xl
     md:text-8xl
@@ -171,11 +172,35 @@
     on:click={() => (clickOutsideModal = true)}
     class="p-0 m-0">
     <News>
-      <span class="text-sm bg-base-50 dark:bg-base-800 rounded-full text-white px-3 py-1 mr-3">USPlus</span>
-      <span class="text-sm mx-1 px-1 font-bold opacity-80 text-base-100 dark:text-neutral">is live!</span> 
-      <span class="text-sm font-medium opacity-80 text-base-100 dark:text-neutral" >Take a look</span>
+      <span class="
+      text-md   
+      bg-base-50
+      dark:bg-base-800
+      rounded-full
+      text-white
+      dark:text-neutral
+      dark:text-semibold
+      dark:drop-shadow-xl 
+      px-3
+      py-1
+      mr-3">USPlus</span>
+      <span class="
+      text-sm
+      mx-1
+      px-1
+      font-bold
+      opacity-80
+      text-base-100
+      dark:text-neutral">is live!</span>
+      <span class="
+      text-sm
+      font-medium
+      opacity-80
+      text-base-100
+      dark:text-neutral">Take a look</span>
     </News>
   </Button>
+
   <Modal title="Get USPlus today!" bind:open={clickOutsideModal} autoclose outsideclose>
     <div class="grid grid-cols-5 gap-2">
       <a href="https://www.bitrue.com/trade/usplus_usdt" target="_blank"> 

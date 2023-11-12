@@ -73,10 +73,10 @@ order: 1
       font-basier 
       leading-[72px]
       text-center" slot="label">
-        <span class="mr-0 md:mr-7 text-black">
+        <span class="mr-0 text-black dark:text-white">
           Get to know the 
         </span>
-        <span class="mr-0 md:mr-7 text-base-50"> 
+        <span class="mr-0 text-base-50 dark:text-base-800"> 
           Fluent Team
         </span>
       </div>
@@ -102,7 +102,7 @@ order: 1
         sm:text-xl 
         md:text-2xl 
         dark:text-gray-400">
-          <span class="text-black font-semibold font-neuehaas">
+          <span class="text-black dark:text-neutral font-semibold font-neuehaas">
             Industry veterans and decisive innovators.
           </span>
           Fluent's core team combines decades of leadership 

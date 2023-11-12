@@ -16,18 +16,16 @@
   import { page }                  from '$app/stores';
   import theme                     from '$lib/stores/ThemeStore';
   import FluentLogoIconWhite       from '$lib/assets/Logo-White.svg?url';
-  import FluentLogoIconBlack       from '$lib/assets/Logo-Black.svg?url';
   
   let width: number;
   let isFluid: boolean   = true;
   let breakPoint: number = 1280;
 
-  $: logoIconStyle = ($theme === 'dark' ? FluentLogoIconWhite : FluentLogoIconBlack);
+  $: logoIconStyle = FluentLogoIconWhite;
   $: activeUrl     = $page.url.pathname;
+  $: isFluid       = (width >= breakPoint) ? true : false 
 
-  $: isFluid = (width >= breakPoint) ? true : false 
-
-  onMount(() => {
+  onMount( ()=> {
     isFluid = (width >= breakPoint) ? true : false 
   });
 
@@ -101,7 +99,8 @@
     sm:text-sm
     bg-base-50
     hover:bg-800
-    dark:hover:bg-base-700
+    dark:hover:text-base-100
+    dark:hover:bg-base-900
     dark:bg-base-800
   `;
 
@@ -124,7 +123,7 @@
   <Navbar class="p-0 py-3 m-0 bg-white dark:bg-base-100" let:hidden let:toggle fluid={isFluid}>
 
     <NavBrand href="/">
-      <Img src={logoIconStyle} class="mr-2 h-7 dark:invert" alt="Fluent Logo" />
+      <Img src={logoIconStyle} class="mr-2 h-7 invert dark:invert-0" alt="Fluent Finance Logo" />
       <span class={logoSpanClasses}> 
         Fluent Finance
       </span>
@@ -169,8 +168,8 @@
         active={activeUrl === '/pages/team'}> Team
       </NavLi>
       <NavLi 
-        href='/blog/fluent-opsec-2023'
-        active={activeUrl === '/blog'}> Blog
+        href='/pages/blog'
+        active={activeUrl === '/pages/blog'}> Blog
       </NavLi>
     </NavUl>
 

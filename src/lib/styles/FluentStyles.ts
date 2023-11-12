@@ -39,7 +39,7 @@ const FluentStyles: FluentStyleThemeType ={
       size    :`min-h-90 h-90 w-full`,
       align   :`justify-left`,
       color   :`bg-neutral`,
-      dark    :`dark:from-base-100 dark:via-base-100 dark:to-base-100`,
+      dark    :`dark:bg-gray-800`,
       break   :`xs:flex xs:flex-wrap`,
     },
 
@@ -56,11 +56,11 @@ const FluentStyles: FluentStyleThemeType ={
     button :{
       align   :``,
       font    :`font-basier font-medium`,
-      color   :`bg-base-600`,
+      color   :`bg-base-600 dark:bg-base-800`,
       view    :`sm:block`,
       text    :`text-center text-neutral text-md leading-normal`,
       size    :`min-h-lg px-9 py-5 mx-2 rounded-xl `,
-      effect  :`hover:bg-primary dark:hover:bg-base-700`,
+      effect  :`hover:bg-primary dark:hover:bg-base-900 dark:hover:text-base-100`,
       break   :`xs:px-11 xs:text-sm sm:text-md md:text-lg lg:text-2xl`,
     },
   },

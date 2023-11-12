@@ -1,6 +1,6 @@
 <!-- handcoded with ♥︎  by ⚡️--𝙆𝙊𝘿𝞝𝙋𝞸𝞝𝙏--⚡️-->
 <!doctype html>
-<html class='h-full min-h-screen bg-transparent light dark:bg-base-100' lang="en" data-theme='fluent'>
+<html class='h-full min-h-screen bg-transparent dark:bg-base-100' lang="en" data-theme='fluent'>
   <head>
     <link rel="icon"                                  href="%sveltekit.assets%/images/favicon.ico" />
     <link rel="apple-touch-icon"      sizes="180x180" href="%sveltekit.assets%/images/apple-touch-icon.png" />
@@ -22,13 +22,6 @@
     <meta name="msapplication-TileColor"               content="#6200EE" />
     <meta name="msapplication-TileImage"               content="%sveltekit.assets%/images/mstile-144x144.png" />
     <meta name="msapplication-config"                  content="%sveltekit.assets%/browserconfig.xml" />
-
-    <script>
-      localStorage.theme === 'light' ||
-      (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
-        ? document.documentElement.classList.add('dark')
-        : document.documentElement.classList.remove('dark');
-    </script>
 
     %sveltekit.head%
   </head>

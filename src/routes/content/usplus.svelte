@@ -34,6 +34,7 @@
     bg-no-repeat
     bg-clip-padding 
     bg-center
+    dark:invert
       `}>
     </div>
     <!-- USPlus Background Image -->
@@ -50,10 +51,12 @@
     font-basier 
     leading-[42px]
     md:leading-[72px]
+    text-black 
+    dark:text-white
     text-center">
-      <span class="mr-1 md:mr-7 text-black">Fluent’s</span>
-      <span class="mr-1 md:mr-7 text-base-50"> Live</span>
-      <span class="text-black"> Pilot Project</span>
+      <span class="">Fluent’s</span>
+      <span class="text-base-50 dark:text-base-800"> Live</span>
+      <span class=""> Pilot Project</span>
     </div>
      
     <div class="
@@ -76,6 +79,7 @@
     justify-center
     text-center
     text-base-200
+    dark:text-neutral
     font-normal
     font-neuehaas
     leading-loose">
@@ -99,11 +103,21 @@
     rounded-2xl
     border-2
     border-black
+    dark:border-white
     justify-center
     items-center
     gap-2
     inline-flex">
-      <div class="text-center text-neutral-900 text-md xs:text-lg md:text-xl  font-medium font-basier leading-loose">
+      <div class="
+      text-center
+      text-neutral-900
+      dark:text-neutral
+      text-md
+      xs:text-lg
+      md:text-xl
+      font-medium
+      font-basier
+      leading-loose">
         <a href="/dashboard/fluent">
           USPlus Analytics Dashboards
         </a>
@@ -121,6 +135,7 @@
           md:px-40
           text-center
           text-black
+          dark:text-neutral 
           text-xl
           sm:text-2xl
           lg:text-5xl

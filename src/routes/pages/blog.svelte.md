@@ -1,4 +1,10 @@
-<!-- handcoded with ♥︎  by ⚡️-𝙆𝙊𝘿𝞝𝙋𝞸𝞝𝙏-⚡️--->
+---
+dir: pages
+title: Blog
+icon: UserGroupSolid
+order: 2
+---
+
 <script>
   import { Section } from 'flowbite-svelte-blocks';
 
@@ -25,7 +31,7 @@
   text-black 
   dark:text-white
   text-center">
-    <span class={`${defaults}`}>Resources</span>
+    <span class={`${defaults}`}>Blog</span>
   </div>
  
 </Section>

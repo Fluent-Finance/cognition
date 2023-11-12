@@ -41,7 +41,6 @@
     xs:text-[40px]
     text-center
     text-black
-    dark:text-white
     xs:text-3xl
     sm:text-5xl
     md:text-6xl
@@ -58,7 +57,7 @@
     lg:text-xl  
     font-normal  
     text-black 
-    dark:text-white
+    dark:text-gray-600
   `;
 
   let shader = `
@@ -117,7 +116,7 @@
     lg:text-2xl  
     xl:text-2xl
     text-gray-500
-    dark:text-gray-400
+    dark:text-gray-600
   `;
 
   let h2Classes = `
@@ -137,7 +136,7 @@
     lg:px-20 
     font-medium
     text-base-200
-    dark:text-base-300
+    dark:text-base-200
   `;
 
   let lowerCopy = `

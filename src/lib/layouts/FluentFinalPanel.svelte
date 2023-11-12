@@ -30,12 +30,14 @@
     rounded-2xl
     border-2
     border-black
+    dark:border-white
     justify-center
     items-center">
 
       <div class="
       text-center
       text-neutral-900
+      dark:text-neutral
       text-sm  
       xs:text-md
       sm:text-lg 

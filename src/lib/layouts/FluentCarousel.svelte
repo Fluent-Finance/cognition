@@ -50,7 +50,6 @@
   let wrapperClasses = `
     ${anchorClasses} 
     bg-neutral
-    dark:bg-white
   `;
 
   let carousel: any; 
@@ -81,7 +80,7 @@
               High-Quality Assets and Managers
             </div>
 
-            <div class={`${spaceCopy} text-center text-slate-900 ${neuehaasCopy}`}>
+            <div class={`${spaceCopy} text-center text-gray-500 ${neuehaasCopy}`}>
               Fluent’s deposit token infrastructure directly plugs into core banking APIs.
             </div>
 
@@ -110,7 +109,7 @@
               Elite Enterprise Service Providers
             </div>
 
-            <div class={`${spaceCopy} text-center text-slate-900 ${neuehaasCopy}`}>
+            <div class={`${spaceCopy} text-center text-gray-500 ${neuehaasCopy}`}>
               Fluent’s tech stack integrates elite distributed 
               ledger technology solutions and service providers.
             </div>
@@ -140,15 +139,15 @@
               Third-Party Audits
             </div>
 
-            <div class={`${spaceCopy} text-center text-slate-900 ${neuehaasCopy}`}>
+            <div class={`${spaceCopy} text-center text-gray-500 ${neuehaasCopy}`}>
 
-              <span class={`text-slate-900 ${neuehaasCopy}`}>
+              <span class={`text-gray-500 ${neuehaasCopy}`}>
                 In addition to earning a SOC 2 Type 1 certification, all of Fluent’s
               </span>
               <span class={`text-base-50 underline ${neuehaasCopy}`}>
                 smart contracts have passed security audits
               </span>
-              <span class={`text-slate-900 ${neuehaasCopy}`}> 
+              <span class={`text-gray-500 ${neuehaasCopy}`}> 
                 and remain open source.
               </span>
             </div>
@@ -186,7 +185,7 @@
             md:mx-10
             md:px-40
             text-center
-            text-slate-900
+            text-gray-500
             ${neuehaasCopy}`}>
               Fluent’s core team includes seasoned executives, 
               system architects, innovators, and entrepreneurs with 

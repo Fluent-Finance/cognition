@@ -109,6 +109,7 @@
   <main class="flex-col ">
     <slot />
   </main>
-    <FluentFooter /> 
+
+  <FluentFooter /> 
 </div>
 
