@@ -1,11 +1,8 @@
 <!-- handcoded with ♥︎  by ⚡️-𝙆𝙊𝘿𝞝𝙋𝞸𝞝𝙏-⚡️--->
 <script lang='ts'>
+  import _           from 'lodash';
   import { Section } from 'flowbite-svelte-blocks';
-
-  import LineGraph      from '$components/LineGraph.svelte';
-  import BarGraph       from '$components/BarGraph.svelte';
-  import PieGraph       from '$components/PieGraph.svelte';
-  import DoughnutGraph  from '$components/DoughnutGraph.svelte';
+  import FS          from '$lib/styles/FluentStyles';
 
   let divPanel = `
     flex-col 
@@ -150,6 +147,7 @@
               <div class="w-[271px] h-[104px] bg-neutral-50 rounded-[10px] shadow"></div>
             </div>
           </div>
+
         </div>
       </div>
     </div>

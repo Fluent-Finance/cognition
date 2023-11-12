@@ -5,8 +5,8 @@
   import FluentFinalPanel from '$lib/layouts/FluentFinalPanel.svelte';
 </script>
 
-<div class='flex flex-col w-full h-full mx-auto px-25'> 
-  <FluentHero />                             
+<div class='flex flex-col w-full h-full mx-auto px-0'> 
+  <FluentHero />
   <FluentMidPanel /> 
   <FluentFinalPanel /> 
 </div> 

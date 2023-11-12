@@ -1,7 +1,7 @@
 import { browser }  from '$app/environment';
 import { writable } from 'svelte/store';
 
-const defaultValue = 'dark';
+const defaultValue = 'light';
 const themeMode    = browser ? window.localStorage.getItem('color-theme') : 'light';
 const initialValue = browser ? themeMode ?? themeMode : defaultValue;
 

@@ -121,7 +121,7 @@ module.exports = {
       "base-900": "#E7D6FF",
     },
     screens: {
-      xs: '720px',
+      xs: '768px',
       sm: '1024px',
       md: '1280px',
       lg: '1440px',

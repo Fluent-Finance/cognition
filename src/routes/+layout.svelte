@@ -18,31 +18,21 @@
   export let data: PageData; 
 
   let width: number;
-  let breakPoint: number    = 1280;
+  let breakPoint: number    = 2260;
   let backdrop: boolean     = false; 
   let drawerHidden: boolean = true;
   let activateClickOutside  = true;
 
   $: drawerHidden = drawerHidden;
 
-  $: if (width >= breakPoint) {
-    drawerHidden         = true;
-    activateClickOutside = true;
-  } else {
-    drawerHidden         = true;
-    activateClickOutside = true;
-  }
+  $: drawerHidden         = (width >= breakPoint) ? true : true;
+  $: activateClickOutside = (width >= breakPoint) ? true : false;
 
   // NOTE: the element that is using one of 
   // the theme attributes must be in the DOM on mount
   onMount(() => {
-    if (width >= breakPoint) {
-      drawerHidden         = true;
-      activateClickOutside = true;
-    } else {
-      drawerHidden         = true;
-      activateClickOutside = true;
-    }
+    drawerHidden         = (width >= breakPoint) ? false : true;
+    activateClickOutside = (width >= breakPoint) ? true : false;
 
     themeChange(false)
     // 👆 false parameter is required for svelte
@@ -62,8 +52,8 @@
     data,
   }
 
-  let drawerClasses   = 'overflow-scroll pb-32 dark:bg-base-100';
-  let closeBtnClasses = 'mb-4 dark:text-white lg:hidden';
+  let drawerClasses   = 'z-index-888 overflow-scroll pb-32 dark:bg-base-100';
+  let closeBtnClasses = 'w-5 h-5 bg-error mb-4 dark:text-white flex lg:hidden';
 
 </script>
 
@@ -100,14 +90,14 @@
 /> 
 
 <svelte:window bind:innerWidth={width} />
-<div class='flex flex-col w-full'> 
 
+<div class='flex flex-col w-full'> 
   <FluentHeader  
     on:toggleDrawer={toggleDrawer} />  
 
   <Drawer
     id="sidebar"
-    width="w-64"
+    width="w-54"
     class={drawerClasses}
     transitionType="fly"
     bind:hidden={drawerHidden}
@@ -122,9 +112,9 @@
   </Drawer> 
 
   <!-- @Main Content Slot --> 
-  <main class="">
+  <main class="flex-col ">
     <slot />
-    <FluentFooter /> 
   </main>
+    <FluentFooter /> 
 </div>
 

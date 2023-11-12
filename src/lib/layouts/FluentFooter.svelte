@@ -28,7 +28,7 @@
 
 <Footer footerType="sitemap" class={footerClasses}>
 
-  <div class='relative w-full my-10'>
+  <div class='z-index-999 relative w-full my-10'>
 
     <div class="flex items-center space-x-3 align-middle sm:pr-20">
 

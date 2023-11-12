@@ -18,7 +18,6 @@ export type DataSetType = {
   render          :() => object | DataSetType['rendered'];
 };
 
-
 export type FluentStyleThemeType = {
 
   global :{
@@ -34,7 +33,7 @@ export type FluentStyleThemeType = {
     } | object | undefined | null;
 
     center      :object | undefined | null;
-    flex        :object | undefined | null;
+    flex        :{ col: string, row: string } | object | undefined | null;
     grid        :object | undefined | null;
     font        :object | undefined | null;
     container   :object | undefined | null;

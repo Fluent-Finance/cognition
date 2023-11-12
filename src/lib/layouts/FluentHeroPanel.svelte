@@ -4,7 +4,7 @@
   import Fingerprint from '$lib/utils/icons/Fingerprint.svelte';
   import Clipboard   from '$lib/utils/icons/Clipboard.svelte';
 
-  import { Section } from 'flowbite-svelte-blocks';
+  import { Section, HeroHeader, FeatureDefault } from 'flowbite-svelte-blocks';
 
   export let iconClasses = `
     mx-auto
@@ -72,17 +72,17 @@
     rounded-3xl
     min-h-fit
     max-w-full 
-    max-w-screen-xl
     text-center
-    py-1
-    px-0
-    mx-0
-    xs:py-8
-    xs:px-8
-    xs:mx-8
-    sm:py-8
-    sm:px-8
-    sm:mx-8
+    my-0
+    py-0
+    px-3
+    mx-3
+    xs:py-4
+    xs:px-4
+    xs:mx-4
+    sm:py-4
+    sm:px-4
+    sm:mx-4
   `;
 
   let pDivClasses = `
@@ -155,34 +155,45 @@
     xl:px-0 
   `;
 
+  let headerclasses = {
+    class:   "max-w-full",
+    h2Class: "mb-9 text-4xl lg:text-6xl xl:text-7xl tracking-tight font-medium text-neutral dark:text-white",
+    pClass:  "text-neutral font-normal font-neuehass text-md xs:text-xl lg:text-2xl dark:text-gray-400",
+  };
 </script> 
 
-<Section class="bg-white dark:bg-transparent">
+<Section name="feature" class="bg-white dark:bg-transparent mt-0">
   <div class={anchorClasses}>
-    <div class="
-    sm:py-10
-    lg:py-10 
-    sm:px-3
-    md:px-0
-    xs:mx-10
-    sm:mx-10
-    md:mx-0
-    lg:mx-30
-    xl:mx-10">
-      <h1 class={h1classes}>
-        Interoperable <span class={shader}>Infrastructure</span>
-        for a Fragmented Financial System
-      </h1> 
-    </div>
+    <HeroHeader {...headerclasses}> 
+      <svelte:fragment slot="h2">
+        <div class="
+        sm:py-10
+        lg:py-10 
+        sm:px-3
+        md:px-0
+        xs:mx-10
+        sm:mx-10
+        md:mx-0
+        lg:mx-30
+        xl:mx-10">
+          <h1 class={h1classes}>
+            Interoperable <span class={shader}>Infrastructure</span>
+            for a Fragmented Financial System
+          </h1> 
+        </div>
+      </svelte:fragment>
 
-    <div class={pDivClasses}>
-      <p class={pclasses}>
-        Public blockchains, digital native systems, and digital assets are here to stay. 
-        Traditional financial institutions, banks, and custodians are too. 
-        Powerful financial landscapes need infrastructure that allows them to communicate 
-        so they can grow – without growing apart.
-      </p>
-    </div>
+      <svelte:fragment slot="paragraph">
+        <div class={pDivClasses}>
+          <p class={pclasses}>
+            Public blockchains, digital native systems, and digital assets are here to stay. 
+            Traditional financial institutions, banks, and custodians are too. 
+            Powerful financial landscapes need infrastructure that allows them to communicate 
+            so they can grow – without growing apart.
+          </p>
+        </div>
+      </svelte:fragment>
+    </HeroHeader>
 
     <div class={lowerCopy}>
       <h2 class={h2Classes}>
