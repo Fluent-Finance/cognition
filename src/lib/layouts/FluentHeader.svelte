@@ -106,6 +106,7 @@
   `;
 
   let darkModeClasses = `
+    sm:order-1
     dark:hover:text-white 
     hover:text-base-900
   `;

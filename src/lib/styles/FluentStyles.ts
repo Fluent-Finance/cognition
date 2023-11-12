@@ -18,7 +18,7 @@ const FluentStyles: FluentStyleThemeType ={
     },
     size :{
       base    :`px-1 mx-1`,
-      breaks  :``,
+      breaks  :`xs:px-2 sm:px-6 md:px-8 lg:px-10 xl:px-12`,
     },
     grid :{
       all :`grid grid-cols-1 xs:grid-cols-2 gap-6`,

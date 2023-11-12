@@ -8,10 +8,15 @@ import mdsvexConfig       from './mdsvex.config.js';
 import { importAssets }   from 'svelte-preprocess-import-assets';
 import postcssImport      from 'postcss-import';
 import autoprefixer       from 'autoprefixer';
+import { readFileSync }   from "fs";
+import { fileURLToPath }  from "url";
+
+const json = readFileSync(fileURLToPath(new URL("package.json", import.meta.url)), 'utf8');
+const { version } = JSON.parse(json);
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-  extensions: ['.svelte', ...mdsvexConfig.extensions],
+  extensions: ['.svelte', '.svelte.md', ...mdsvexConfig.extensions],
 
   kit: {
     adapter: adapter({ 
@@ -21,6 +26,9 @@ const config = {
       polyfill: true,
       deps: './deps.ts'
     }),
+    version: {
+      name: version, 
+    },
 		serviceWorker: { register: true },
     alias: {
       $styles: 'src/lib/styles',
@@ -38,13 +46,14 @@ const config = {
       mode: 'hash',
       directives: {
         'base-uri': ['none'],
-        'script-src': ['self'],
+        'script-src': ['self',
+          'sha256-4N/7e9aYkfuXVBtskvak4XR8lIfkvWsWV0BwGF3wqAk=',
+          'sha256-fSrLZUVrC4moK2ehdVTeY+HZudZmpoiaJVnn/qnG7s4='],
         'object-src': ['none'],
         'frame-ancestors': ['self']
       }
     }
   }, 
-
   preprocess: [
     preprocess({
       typescript: true,

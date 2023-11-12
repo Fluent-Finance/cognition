@@ -1,19 +1,30 @@
 <!-- handcoded with ♥︎  by ⚡️-𝙆𝙊𝘿𝞝𝙋𝞸𝞝𝙏-⚡️--->
 <script lang='ts'>
-  import _ from 'lodash';
-  import { Heading, P } from 'flowbite-svelte';
-  import { Section }    from 'flowbite-svelte-blocks';
-  import LineGraph      from '$components/LineGraph.svelte';
-  import BarGraph       from '$components/BarGraph.svelte';
-  import PieGraph       from '$components/PieGraph.svelte';
-  import DoughnutGraph  from '$components/DoughnutGraph.svelte';
+  import _             from 'lodash';
+  import { P }         from 'flowbite-svelte';
+  import { Section }   from 'flowbite-svelte-blocks';
+  import LineGraph     from '$components/LineGraph.svelte';
+  import BarGraph      from '$components/BarGraph.svelte';
+  import DoughnutGraph from '$components/DoughnutGraph.svelte';
 </script>
 
 <Section class="bg-white dark:bg-base-100">
-  <div class='container w-full pt-10'>
-    <div class="w-full my-40 h-[136px] text-center">
-      <span class="mr-7 text-base-50 text-[90px] font-semibold font-basier leading-[72px]">USPlus</span>
-      <span class="text-black text-[90px] font-semibold font-basier leading-[72px]">Bank Reserves</span>
+  <div class='container w-full pt-0'>
+    <div class="
+    w-full
+    my-8
+    text-3xl 
+    xs:text-4xl 
+    sm:text-5xl 
+    md:text-6xl 
+    lg:text-7xl 
+    xl:text-8xl 
+    text-black
+    text-center
+    font-basier
+    font-semibold
+    leading-[52px]">
+      <span class="text-base-50 ">USPlus</span> Bank Reserves
     </div>
 
     <div class='grid grid-cols-4 grid-flow-row gap-10'>

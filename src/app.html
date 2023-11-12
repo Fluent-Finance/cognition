@@ -1,6 +1,6 @@
 <!-- handcoded with ♥︎  by ⚡️--𝙆𝙊𝘿𝞝𝙋𝞸𝞝𝙏--⚡️-->
 <!doctype html>
-<html class='h-full min-h-screen bg-transparent dark:bg-base-100' lang="en" data-theme='fluent'>
+<html class='h-full min-h-screen bg-transparent light dark:bg-base-100' lang="en" data-theme='fluent'>
   <head>
     <link rel="icon"                                  href="%sveltekit.assets%/images/favicon.ico" />
     <link rel="apple-touch-icon"      sizes="180x180" href="%sveltekit.assets%/images/apple-touch-icon.png" />
@@ -11,7 +11,7 @@
     <link rel="mask-icon"                             href="%sveltekit.assets%/images/safari-pinned-tab.svg" color="#6200EE" />
     <link rel="stylesheet"                            href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.css" />
 
-    <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, user-scalable=yes, maximum-scale=1.5, minimum-scale=1" />
+    <meta name="viewport" content="width=device-width, user-scalable=yes, maximum-scale=1.5, minimum-scale=1" />
 
     <meta charset="utf-8" />
     <meta name="theme-color"                           content="#6200EE" />
@@ -24,7 +24,7 @@
     <meta name="msapplication-config"                  content="%sveltekit.assets%/browserconfig.xml" />
 
     <script>
-      localStorage.theme === 'dark' ||
+      localStorage.theme === 'light' ||
       (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
         ? document.documentElement.classList.add('dark')
         : document.documentElement.classList.remove('dark');

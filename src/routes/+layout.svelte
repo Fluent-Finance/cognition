@@ -6,7 +6,6 @@
   import { onMount }     from 'svelte';
   import { MetaTags }    from 'svelte-meta-tags';
   import { sineIn }      from 'svelte/easing';
-  import { themeChange } from 'theme-change'
   
   import { Drawer, CloseButton } from 'flowbite-svelte';
 
@@ -28,14 +27,9 @@
   $: drawerHidden         = (width >= breakPoint) ? true : true;
   $: activateClickOutside = (width >= breakPoint) ? true : false;
 
-  // NOTE: the element that is using one of 
-  // the theme attributes must be in the DOM on mount
   onMount(() => {
     drawerHidden         = (width >= breakPoint) ? false : true;
     activateClickOutside = (width >= breakPoint) ? true : false;
-
-    themeChange(false)
-    // 👆 false parameter is required for svelte
   });
    
   let transitionParams = {

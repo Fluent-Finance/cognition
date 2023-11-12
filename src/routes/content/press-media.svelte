@@ -1,6 +1,6 @@
 <!-- handcoded with ♥︎  by ⚡️-𝙆𝙊𝘿𝞝𝙋𝞸𝞝𝙏-⚡️--->
 <script lang='ts'>
-  import { Section, } from 'flowbite-svelte-blocks';
+  import { Section } from 'flowbite-svelte-blocks';
 </script> 
 
 <Section class="bg-white dark:bg-base-100">

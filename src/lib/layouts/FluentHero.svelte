@@ -98,19 +98,15 @@
     relative
     min-h-screen
     max-w-full
-
     my-5
-
     mx-0
-    xs:mx-5
-    md:mx-10
-
     px-0
+    py-19
+    xs:mx-5
     xs:px-10
+    md:mx-10
     md:px-12
     lg:px-16
-
-    py-19
     lg:py-10
   `;
 
