@@ -21,7 +21,7 @@ const FluentStyles: FluentStyleThemeType ={
       breaks  :``,
     },
     grid :{
-      all :`grid grid-cols-1 xs:grid-cols-2 gap-6 my-10`,
+      all :`grid grid-cols-1 xs:grid-cols-2 gap-6`,
     },
     font :{},
     text :{
