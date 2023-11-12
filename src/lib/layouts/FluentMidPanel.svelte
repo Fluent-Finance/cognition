@@ -194,7 +194,7 @@
 
     <Hr classHr="my-1 mx-5 md:my-10 md:mx-40" /> 
 
-    <div class="my-20 mx-10 px-60 xs:px-40">
+    <div class="my-20 mx-10 px-10 xs:px-40 md:px-60">
       <HeroHeader {...headerclasses}> 
         <svelte:fragment slot="h2">On the Rise</svelte:fragment>
         <svelte:fragment slot="paragraph">
