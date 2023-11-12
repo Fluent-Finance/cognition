@@ -120,7 +120,7 @@
 </script>
 
 <header class="z-index-50 sticky mx-0 px-0 top-0 mt-10" style='z-index: 50'>
-  <Navbar class="p-0 m-0 bg-white dark:bg-base-100" let:hidden let:toggle fluid={isFluid}>
+  <Navbar class="p-0 py-3 m-0 bg-white dark:bg-base-100" let:hidden let:toggle fluid={isFluid}>
 
     <NavBrand href="/">
       <Img src={logoIconStyle} class="mr-2 h-7 dark:invert" alt="Fluent Logo" />
