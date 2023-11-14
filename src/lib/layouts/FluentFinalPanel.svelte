@@ -38,7 +38,7 @@
       text-center
       text-neutral-900
       dark:text-neutral
-      text-sm  
+      text-xs  
       xs:text-md
       sm:text-lg 
       md:text-xl

@@ -2,8 +2,8 @@
 <script lang='ts'>
   import { Button }        from 'flowbite-svelte';
   import { Section, News } from 'flowbite-svelte-blocks';
-  import FluentHeroPanel   from './FluentHeroPanel.svelte';
   import { Img, Modal }    from 'flowbite-svelte';
+
   import bitrue            from '$lib/assets/bitrue.png';
   import xdc               from '$lib/assets/xdc.png';
   import ethereum          from '$lib/assets/ethereum.png';
@@ -96,7 +96,7 @@
 
   let divHeroClass = `
     relative
-    min-h-screen
+    min-h-[80vh]
     max-w-full
     my-5
     mx-0
@@ -167,7 +167,6 @@
 </script>
 
 <Section name="heroDefault">
-
   <Button 
     on:click={() => (clickOutsideModal = true)}
     class="p-0 m-0">
@@ -258,7 +257,4 @@
       </div>
     </div>
   </div>
-
-  <FluentHeroPanel /> 
-
 </Section>
