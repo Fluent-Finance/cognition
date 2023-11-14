@@ -6,6 +6,7 @@ order: 1
 ---
 
 <script>
+  import _ from 'lodash';
   import { Img, Heading, P } from 'flowbite-svelte'
   import { 
     Section, 
@@ -20,47 +21,42 @@ order: 1
   import TeamMembers from '$lib/data/TeamMembers';
 
   let imgClass = `
-    w-full 
+    p-0
+    m-2
+    mx-auto
     grayscale
     hover:grayscale-0
-    min-w-lg
-    min-h-lg
-    object-fill
-    rounded-3xl 
+    shadow-xl 
+    rounded-3xl
   `;
 
   let divClass = ` 
+    mx-auto
     justify-center
     content-center
     items-center
     text-center
-    bg-neutral
-    rounded-lg
-    shadow
-    sm:flex
-    dark:bg-base-100
-    dark:border-gray-700
   `;
 
-  let wrapperClass = `
-    py-8
-    px-4
-    mx-auto
-    min-w-full
-    max-w-full
-    lg:py-16
-    lg:px-6
+  let cssMemberImage = `
+    mb-2
+    p-8
+    transition
+    overflow-hidden
+    object-cover 
+    object-center
+    rounded-3xl 
   `;
 </script>
 
-<Section name="team" class='relative py-6 sm:py-10 min-w-full'>
-  <TeamWrapper divClass={wrapperClass}> 
+<Section name="team" class='relative py-6 sm:py-10 max-w-full'>
+  <TeamWrapper {divClass}> 
     <TeamHeader>
       <div class="
-      w-full 
       my-5 
       py-5
       px-10
+      xs:px-10
       sm:px-5
       md:px-0
       text-3xl 
@@ -71,7 +67,8 @@ order: 1
       xl:text-8xl 
       font-semibold 
       font-basier 
-      leading-[72px]
+      leading-[32px]
+      md:leading-[72px]
       text-center" slot="label">
         <span class="mr-0 text-black dark:text-white">
           Get to know the 
@@ -83,8 +80,10 @@ order: 1
       <div class="
       my-10
       py-0
-      mx-1
-      px-1
+      mx-5
+      px-5
+      xs:mx-10
+      xs:px-20
       lg:my-10 
       lg:py-10 
       lg:mx-60 
@@ -97,6 +96,7 @@ order: 1
         justify-center
         text-gray-500
         mb-16
+        mx-20
         text-md 
         xs:text-lg  
         sm:text-xl 
@@ -112,24 +112,29 @@ order: 1
         </P> 
       </div>
     </TeamHeader>
-    <div class="grid gap-6 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-      {#each TeamMembers as { href, src, alt, name, jobTitle, description }}
+    <div class="
+    mx-auto
+    grid
+    gap-2
+    grid-cols-1
+    xs:grid-cols-2
+    md:grid-cols-3
+    place-content-center
+    justify-center
+    items-center
+    content-center">
+      {#each TeamMembers as { href, src, alt, name, jobTitle, description }, idx}
         <div class="
-        bg-white
-        rounded-xl
+        m-10
+        bg-neutral 
+        shadow-md  
         border
         border-gray-200
-        shadow-sm
         dark:bg-gray-800
         dark:border-gray-700">
           <a {href}>
-            <div class="
-            p-9
-            rounded-tl-lg  
-            rounded-tr-lg   
-            rounded-bl-none
-            rounded-br-none">
-              <Img {src} {alt} class={imgClass} />
+            <div class={cssMemberImage}>
+              <Img class='' size='max-w-full' {src} {alt} {imgClass} figClass="" />
             </div>
           </a>
           <div class="
@@ -138,14 +143,16 @@ order: 1
           content-center
           text-center
           justify-center
+          mt-2
+          sm:mt-0
           px-5 
           pb-5">
-            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+            <h3 class="text-sm sm:text-xl font-bold tracking-tight text-gray-900 dark:text-white">
               <a {href} class=""> 
                 {name}
               </a>
             </h3>
-            <span class="text-gray-500">
+            <span class="text-sm sm:text-lg text-gray-500">
               {jobTitle} 
             </span>
             <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">

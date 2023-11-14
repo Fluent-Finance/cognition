@@ -3,7 +3,7 @@
 const TeamMembers = [
   {
     href: '#',
-    src: '/images/team/00_team_member.jpg',
+    src: '/images/team/00_team_member.png',
     alt: 'Bradley Allgood',
     name: 'Bradley Allgood',
     jobTitle: 'Chief Executive Officer',
@@ -35,7 +35,7 @@ const TeamMembers = [
   },
   {
     href: '#',
-    src: '/images/team/04_team_member.jpg',
+    src: '/images/team/04_team_member.png',
     alt: 'Anthony Nixon',
     name: 'Anthony Nixon',
     jobTitle: 'Senior Software Engineer',
@@ -51,7 +51,7 @@ const TeamMembers = [
   },
   {
     href: '#',
-    src: '/images/team/06_team_member.jpg',
+    src: '/images/team/06_team_member.png',
     alt: 'Khaled Khan',
     name: 'Khaled Khan',
     jobTitle: 'Chief Strategy Officer',
@@ -59,7 +59,7 @@ const TeamMembers = [
   },
   {
     href: '#',
-    src: '/images/team/07_team_member.jpg',
+    src: '/images/team/07_team_member.png',
     alt: 'Brent Tanner',
     name: 'Brent Tanner',
     jobTitle: 'Chief Operations Officer',
@@ -67,7 +67,7 @@ const TeamMembers = [
   },
   {
     href: '#',
-    src: '/images/team/08_team_member.jpg',
+    src: '/images/team/08_team_member.png',
     alt: 'William Hester',
     name: 'William Hester',
     jobTitle: 'Head of Engineering',
@@ -75,7 +75,7 @@ const TeamMembers = [
   },
   {
     href: '#',
-    src: '/images/team/09_team_member.jpg',
+    src: '/images/team/09_team_member.png',
     alt: 'anon',
     name: 'K. Poet',
     jobTitle: 'Sr. Lead Engineer',

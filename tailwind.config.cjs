@@ -148,7 +148,17 @@ module.exports = {
         '144': '36rem',
       },
       backgroundImage: () => ({
-        'usplus-bg': "url('/images/USPlus-Logo-Text.svg')",
+        'teammember-0':   "url('/images/team/00_team_member.jpg')",
+        'teammember-1':   "url('/images/team/01_team_member.jpg')",
+        'teammember-2':   "url('/images/team/02_team_member.jpg')",
+        'teammember-3':   "url('/images/team/03_team_member.jpg')",
+        'teammember-4':   "url('/images/team/04_team_member.jpg')",
+        'teammember-5':   "url('/images/team/05_team_member.jpg')",
+        'teammember-6':   "url('/images/team/06_team_member.jpg')",
+        'teammember-7':   "url('/images/team/07_team_member.jpg')",
+        'teammember-8':   "url('/images/team/08_team_member.jpg')",
+        'teammember-9':   "url('/images/team/09_team_member.jpg')",
+        'usplus-bg':      "url('/images/USPlus-Logo-Text.svg')",
         'footer-texture': "url('/images/FooterCorner.svg')"
       }),
       fontFamily: {
