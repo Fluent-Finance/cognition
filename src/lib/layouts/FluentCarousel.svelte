@@ -3,9 +3,11 @@
 
   import _            from 'lodash';
   import { Section, } from 'flowbite-svelte-blocks';
+  import { Img }      from 'flowbite-svelte'
   import { browser }  from '$app/environment';
   import Carousel     from 'svelte-carousel';
 
+  import IM from '$lib/data/CarouselImage';
   import FS from '$lib/styles/FluentStyles';
 
   let flexCol     = FS.processStyles('global.flex');
@@ -14,9 +16,10 @@
   let center      = FS.processStyles('global.center');
   let textBreaks  = FS.processStyles('global.text.breaks');
 
+
   let h1Headers     = `my-0 py-0 mx-4 px-4 md:mt-10 mb-0 text-black font-medium font-basier leading-9`;
   let indicatorBase = `absolute w-[35.74px] h-1 top-[-20px] md:top-[4px] rounded-3xl bg-base-300`;
-  let placeholder   = `w-[271px] h-[104px] bg-neutral-50 rounded-[10px] shadow`;
+  let placeholder   = `w-[271px] h-[104px] inset-0 object-center bg-neutral-50 rounded-[10px] shadow`;
   let neuehaasCopy  = `text-[22px] font-normal font-neuehaas leading-loose`;
   let spaceCopy     = `my-1 mx-5 py-0 px-5 md:my-20 md:mx-10 md:px-20`;
 
@@ -52,6 +55,22 @@
     bg-neutral
   `;
 
+  let imgClass = `
+    mx-auto
+    max-w-sm
+    max-h-[104px]
+  `;
+
+  let imageClass = `
+    mx-auto
+    px-7
+    py-7
+    items-center
+    content-center
+  `;
+
+  let size = 'max-w-full';
+
   let carousel: any; 
 </script>
 
@@ -86,10 +105,14 @@
 
             <div class={`mx-auto ${center} ${gridCols}`}> 
               <div class="">
-                <div class={`${placeholder}`}></div>
+                <div class={`${placeholder}`}>
+                  <Img src={ _.get(IM, '0') } {imgClass} {size} class={imageClass} />
+                </div>
               </div>
               <div class="">
-                <div class={`${placeholder}`}></div>
+                <div class={`${placeholder}`}>
+                  <Img src={_.get(IM, '1')} {imgClass} {size} class={imageClass} />
+                </div>
               </div>
             </div>
 
@@ -116,10 +139,15 @@
 
             <div class={`mx-auto ${center} ${gridCols}`}> 
               <div class="">
-                <div class={`${placeholder}`}></div>
+                <div class={`${placeholder}`}>
+                  <Img src={_.get(IM, '2')} {imgClass} {size} class={imageClass} />
+
+                </div>
               </div>
               <div class="">
-                <div class={`${placeholder}`}></div>
+                <div class={`${placeholder}`}>
+                  <Img src={_.get(IM, '3')} {imgClass} {size} class={imageClass} />
+                </div>
               </div>
             </div>
 
@@ -140,7 +168,6 @@
             </div>
 
             <div class={`${spaceCopy} text-center text-gray-500 ${neuehaasCopy}`}>
-
               <span class={`text-gray-500 ${neuehaasCopy}`}>
                 In addition to earning a SOC 2 Type 1 certification, all of Fluent’s
               </span>
@@ -154,7 +181,9 @@
 
             <div class={`mx-auto ${center}`}> 
               <div class="">
-                <div class={`${placeholder}`}></div>
+                <div class={`${placeholder}`}>
+                  <Img src={_.get(IM, '4')} {imgClass} {size} class={imageClass} />
+                </div>
               </div>
             </div>
 
@@ -195,31 +224,53 @@
 
             <div class={`my-2 md:my-10 mx-auto ${center} ${gridCols} md:grid-cols-4`}> 
               <div class="">
-                <div class={`${placeholder}`}></div>
+                <div class={`${placeholder}`}>
+                  <Img src={_.get(IM, '5')} {imgClass} {size} class={imageClass} />
+                </div>
               </div>
+
               <div class="">
-                <div class={`${placeholder}`}></div>
+                <div class={`${placeholder}`}>
+                  <Img src={_.get(IM, '6')} {imgClass} {size} class={imageClass} />
+                </div>
               </div>
+
               <div class="">
-                <div class={`${placeholder}`}></div>
+                <div class={`${placeholder}`}>
+                  <Img src={_.get(IM, '7')} {imgClass} {size} class={imageClass} />
+                </div>
               </div>
+
               <div class="">
-                <div class={`${placeholder}`}></div>
+                <div class={`${placeholder}`}>
+                  <Img src={_.get(IM, '8')} {imgClass} {size} class={imageClass} />
+                </div>
               </div>
+
               <div class="">
-                <div class={`${placeholder}`}></div>
+                <div class={`${placeholder}`}>
+                  <Img src={_.get(IM, '9')} {imgClass} {size} class={imageClass} />
+                </div>
               </div>
+
               <div class="">
-                <div class={`${placeholder}`}></div>
+                <div class={`${placeholder}`}>
+                  <Img src={_.get(IM, '10')} {imgClass} {size} class={imageClass} />
+                </div>
               </div>
+
               <div class="">
-                <div class={`${placeholder}`}></div>
+                <div class={`${placeholder}`}>
+                  <Img src={_.get(IM, '11')} {imgClass} {size} class={imageClass} />
+                </div>
               </div>
+
               <div class="">
-                <div class={`${placeholder}`}></div>
+                <div class={`${placeholder}`}>
+                  <Img src={_.get(IM, '12')} {imgClass} {size} class={imageClass} />
+                </div>
               </div>
             </div>
-
           </div>
         </div>
 
