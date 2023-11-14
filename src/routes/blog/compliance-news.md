@@ -9,7 +9,7 @@ icon: FileOutline
 </script>
 
 <div class="w-full h-sm max-h-xl"> 
-  <Img src="/images/blog_image.jpg" alt="about" size="h-md object-cover rounded-xl opacity-60 filter grayscale-0" alignment="mx-auto" />
+  <Img src="/images/fluent_banner_1500x500.png" alt="about" size="h-md object-cover rounded-xl opacity-60 filter grayscale-0" alignment="mx-auto" />
 </div>  
 
 <Heading class="p-8" tag="h1" customSize="text-3xl">{title}</Heading>

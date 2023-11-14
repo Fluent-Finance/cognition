@@ -2,7 +2,13 @@
 <script lang='ts'>
   import _           from 'lodash';
   import { Section } from 'flowbite-svelte-blocks';
-  import FS          from '$lib/styles/FluentStyles';
+  import { Img }     from 'flowbite-svelte';
+
+  import bitrue            from '$lib/assets/bitrue.png';
+  import xdc               from '$lib/assets/xdc.png';
+  import ethereum          from '$lib/assets/ethereum.png';
+  import celo              from '$lib/assets/celo.svg?url';
+  import arbitrum          from '$lib/assets/arbitrum.png';
 
   let divPanel = `
     flex-col 
@@ -11,12 +17,33 @@
     content-center
     items-center
   `;
+
+  let imgClass = `
+    mx-auto
+    max-w-sm
+    max-h-[104px]
+  `;
+
+  let imageClass = `
+    mx-auto
+    px-7
+    py-7
+    items-center
+    content-center
+  `;
+
+  let size = 'max-w-full';
+
+  let placeholder = `w-[271px] h-[104px] inset-0 object-center bg-neutral-50 rounded-[10px] shadow`;
 </script> 
 
 <Section class="bg-white dark:bg-base-100">
   <div class="
   flex-col
-  py-0
+  mt-[-50px]  
+  xs:mt-[0px]  
+  py-[0]
+  xs:py-0
   my-0
   px-4
   min-h-fit
@@ -26,22 +53,27 @@
 
     <!-- USPlus Background Image -->
     <div class={`
+    my-[-70px]
+    md:my-[-40px]
+    lg::my-[0px]
     w-full 
     h-[300px]
+    md:h-[300px]
     bg-usplus-bg 
-    object-fill 
+    object-fit 
+    overflow-hidden
     bg-cover
     bg-no-repeat
     bg-clip-padding 
     bg-center
-    dark:invert
-      `}>
+    dark:invert `}>
     </div>
     <!-- USPlus Background Image -->
 
     <div class="
     my-1 
     md:my-10
+    px-10
     text-4xl 
     xs:text-5xl 
     sm:text-6xl 
@@ -67,8 +99,8 @@
     md:mx-20
     md:px-20
     md:py-10
-    lg:m-20
-    lg:mx-10
+    lg:m-10
+    lg:mx-40
     lg:px-40
     text-sm  
     xs:text-lg  
@@ -119,7 +151,7 @@
       font-basier
       leading-loose">
         <a href="/dashboard/fluent">
-          USPlus Analytics Dashboards
+          USPlus Analytics Dashboard
         </a>
       </div>
     </div>
@@ -133,6 +165,7 @@
           px-2
           md:mx-20
           md:px-40
+          lg:px-20
           text-center
           text-black
           dark:text-neutral 
@@ -149,20 +182,27 @@
           </div>
 
           <div class="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-6 my-10">
-            <div class="">
-              <div class="w-[271px] h-[104px] bg-neutral-50 rounded-[10px] shadow"></div>
+            <div class={`${placeholder}`}>
+              <a href="https://www.bitrue.com/trade/usplus_usdt" target="_blank"> 
+                <Img src={bitrue} class={imageClass} {imgClass} {size} alt="Bitrue" />
+              </a>  
             </div>
-            <div class="">
-              <div class="w-[271px] h-[104px] bg-neutral-50 rounded-[10px] shadow"></div>
+            <div class={`pt-1 ${placeholder}`}>
+              <a href="https://app.uniswap.org/pools/651885" target="_blank"> 
+                <Img src={arbitrum} class={imageClass} {imgClass} {size} alt="Arbitrum" />
+              </a>  
             </div>
-            <div class="">
-              <div class="w-[271px] h-[104px] bg-neutral-50 rounded-[10px] shadow"></div>
+            <div class={`pt-3 ${placeholder}`}>
+              <a href="https://info.uniswap.org/#/celo/pools/0x7053060549aaad6ea733d053153bb9c00bfe42d2" target="_blank"> 
+                <Img src={celo} class={imageClass} {imgClass} {size} alt="Celo" />
+              </a>  
             </div>
-            <div class="">
-              <div class="w-[271px] h-[104px] bg-neutral-50 rounded-[10px] shadow"></div>
+            <div class={`${placeholder}`}>
+              <a href="https://info.uniswap.org/#/pools/0x73d4c165472d38ca879b7cbd4f5f7ab218d49086" target="_blank"> 
+                <Img src={ethereum} class={imageClass} {imgClass} {size} alt="Ethereum" />
+              </a>  
             </div>
           </div>
-
         </div>
       </div>
     </div>

@@ -158,7 +158,7 @@ module.exports = {
         'teammember-7':   "url('/images/team/07_team_member.jpg')",
         'teammember-8':   "url('/images/team/08_team_member.jpg')",
         'teammember-9':   "url('/images/team/09_team_member.jpg')",
-        'usplus-bg':      "url('/images/USPlus-Logo-Text.svg')",
+        'usplus-bg':      "url('/images/USPlusLogo.svg')",
         'footer-texture': "url('/images/FooterCorner.svg')"
       }),
       fontFamily: {
