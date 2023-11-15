@@ -60,26 +60,26 @@
 <!-- Site MetaData OG Tags --> 
 <MetaTags 
   title='Fluent Finance'
-  description='Fluent Finance Data Charts.' 
+  description='Fluent Finance Network.' 
   openGraph={{
     url: `${import.meta.env.VITE_URL}`,
     title: 'Cognition: by Fluent Finance',
-    description: 'Fluent Network Data Charts.',
+    description: "Fluent Finance Network",
     images: [
       {
-        url: '/images/fluent_banner_1500x500.png',
-        width: 1500,
-        height: 500,
+        url: '/images/android-chrome-512x512.png',
+        width: 424,
+        height: 424,
         alt: 'Fluent Og Image Alt'
       },
       {
-        url: '/images/fluent_banner.png',
-        width: 1500,
-        height: 500,
+        url: '/images/Fluent-Logo-Color.png',
+        width: 424,
+        height: 424,
         alt: 'Fluent Og Image Alt Second'
       },
     ],
-    siteName: 'Fluent: Cognition'
+    siteName: 'Fluent Finance'
   }}
 /> 
 
