@@ -6,25 +6,29 @@
   import LineGraph     from '$components/LineGraph.svelte';
   import BarGraph      from '$components/BarGraph.svelte';
   import DoughnutGraph from '$components/DoughnutGraph.svelte';
+
+  let hTextBreaks = `
+    text-4xl 
+    xs:text-5xl 
+    md:text-6xl 
+    lg:text-7xl 
+    xl:text-8xl 
+  `;
 </script>
 
 <Section class="bg-white dark:bg-base-100">
   <div class='container w-full pt-0'>
-    <div class="
+    <div class={`
     w-full
     my-8
-    text-3xl 
-    xs:text-4xl 
-    sm:text-5xl 
-    md:text-6xl 
-    lg:text-7xl 
-    xl:text-8xl 
+    ${hTextBreaks}
     text-black
+    dark:text-white
     text-center
     font-basier
     font-semibold
-    leading-[52px]">
-      <span class="text-base-50 ">USPlus</span> Bank Reserves
+    leading-[52px]`}>
+      <span class="text-base-50 dark:text-base-800">USPlus</span> Bank Reserves
     </div>
 
     <div class='grid grid-cols-4 grid-flow-row gap-10'>
@@ -40,25 +44,29 @@
     <div class='grid grid-cols-4 grid-flow-row gap-10'>
       <div class='row-span-3 col-span-4'>
         <P class="
-        font-neuehaas
-        text-md
-        sm:text-xl  
+        text-sm
+        xs:text-md   
+        sm:text-lg   
+        md:text-2xl
         lg:text-2xl
         xl:text-4xl
         prose-2xl
+        font-neuehaas
         font-normal
         text-center
         items-center
-        my-20
-        mx-10
+        my-10
+        mx-0
+        xs:mx-10
         md:mx-20
-        p-10">
+        p-2
+        xs:p-10">
           At Fluent Finance, we’re driven by a simple philosophy: put the users first. 
           We’ve always believed the power of DeFi should be harnessed for the benefit 
           of those who contribute to its growth. That’s why we’re thrilled to announce 
           our integration with Flow Rewards 
           <a 
-            class="text-primary dark:text-base-700" 
+            class="text-primary dark:text-base-800" 
             href="https://docs.google.com/document/d/11j66k-nuOCo1MXjSKzvt25-WX8jMjxxPepfbFS5HGVs/edit" 
             target="_blank"> 
               open-sourced smart contracts.
@@ -67,10 +75,21 @@
       </div> 
     </div> 
 
-    <div class="w-full my-40 h-[136px] text-center">
-      <span class="text-black text-[90px] font-semibold font-basier leading-[72px]">USPlus</span>
-      <span class="mr-7 text-base-50 text-[90px] font-semibold font-basier leading-[72px]"> Defi</span>
-      <span class="text-black text-[90px] font-semibold font-basier leading-[72px]"> Pools</span>
+    <div class={`
+    w-full
+    my-0
+    sm:my-40
+    h-[136px]
+    ${hTextBreaks}
+    font-semibold
+    font-basier
+    leading-[72px]
+    text-center
+    text-black
+    dark:text-white`}>
+      <span class="">USPlus</span>
+      <span class="text-base-50 dark:text-base-800">Defi</span>
+      <span class="">Pools</span>
     </div>
 
     <div class='grid grid-cols-4 grid-flow-col gap-10'>
