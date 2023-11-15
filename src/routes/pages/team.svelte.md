@@ -59,7 +59,7 @@ order: 1
       xs:px-10
       sm:px-5
       md:px-0
-      text-3xl 
+      text-4xl 
       xs:text-4xl 
       sm:text-6xl 
       md:text-6xl 
@@ -96,7 +96,8 @@ order: 1
         justify-center
         text-gray-500
         mb-16
-        mx-20
+        mx-0
+        md:mx-10
         text-md 
         xs:text-lg  
         sm:text-xl 
