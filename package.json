@@ -48,8 +48,8 @@
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "lint": "prettier --plugin-search-dir . --check . && eslint .",
     "format": "prettier --plugin-search-dir . --write .",
-    "test:integration": "playwright test",
-    "test:unit": "vitest"
+    "test:integration": "bunx playwright test",
+    "test:unit": "bunx vitest"
   },
   "devDependencies": {
     "@headlessui/tailwindcss": "^0.2.0",
@@ -93,6 +93,9 @@
     "flowbite-svelte-icons": "^0.4.3",
     "headlessui": "^0.0.0",
     "mdsvex": "^0.11.0",
+    "playwright": "^1.39.0",
+    "playwright-chromium": "^1.39.0",
+    "playwright-firefox": "^1.39.0",
     "postcss": "latest",
     "postcss-cli": "^10.1.0",
     "postcss-import": "^15.1.0",

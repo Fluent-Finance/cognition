@@ -53,6 +53,20 @@ bun go
 bun done
 ```
 
+### :triangular_ruler: Testing (Integration & Unit)
+
+![cognition_run_tests](https://github.com/Fluent-Finance/cognition/assets/757859/9296d5f8-dd20-4a08-8c5b-4dcf835358ec)
+
+```bash
+# will run both sets of tests
+# and watch for file changes
+bun run test
+
+# run test suite 
+bun run test:unit
+bun run test:integration
+```
+
 ### :closed_lock_with_key: Secure Shell / Runtime
 
 ```bash
