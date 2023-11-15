@@ -3,6 +3,11 @@
   import Inoutcircle from '$lib/utils/icons/Inoutcircle.svelte';
   import Fingerprint from '$lib/utils/icons/Fingerprint.svelte';
   import Clipboard   from '$lib/utils/icons/Clipboard.svelte';
+  import Checkmark   from '$lib/utils/icons/Checkmark.svelte';
+  import Union       from '$lib/utils/icons/Union.svelte';
+  import Eye         from '$lib/utils/icons/Eye.svelte';
+  import Padlock     from '$lib/utils/icons/Padlock.svelte';
+  import Bank        from '$lib/utils/icons/Bank.svelte';
 
   import { Hr } from 'flowbite-svelte';
 
@@ -37,8 +42,10 @@
     text-center
     align-center
     my-0
-    mx-2
+    mx-0
     px-2
+    xs:mx-2
+    xs:px-2
     md:my-10
     md:mx-20
     md:px-20
@@ -56,8 +63,8 @@
 
   let pLowerClasses = `
     ${pclasses}
-    px-1
-    mx-1
+    px-5
+    mx-0
     xs:px-10
     xs:mx-10
     md:px-20
@@ -145,7 +152,7 @@
   let h2Classes = `
     font-basier
     text-center
-    text-md
+    text-2xl 
     xs:text-2xl
     sm:text-3xl
     md:text-4xl
@@ -153,6 +160,7 @@
     xl:text-6xl
     my-10
     sm:my-20
+    px-4 
     xs:px-2 
     sm:px-5 
     md:px-10 
@@ -164,9 +172,8 @@
 
   let h3classes = `
     mb-2 
-    text-xs 
-    xs:text-sm 
-    sm:text-md 
+    text-md 
+    xs:text-md 
     md:text-lg 
     lg:text-xl  
     font-normal  
@@ -192,8 +199,8 @@
   export let iconClasses = `
     mx-auto
     mb-4
-    w-10
-    h-10
+    w-15
+    h-15
     xs:w-15
     xs:h-15
     text-primary-600
@@ -228,12 +235,11 @@
   `;
 
   let h3TextClass = `
-    text-xs
+    text-md
     xs:text-sm
-    md:text-md 
-    lg:text-lg  
+    md:text-lg  
     xl:text-xl   
-    font-normal
+    font-medium
   `;
 </script>
 
@@ -276,8 +282,25 @@
     </h2> 
   </div>
 
-  <div class="mt-0 mb-10 xs:mt-6 lg:px-20 lg:mx-10">
-    <div class="my-5 p-1 mx-1 sm:mx-10 grid grid-cols-3 gap-5 xs:gap-10 space-y-0">
+  <div class="
+  mt-0
+  mb-10
+  xs:mt-6
+  lg:px-20
+  lg:mx-10">
+    <div class="
+    my-1
+    xs:my-5
+    p-1
+    mx-1
+    sm:mx-10
+    grid
+    grid-cols-1
+    xs:grid-cols-3
+    gap-9
+    xs:gap-5
+    xs:gap-10
+    space-y-0">
       <div>
         <Fingerprint class={iconClasses} />
         <h3 class={h3classes}>Tokenize Off-Chain Assets</h3>
@@ -294,7 +317,7 @@
   </div>
 </div>
 
-<div class={`bg-base-600 ${anchorClasses}`}>
+<div id="anchor-deposit" class={`bg-base-600 ${anchorClasses}`}>
   <HeroHeader {...headerclasses}> 
     <svelte:fragment slot="h2">
       <div class="
@@ -312,8 +335,8 @@
     <svelte:fragment slot="paragraph">
       <div class="
         py-5
-        px-1
-        mx-1
+        px-0
+        mx-0
         xs:px-5
         xs:mx-5
         sm:px-9
@@ -341,24 +364,28 @@
   md:mx-20">
     <div class="
     p-1
-    my-10
+    my-2
+    xs:my-10
     mx-0
     grid
-    grid-cols-3
-    gap-5
-    xs:gap-20
+    grid-cols-1
+    xs:grid-cols-3
+    gap-14
+    xs:gap-10
     xs:mx-10
+    md:mx-10
+    lg:mx-40
     space-y-0">
       <div>
         <Inoutcircle class={iconClasses} color="white" />
         <h3 class={h3TextClass}>1-Click Issuance & Redemption</h3>
       </div>
       <div>
-        <Inoutcircle class={iconClasses} color="white" />
+        <Checkmark class={iconClasses} color="white" />
         <h3 class={h3TextClass}>Regulated & Compliant</h3>
       </div>
       <div>
-        <Inoutcircle class={iconClasses} color="white" />
+        <Bank class={iconClasses} color="white" />
         <h3 class={h3TextClass}>Federated Custody</h3>
       </div>
     </div>
@@ -377,7 +404,7 @@
   </div> 
 </div>
 
-<div class={lowerAnchorClasses}>
+<div id="anchor-principles" class={lowerAnchorClasses}>
   <div class="
   py-5
   px-0
@@ -430,32 +457,35 @@
     md:px-30
     md:mx-20">
       <div class="
-      my-10 
+      my-4 
+      xs:my-10 
       sm:my-20 
       py-0 
       mx-0 
       xs:mx-10 
-      md:mx-5 
+      md:mx-20 
+      lg:mx-40 
       grid
-      grid-cols-2
+      grid-cols-1
       xs:grid-cols-4
-      gap-5
+      gap-14
       xs:gap-10
+      lg:gap-12
       space-y-0">
         <div>
-          <Inoutcircle class={iconClasses} color="#a02de5" />
+          <Padlock class={iconClasses} color="#a02de5" />
           <h3 class={h3TextClass}>Genuine Ownership</h3>
         </div>
         <div>
-          <Inoutcircle class={iconClasses} color="#a02de5" />
+          <Checkmark class={iconClasses} color="#a02de5" />
           <h3 class={h3TextClass}>On-Chain Verification</h3>
         </div>
         <div>
-          <Inoutcircle class={iconClasses} color="#a02De5" />
+          <Union class={iconClasses} color="#a02De5" />
           <h3 class={h3TextClass}>Disintermediation</h3>
         </div>
         <div>
-          <Fingerprint class={iconClasses} color="#a02De5" />
+          <Eye class={iconClasses} color="#a02De5" />
           <h3 class={h3TextClass}>Censorship Resistance</h3>
         </div>
       </div>

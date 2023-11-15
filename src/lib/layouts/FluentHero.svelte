@@ -1,8 +1,7 @@
 <!-- handcoded with ♥︎  by ⚡️-𝙆𝙊𝘿𝞝𝙋𝞸𝞝𝙏-⚡️--->
 <script lang='ts'>
-  import { Button }        from 'flowbite-svelte';
-  import { Section, News } from 'flowbite-svelte-blocks';
-  import { Img, Modal }    from 'flowbite-svelte';
+  import { Section, News }       from 'flowbite-svelte-blocks';
+  import { Button, Img, Modal }  from 'flowbite-svelte';
 
   import bitrue            from '$lib/assets/bitrue.png';
   import xdc               from '$lib/assets/xdc.png';
