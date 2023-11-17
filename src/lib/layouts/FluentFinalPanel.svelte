@@ -4,10 +4,11 @@
   import FluentCarousel from './FluentCarousel.svelte';
 </script> 
 
-<FluentCarousel />
+<Section class="bg-white dark:bg-base-100">
+  <FluentCarousel />
+</Section>
 
 <Section class="bg-white dark:bg-base-100">
-
   <div class="
   py-18
   px-4
