@@ -245,7 +245,7 @@
               </a> 
             </div>
             <div class="mt-3 rounded-lg sm:mt-0 sm:ml-3">
-              <a href="/dashboard/fluent">
+              <a href="dashboard/fluent">
                 <button class={btnPlain}>
                   Dashboard
                 </button>
