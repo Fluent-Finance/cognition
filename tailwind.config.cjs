@@ -125,8 +125,12 @@ module.exports = {
       sm: '1024px',
       md: '1280px',
       lg: '1440px',
-      xl: '1920px',
+      xl: '1904px',
       '2xl': '2160px',
+      '3xl': '2338px',
+      '4xl': '2560px',
+      '5xl': '2630px',
+      '6xl': '2880px',
     },
     container: {
       center: true,
