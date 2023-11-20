@@ -34,4 +34,5 @@ order: 2
     <span class={`${defaults}`}>Blog</span>
   </div>
  
+  <a href='/blog/fluent-finances-integration-with-flow-rewards-offers-lps-a-risk-off-and-non-custodial-offering-on-uniswap'>Flow Rewards</a>
 </Section>

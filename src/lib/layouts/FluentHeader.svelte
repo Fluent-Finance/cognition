@@ -168,8 +168,8 @@
         active={activeUrl === '/pages/team'}> Team
       </NavLi>
       <NavLi 
-        href='/pages/blog'
-        active={activeUrl === '/pages/blog'}> Blog
+        href='/blog/fluent-finances-integration-with-flow-rewards-offers-lps-a-risk-off-and-non-custodial-offering-on-uniswap'
+        active={activeUrl === '/blog/*'}> Blog
       </NavLi>
     </NavUl>
 

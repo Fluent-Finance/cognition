@@ -4,7 +4,11 @@ import { error }               from '@sveltejs/kit';
 import type { EntryGenerator } from './$types';
  
 export const entries: EntryGenerator = () => {
-  return [{ slug: 'compliance-news' }, { slug: 'fluent-opsec-2023' }];
+  return [
+    { slug: 'fluent-finances-integration-with-flow-rewards-offers-lps-a-risk-off-and-non-custodial-offering-on-uniswap'},
+    { slug: 'compliance-news' }, 
+    { slug: 'fluent-opsec-2023' }
+  ];
 };
 
 export const prerender = true; 

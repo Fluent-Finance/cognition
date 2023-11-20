@@ -35,7 +35,7 @@ const FluentStyles: FluentStyleThemeType ={
     div :{
       grid    :``,
       layer   :`z-index-999`,
-      space   :`my-10 py-10 px-10`,
+      space   :`my-10 py-10 px-10 xs:px-20`,
       size    :`min-h-90 h-90 w-full`,
       align   :`justify-left`,
       color   :`bg-neutral`,
@@ -44,13 +44,13 @@ const FluentStyles: FluentStyleThemeType ={
     },
 
     icon :{
-      space   :`mt-4 p-1`,
-      size    :`w-5 h-5 rounded-full`,
-      break   :`xs:w-7 xs:h-7`,
+      space   :`mt-3 p-1`,
+      size    :`w-7 h-7 rounded-full`,
+      break   :`xs:w-9 xs:h-9`,
       align   :`align-bottom`,
       color   :`text-white bg-base-100`,
       dark    :`dark:text-gray-500 dark:hover:text-white`,
-      effect  :`hover:text-gray-900`,
+      effect  :`hover:text-gray-400`,
     },
 
     button :{

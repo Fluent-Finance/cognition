@@ -2,6 +2,7 @@
 <script lang='ts'>
 
   import { 
+    Img,
     Hr,
     Button, 
     Footer, 
@@ -18,6 +19,8 @@
   } from 'flowbite-svelte-icons';
 
   import FluentStyles from '$styles/FluentStyles';
+
+  import Medium     from '$lib/assets/_Medium.svg?url';
 
   let by = (`Fluent Finance Inc., and its subsidiary Fluent Federation Corp. 2022. All rights reserved.`);
 
@@ -41,13 +44,17 @@
       dark:text-base-900 
       min-w-[80px] 
       text-lg  
-      xs:text-2xl 
-      md:text-3xl 
+      xs:text-3xl 
+      md:text-4xl 
+      lg:text-5xl 
       align-middle 
       items-center">
         Follow Us
       </h1>
 
+      <FooterIcon target="_blank" href="https://github.com/Fluent-Finance">
+        <GithubSolid class={iconClasses} />
+      </FooterIcon>
       <FooterIcon target="_blank" href="https://discord.gg/22ywcEfU65">
         <DiscordSolid class={iconClasses} /> 
       </FooterIcon>
@@ -60,8 +67,8 @@
       <FooterIcon target="_blank" href="https://etherscan.io/token/0xe2e15a27fd732a96534b9797bf8091f3d9849831">
         <LinkSolid class={iconClasses} />
       </FooterIcon>
-      <FooterIcon target="_blank" href="https://github.com/Fluent-Finance">
-        <GithubSolid class={iconClasses} />
+      <FooterIcon target="_blank" href="https://fluentfinance.medium.com">
+        <Img src={Medium} class={`${iconClasses} dark:hue-rotate-100 dark:opacity-70 dark:backdrop-contrast-200 p-0 min-w-6 max-w-12`} />
       </FooterIcon>
     </div>
 
