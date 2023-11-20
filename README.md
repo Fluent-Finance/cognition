@@ -58,11 +58,14 @@ bun done
 ![cognition_run_tests](https://github.com/Fluent-Finance/cognition/assets/757859/9296d5f8-dd20-4a08-8c5b-4dcf835358ec)
 
 ```bash
+# Deps -- need to run only once
+bunx playwright install
+
 # will run both sets of tests
 # and watch for file changes
 bun run test
 
-# run test suite 
+# test specific suite 
 bun run test:unit
 bun run test:integration
 ```

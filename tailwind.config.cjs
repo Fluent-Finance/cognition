@@ -41,7 +41,7 @@ module.exports = {
     themes: [{
       fluent: {
         "white":           "#FAFAFA",
-        "neutral":         "#F7F3FC",
+        "neutral":         "#EDECEE",
         "black":           "#222222",
 
         "base-25":         "#131313",
@@ -50,7 +50,7 @@ module.exports = {
         "base-50":         "#6200EE",
         "base-100":        "#171b2f",
         "base-200":        "#4B4653",
-        "base-300":        "#D5D1DB",
+        "base-300":        "#EDECEE",
         "base-400":        "#D5D9EC",
         "base-500":        "#F7F3FD",
         "base-550":        "#590De5",
@@ -102,7 +102,7 @@ module.exports = {
     appearance: ['responsive', 'hover', 'focus'],
     colors: {
       "white":    "#FAFAFA",
-      "neutral":  "#F7F3FC",
+      "neutral":  "#EDECEE",
       "black":    "#111111",
 
       "base-25":  "#131313",

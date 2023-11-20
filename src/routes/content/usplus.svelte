@@ -1,14 +1,20 @@
 <!-- handcoded with ♥︎  by ⚡️-𝙆𝙊𝘿𝞝𝙋𝞸𝞝𝙏-⚡️--->
 <script lang='ts'>
-  import _           from 'lodash';
-  import { Section } from 'flowbite-svelte-blocks';
-  import { Img }     from 'flowbite-svelte';
+  import _            from 'lodash';
+  import { Section }  from 'flowbite-svelte-blocks';
+  import { Img }      from 'flowbite-svelte';
+  import { browser }  from '$app/environment';
+  import Carousel     from 'svelte-carousel';
 
-  import bitrue            from '$lib/assets/bitrue.png';
-  import xdc               from '$lib/assets/xdc.png';
-  import ethereum          from '$lib/assets/ethereum.png';
-  import celo              from '$lib/assets/celo.svg?url';
-  import arbitrum          from '$lib/assets/arbitrum.png';
+  import bitrue       from '$lib/assets/bitrue.png';
+  import ethereum     from '$lib/assets/ethereum.png';
+  import celo         from '$lib/assets/celo.svg?url';
+  import arbitrum     from '$lib/assets/arbitrum.png';
+  import ImagePanels  from '$lib/atoms/ImagePanels.svelte';
+
+  let carousel: any; 
+
+  let indicatorBase = `absolute w-[35.74px] h-1 top-[-20px] md:top-[4px] rounded-3xl bg-base-300`;
 
   let divPanel = `
     flex-col 
@@ -34,7 +40,7 @@
 
   let size = 'max-w-full';
 
-  let placeholder = `w-[271px] h-[104px] inset-0 object-center bg-neutral-50 rounded-[10px] shadow`;
+  let placeholder = `w-[270px] h-[104px] rounded-xl inset-0 object-center`;
 </script> 
 
 <Section class="bg-white dark:bg-base-100">
@@ -66,8 +72,7 @@
     bg-no-repeat
     bg-clip-padding 
     bg-center
-    dark:invert `}>
-    </div>
+    dark:invert `} />
     <!-- USPlus Background Image -->
 
     <div class="
@@ -181,27 +186,49 @@
             is available on leading crypto exchanges
           </div>
 
-          <div class="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-6 my-10">
-            <div class={`${placeholder}`}>
-              <a href="https://www.bitrue.com/trade/usplus_usdt" target="_blank"> 
-                <Img src={bitrue} class={imageClass} {imgClass} {size} alt="Bitrue" />
-              </a>  
-            </div>
-            <div class={`pt-1 ${placeholder}`}>
-              <a href="https://app.uniswap.org/pools/651885" target="_blank"> 
-                <Img src={arbitrum} class={imageClass} {imgClass} {size} alt="Arbitrum" />
-              </a>  
-            </div>
-            <div class={`pt-3 ${placeholder}`}>
-              <a href="https://info.uniswap.org/#/celo/pools/0x7053060549aaad6ea733d053153bb9c00bfe42d2" target="_blank"> 
-                <Img src={celo} class={imageClass} {imgClass} {size} alt="Celo" />
-              </a>  
-            </div>
-            <div class={`${placeholder}`}>
-              <a href="https://info.uniswap.org/#/pools/0x73d4c165472d38ca879b7cbd4f5f7ab218d49086" target="_blank"> 
-                <Img src={ethereum} class={imageClass} {imgClass} {size} alt="Ethereum" />
-              </a>  
-            </div>
+          <ImagePanels />
+
+          <div id="img-panels" class="sm:hidden max-w-[270px] max-h-[120px] rounded-lg shadow-lg bg-neutral-50 py-2 grid grid-cols-1">
+            {#if browser}
+              <Carousel 
+              let:currentPageIndex
+              let:pagesCount
+              let:showPage
+              arrows={false}
+              autoplay={true}
+              bind:this={carousel}>
+
+                <div id={`panel-${currentPageIndex}`} class={placeholder}>
+                  <a href="https://www.bitrue.com/trade/usplus_usdt" target="_blank"> 
+                    <Img src={bitrue} class={imageClass} {imgClass} {size} alt="Bitrue" />
+                  </a>  
+                </div>
+                <div id={`panel-${currentPageIndex}`} class={placeholder}>
+                  <a href="https://app.uniswap.org/pools/651885" target="_blank"> 
+                    <Img src={arbitrum} class={imageClass} {imgClass} {size} alt="Arbitrum" />
+                  </a>  
+                </div>
+                <div id={`panel-${currentPageIndex}`} class={`pt-3 ${placeholder}`}>
+                  <a href="https://info.uniswap.org/#/celo/pools/0x7053060549aaad6ea733d053153bb9c00bfe42d2" target="_blank"> 
+                    <Img src={celo} class={imageClass} {imgClass} {size} alt="Celo" />
+                  </a>  
+                </div>
+                <div id={`panel-${currentPageIndex}`} class={placeholder}>
+                  <a href="https://info.uniswap.org/#/pools/0x73d4c165472d38ca879b7cbd4f5f7ab218d49086" target="_blank"> 
+                    <Img src={ethereum} class={imageClass} {imgClass} {size} alt="Ethereum" />
+                  </a>  
+                </div>
+
+                <div class="relative mt-20 h-[12px]" slot="dots">
+                  <div class="w-[172.25px] h-1 relative">
+                    <div class={`${indicatorBase} left-0`}></div>
+                    <div class={`${indicatorBase} left-[45.70px] bg-base-50`}></div>
+                    <div class={`${indicatorBase} left-[90.81px]`}></div>
+                    <div class={`${indicatorBase} left-[136.51px]`}></div>
+                  </div>
+                </div>
+              </Carousel>
+            {/if}
           </div>
         </div>
       </div>

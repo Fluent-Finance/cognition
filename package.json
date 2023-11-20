@@ -42,7 +42,7 @@
     "go": "op run -- npx vite dev --port $PORT --host $HOST",
     "do": "op run -- npx vite build",
     "fun": "bun --hot run --bun go",
-    "done": "op run -- npx vite preview --port $PORT --host $HOST",
+    "done": "op run -- npx vite preview --port 4242 --host $HOST",
     "test": "bun run test:integration && bun run test:unit",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
