@@ -5,6 +5,7 @@
   import { Img }      from 'flowbite-svelte';
   import { browser }  from '$app/environment';
   import Carousel     from 'svelte-carousel';
+  import CarouselDot  from '$lib/atoms/CarouselDot.svelte';
 
   import bitrue       from '$lib/assets/bitrue.png';
   import ethereum     from '$lib/assets/ethereum.png';
@@ -13,8 +14,6 @@
   import ImagePanels  from '$lib/atoms/ImagePanels.svelte';
 
   let carousel: any; 
-
-  let indicatorBase = `absolute w-[35.74px] h-1 top-[-20px] md:top-[4px] rounded-3xl bg-base-300`;
 
   let divPanel = `
     flex-col 
@@ -192,8 +191,6 @@
             {#if browser}
               <Carousel 
               let:currentPageIndex
-              let:pagesCount
-              let:showPage
               arrows={false}
               autoplay={true}
               bind:this={carousel}>
@@ -219,12 +216,19 @@
                   </a>  
                 </div>
 
-                <div class="relative mt-20 h-[12px]" slot="dots">
+                <div 
+                slot="dots"
+                let:showPage 
+                let:currentPageIndex 
+                let:pagesCount
+                class="relative mt-20 h-[12px]">
                   <div class="w-[172.25px] h-1 relative">
-                    <div class={`${indicatorBase} left-0`}></div>
-                    <div class={`${indicatorBase} left-[45.70px] bg-base-50`}></div>
-                    <div class={`${indicatorBase} left-[90.81px]`}></div>
-                    <div class={`${indicatorBase} left-[136.51px]`}></div>
+                    {#each Array(pagesCount) as _, pageIndex (pageIndex)}
+                      <CarouselDot
+                        active={currentPageIndex === pageIndex}
+                        on:click={() => showPage(pageIndex)}
+                      ></CarouselDot>
+                    {/each}
                   </div>
                 </div>
               </Carousel>

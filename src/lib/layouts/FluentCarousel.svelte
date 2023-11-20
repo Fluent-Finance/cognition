@@ -4,6 +4,7 @@
   import { Img }      from 'flowbite-svelte'
   import { browser }  from '$app/environment';
   import Carousel     from 'svelte-carousel';
+  import CarouselDot  from '$lib/atoms/CarouselDot.svelte';
 
   import IM from '$lib/data/CarouselImage';
   import FS from '$lib/styles/FluentStyles';
@@ -80,8 +81,6 @@
   <div class={wrapperClasses}>
     <Carousel 
     let:currentPageIndex
-    let:pagesCount
-    let:showPage
     arrows={false}
     autoplay={true}
     bind:this={carousel}>
@@ -278,13 +277,19 @@
           </div>
         </div>
       </div>
-
-      <div class="relative h-[12px]" slot="dots">
+      <div 
+      slot="dots"
+      let:showPage 
+      let:currentPageIndex 
+      let:pagesCount
+      class="relative mt-0 sm:mt-20 h-[12px]">
         <div class="w-[172.25px] h-1 relative">
-          <div class={`${indicatorBase} left-0 bg-base-50`}></div>
-          <div class={`${indicatorBase} left-[45.70px]`}></div>
-          <div class={`${indicatorBase} left-[90.81px]`}></div>
-          <div class={`${indicatorBase} left-[136.51px]`}></div>
+          {#each Array(pagesCount) as _, pageIndex (pageIndex)}
+            <CarouselDot
+              active={currentPageIndex === pageIndex}
+              on:click={() => showPage(pageIndex)}
+            ></CarouselDot>
+          {/each}
         </div>
       </div>
     </Carousel>
