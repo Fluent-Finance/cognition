@@ -35,7 +35,7 @@ const FluentStyles: FluentStyleThemeType ={
     div :{
       grid    :``,
       layer   :`z-index-999`,
-      space   :`my-10 py-10 px-20`,
+      space   :`my-10 py-10 px-10`,
       size    :`min-h-90 h-90 w-full`,
       align   :`justify-left`,
       color   :`bg-neutral`,
