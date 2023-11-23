@@ -23,7 +23,7 @@
   export let totalPage = 0;
   export let downloadFileName = '';
 
-  pdfjs.GlobalWorkerOptions.workerSrc = new URL('pdfjs-dist/build/pdf.worker.js', import.meta.url);
+  pdfjs.GlobalWorkerOptions.workerSrc = new URL('https://raw.githubusercontent.com/mozilla/pdfjs-dist/master/build/pdf.worker.js');
 
   let canvas;
   let page_num = 0;
@@ -415,7 +415,7 @@
           {#if showButtons.includes("autoflip")}
           <Tooltip>
             <span
-              aria-role=""
+              aria-role="pdf"
               slot="activator"
               class="page-info button-control"
               on:click={() => onPageTurn()}
