@@ -138,8 +138,8 @@
     xs:leading-[58px]
     sm:leading-[72px]
     md:leading-[90px]
-    lg:leading-[112px]
-    xl:leading-[112px]
+    lg:leading-[129px]
+    xl:leading-[132px]
     font-basier
     font-medium
     max-w-9xl

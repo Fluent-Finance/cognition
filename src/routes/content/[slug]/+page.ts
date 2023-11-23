@@ -6,7 +6,7 @@ export const prerender = true;
 
 export const entries: EntryGenerator = () => {
   return [
-    { slug: 'resources' }, 
+    { slug: 'whitepaper' }, 
     { slug: 'press-media' }, 
     { slug: 'usplus' }
   ];

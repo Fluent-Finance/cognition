@@ -8,8 +8,13 @@
     NavHamburger, 
     NavUl, 
     NavLi, 
-    Button 
+    Button,
+    Dropdown, 
+    DropdownItem, 
+    DropdownDivider,
   } from 'flowbite-svelte';
+
+  import { ChevronDownOutline } from 'flowbite-svelte-icons';
 
   import _                         from 'lodash';
   import { onMount }               from 'svelte';
@@ -152,9 +157,20 @@
         active={activeUrl === '/'}> About
       </NavLi>
       <NavLi 
-        href='/content/resources'
-        active={activeUrl === '/content/resources'}> Resources
+        class='cursor-pointer'
+        href='#'
+        active={activeUrl === '/content/whitepaper'}> Resources
       </NavLi>
+      <Dropdown class="w-44 z-20">
+        <DropdownItem href="/content/whitepaper">Whitepaper</DropdownItem>
+        <DropdownItem 
+          href="https://github.com/Fluent-Finance" 
+          target="_blank">
+            Github
+        </DropdownItem>
+        <DropdownDivider />
+        <DropdownItem href="/dashboard/fluent">Dashboard</DropdownItem>
+      </Dropdown>
       <NavLi 
         href='/content/press-media'
         active={activeUrl === '/content/press-media'}> Press
