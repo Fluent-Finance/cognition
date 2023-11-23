@@ -58,7 +58,7 @@
       <FooterIcon target="_blank" href="https://discord.gg/22ywcEfU65">
         <DiscordSolid class={iconClasses} /> 
       </FooterIcon>
-      <FooterIcon target="_blank" href="https://twitter.com/FluentDAO">
+      <FooterIcon target="_blank" href="https://twitter.com/Fluentinfra">
         <TwitterSolid class={iconClasses} />
       </FooterIcon>
       <FooterIcon target="_blank" href="https://www.linkedin.com/company/fluent-finance/">
