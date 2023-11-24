@@ -31,7 +31,7 @@ order: 2
   text-black 
   dark:text-white
   text-center">
-    <span class={`${defaults}`}>Our Blog: Coming Soon!</span>
+    <span class={`${defaults}`}>Coming Soon!</span>
   </div>
  
 </Section>

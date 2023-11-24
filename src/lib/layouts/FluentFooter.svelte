@@ -68,7 +68,7 @@
         <LinkSolid class={iconClasses} />
       </FooterIcon>
       <FooterIcon target="_blank" href="https://fluentfinance.medium.com">
-        <Img src={Medium} class={`${iconClasses} dark:hue-rotate-100 dark:opacity-70 dark:backdrop-contrast-200 p-0 min-w-6 max-w-12`} />
+        <Img src={Medium} class={`${iconClasses} dark:hue-rotate-100 dark:opacity-60 dark:backdrop-contrast-200 p-0 min-w-6 max-w-12`} />
       </FooterIcon>
     </div>
 
@@ -77,8 +77,8 @@
     <div> 
       <p class='my-5 ml-3 text-base-200 prose prose-p text-[10px] xs:text-sm'> 
         Fluent Finance is the fintech infrastructure company responsible for 
-        developing the connections from core banking to public layers, bridging 
-        Web2 to Web3 utilizing the Fluent Protocol. Our flagship product is 
+        developing connections from core banking to public layers, bridging 
+        Web2 & Web3 utilizing the Fluent Protocol. Our flagship product is 
         USPlus, the only fully verifiable cash and equivalent backed stablecoin.
       </p>
 
