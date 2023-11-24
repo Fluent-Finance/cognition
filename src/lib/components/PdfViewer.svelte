@@ -58,24 +58,23 @@
     pageRendering = true;
     // Using promise to fetch the page
     pdfDoc.getPage(num).then(function (page) {
-      let viewport = page.getViewport({ scale: scale, rotation: rotation });
+      let viewport        = page.getViewport({ scale: scale, rotation: rotation });
       const canvasContext = canvas.getContext("2d");
-      canvas.height = viewport.height;
-      canvas.width = viewport.width;
+      canvas.height       = viewport.height;
+      canvas.width        = viewport.width;
 
       // Render PDF page into canvas context
       let renderContext = {
         canvasContext,
         viewport,
       };
+
       let renderTask = page.render(renderContext);
 
       // Wait for rendering to finish
       renderTask.promise.then(function () {
         pageRendering = false;
         if (pageNumPending !== null) {
-          // New page rendering is pending
-          // renderPage(pageNumPending);
           if (pageNum < pdfDoc.totalPage) {
             pages[pageNum] = canvas;
             pageNum++;
@@ -176,9 +175,7 @@
         totalPage = pdfDoc.numPages;
         if (showButtons.length) {
           for (let number = 1; number <= totalPage; number++) {
-            // Extract the text
             getPageText(number, pdfDoc).then(function (textPage) {
-              // Show the text of the page in the console
               pdfContent = pdfContent.concat(textPage);
               readingTime = calcRT(pdfContent);
             });
@@ -194,32 +191,32 @@
 
   $: if (isInitialised) queueRenderPage(pageNum);
 
-  //turn page after certain time interval
+  // Page turner 
   const onPageTurn = () => {
     autoFlip = !autoFlip;
     if (autoFlip === false) {
-      clearInterval(interval); //stop autoflip
-      clearInterval(secondInterval); //stop countdown seconds
+      clearInterval(interval); 
+      clearInterval(secondInterval); 
     }
     if (autoFlip === true && pageNum <= totalPage) {
       secondInterval = setInterval(() => {
         seconds = seconds - 1;
       }, 1000);
       interval = setInterval(() => {
-        seconds = flipTime; //reset second after page flip
+        seconds = flipTime; 
         onNextPage();
-      }, flipTime * 1000); //every {flipTime} seconds
+      }, flipTime * 1000); 
     }
   };
 
-  //Download pdf function
+  // Download pdf
   const downloadPdf = ({ url: fileURL, data }) => {
     let fileName =
       downloadFileName || fileURL && fileURL.substring(fileURL.lastIndexOf("/") + 1);
     savePDF({ fileURL, data, name: fileName });
   };
 
-  //prevent memory leak
+  // prevent memory leak
   onDestroy(() => {
     clearInterval(interval);
     clearInterval(secondInterval);

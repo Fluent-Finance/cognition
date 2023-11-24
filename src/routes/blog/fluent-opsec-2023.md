@@ -8,7 +8,7 @@ title: 'Fluent OPSEC 2023'
 </script>
 
 <div class="w-full h-md max-h-xl"> 
-  <Img src="/images/about.jpg" alt="about" size="object-cover max-h-50 rounded-xl opacity-60 filter grayscale" alignment="mx-auto" />
+  <Img src="/images/image-1@2x.jpg" alt="about" size="object-cover max-h-50 rounded-xl opacity-60 filter grayscale" alignment="mx-auto" />
 </div>  
 
 <Heading class="p-8" tag="h1" customSize="text-3xl">{title}</Heading>
