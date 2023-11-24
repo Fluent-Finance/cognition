@@ -25,7 +25,7 @@
     MessagesSolid,
   } from 'flowbite-svelte-icons';
 
-  import type { PageData } from './$types';
+  import type { PageData } from '$types';
 
   console.log(page);
   let icons = {

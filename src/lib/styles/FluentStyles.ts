@@ -74,7 +74,7 @@ const FluentStyles: FluentStyleThemeType ={
   }),
 
   _classes :(el: string)=> {
-    return _.values(_.get(FluentStyles, el)).join(' ').trim();
+    return _?.values(_.get(FluentStyles, el)).join(' ').trim();
   }
 };
 

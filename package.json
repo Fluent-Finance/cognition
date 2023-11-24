@@ -42,7 +42,7 @@
     "go": "op run -- npx vite dev --port $PORT --host $HOST",
     "do": "op run -- npx vite build",
     "fun": "bun --hot run --bun go",
-    "done": "op run -- npx vite preview --port 4242 --host $HOST",
+    "done": "op run -- npx vite preview --port $POST --host $HOST",
     "test": "bun run test:integration && bun run test:unit",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
@@ -93,7 +93,6 @@
     "flowbite-svelte-icons": "^0.4.3",
     "headlessui": "^0.0.0",
     "mdsvex": "^0.11.0",
-    "pdfjs-dist": "^4.0.189",
     "playwright": "^1.39.0",
     "playwright-chromium": "^1.39.0",
     "playwright-firefox": "^1.39.0",
@@ -115,6 +114,7 @@
     "svelte-hero-icons": "^5.0.0",
     "svelte-heros-v2": "^0.10.11",
     "svelte-meta-tags": "^3.0.3",
+    "svelte-pdf": "https://github.com/0xO0O0/svelte-pdf.git",
     "svelte-preprocess": "^5.0.4",
     "svelte-preprocess-import-assets": "^1.0.1",
     "sveltekit-adapter-deno": "^0.11.2",
@@ -132,6 +132,7 @@
     "chartjs-adapter-luxon": "^1.3.1",
     "dayjs": "^1.11.9",
     "lodash": "^4.17.21",
+    "pdfjs-dist": "^3.8.162",
     "luxon": "^3.4.2"
   },
   "prettier": {

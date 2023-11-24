@@ -5,7 +5,7 @@ import tailwindcss      from 'tailwindcss';
 import nesting          from 'postcss-nesting';
 import autoprefixer     from 'autoprefixer';
 import svg              from '@poppanator/sveltekit-svg'
-import topLevelAwait    from "vite-plugin-top-level-await";
+import topLevelAwait    from 'vite-plugin-top-level-await';
 
 /** @type {import('vite').UserConfig} */
 export default defineConfig({
@@ -49,11 +49,11 @@ export default defineConfig({
   },
   build: {
     commonjsOptions: {
-      transformMixedEsModules: true
+      transformMixedEsModules: true,
     }
   },
   ssr: {
-    noExternal: ['svelte-hero-icons', 'flowbite-svelte-icons']
+    noExternal: ['svelte-hero-icons', 'flowbite-svelte-icons' ]
   },
   resolve: {
     alias: {

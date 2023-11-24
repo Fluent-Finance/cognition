@@ -1,25 +1,26 @@
 <!-- handcoded with ♥︎  by ⚡️-𝙆𝙊𝘿𝞝𝙋𝞸𝞝𝙏-⚡️--->
 <script lang='ts'>
-
-  let PdfViewer;
-
-  import type { PageData } from '$types';
+  import type { PageServerData } from './$types';
 
   import { Section } from 'flowbite-svelte-blocks';
   import { onMount } from "svelte";
   import url         from "$lib/assets/FluentWhitepaper.pdf";
 
-  const showBorder  = true;
-  const showButtons = ['navigation', 'timeInfo', 'pageInfo'];
+  let PdfViewer;
 
-  export let data: PageData; 
-  let width: number;
+  export let data: PageServerData;
+  export let width: number;
 
   $: scale = (width >= 1920) ? 1.5 : 1.7;
 
+  const showBorder  = true;
+  const showButtons = ['navigation', 'timeInfo', 'pageInfo'];
+
   onMount(async () => {
-    const module = await import("$lib/components/PdfViewer.svelte");
-    PdfViewer = module.default;
+    try {
+      const module = await import("$lib/components/PdfViewer.svelte");
+      PdfViewer = module.default;
+    } catch (error) { console.log(error); }
   });
 </script>
 

@@ -1,8 +1,10 @@
 <script>
   import { onDestroy, tick } from "svelte";
+  // const pdfjs = require("$lib/pdfjs");
   import * as pdfjs from "pdfjs-dist";
   import { onPrint, calcRT, getPageText, savePDF } from "$lib/utils/Helper.svelte";
   import Tooltip from "$lib/utils/Tooltip.svelte";
+  import pdfWorker from '$lib/pdfjs/pdf.worker?worker';
 
   export let url;
   export let data;
@@ -23,7 +25,10 @@
   export let totalPage = 0;
   export let downloadFileName = '';
 
-  pdfjs.GlobalWorkerOptions.workerSrc = new URL('https://raw.githubusercontent.com/mozilla/pdfjs-dist/master/build/pdf.worker.js');
+  // const pathUrl = "$lib/pdfjs/build/pdf.worker.js?worker";
+    // pdfjs.GlobalWorkerOptions.workerSrc = new URL(pdfWorker, import.meta.url);
+  if (pdfjs.GlobalWorkerOptions)
+    pdfjs.GlobalWorkerOptions.workerSrc = new URL('/pdf.worker.js', import.meta.url);
 
   let canvas;
   let page_num = 0;
@@ -415,7 +420,6 @@
           {#if showButtons.includes("autoflip")}
           <Tooltip>
             <span
-              aria-role="pdf"
               slot="activator"
               class="page-info button-control"
               on:click={() => onPageTurn()}
