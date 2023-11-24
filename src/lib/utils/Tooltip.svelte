@@ -1,18 +1,21 @@
-<script>
-  import { scale, fade } from "svelte/transition";
+<script lang='ts'>
+  import { scale, fade }  from "svelte/transition";
   import { ClassBuilder } from "./classes.js";
+
   const classesDefault = "tooltip";
-  let className = "";
-  export let classes = classesDefault;
+  let className        = "";
+  export let classes   = classesDefault;
   export { className as class };
-  export let show = false;
-  export let timeout = null;
-  const cb = new ClassBuilder(classes, classesDefault);
+  export let show      = false;
+  export let timeout   = null;
+  const cb             = new ClassBuilder(classes, classesDefault);
+
   $: c = cb
     .flush()
     .add(classes, true, classesDefault)
     .add(className)
     .get();
+
   function showTooltip() {
     if (show) return;
     show = true;
@@ -21,12 +24,14 @@
       show = false;
     }, timeout);
   }
+  
   function hideTooltip() {
     if (!show) return;
 
     show = false;
     clearTimeout(timeout);
   }
+
   function debounce(func, wait, immediate) {
     let timeout;
     return function() {
@@ -69,8 +74,9 @@
 
 <div class="activator">
   <div
-    on:mouseenter={debounce(showTooltip, 100)}
-    on:mouseleave={debounce(hideTooltip, 500)}
+    role="note"
+    on:mouseenter={debounce(showTooltip, 100, null)}
+    on:mouseleave={debounce(hideTooltip, 500, null)}
     on:mouseenter
     on:mouseleave
     on:focus

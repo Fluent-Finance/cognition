@@ -1,16 +1,24 @@
-<script>
+<script lang='ts'>
   import { onDestroy, tick } from "svelte";
-  // const pdfjs = require("$lib/pdfjs");
-  import * as pdfjs from "pdfjs-dist";
-  import { onPrint, calcRT, getPageText, savePDF } from "$lib/utils/Helper.svelte";
-  import Tooltip from "$lib/utils/Tooltip.svelte";
-  import pdfWorker from '$lib/pdfjs/pdf.worker?worker';
+  import Tooltip             from "$lib/utils/Tooltip.svelte";
+  import * as pdfjs          from "pdfjs-dist";
 
-  export let url;
-  export let data;
-  export let scale = 1.8;
-  export let pageNum = 1; //must be number
-  export let flipTime = 120; //by default 2 minute, value in seconds
+  import { 
+    onPrint, 
+    calcRT, 
+    getPageText, 
+    savePDF 
+  } from "$lib/utils/Helper.svelte";
+
+  export let url, data;
+
+  export let scale            = 1.8;
+  export let pageNum          = 1;
+  export let flipTime         = 120;
+  export let showBorder       = true;
+  export let totalPage        = 0;
+  export let downloadFileName = '';
+
   export let showButtons = [
     "navigation",
     "zoom",
@@ -20,36 +28,31 @@
     "autoflip",
     "timeInfo",
     "pageInfo",
-  ]; //array
-  export let showBorder = true; //boolean
-  export let totalPage = 0;
-  export let downloadFileName = '';
+  ]; 
 
-  // const pathUrl = "$lib/pdfjs/build/pdf.worker.js?worker";
-    // pdfjs.GlobalWorkerOptions.workerSrc = new URL(pdfWorker, import.meta.url);
   if (pdfjs.GlobalWorkerOptions)
     pdfjs.GlobalWorkerOptions.workerSrc = new URL('/pdf.worker.js', import.meta.url);
 
   let canvas;
-  let page_num = 0;
-  let pageCount = 0;
-  let pdfDoc = null;
-  let pageRendering = false;
-  let pageNumPending = null;
-  let rotation = 0;
-  let pdfContent = "";
-  let readingTime = 0;
-  let autoFlip = false;
+  let page_num        = 0;
+  let pageCount       = 0;
+  let pdfDoc          = null;
+  let pageRendering   = false;
+  let pageNumPending  = null;
+  let rotation        = 0;
+  let pdfContent      = "";
+  let readingTime     = 0;
+  let autoFlip        = false;
   let interval;
   let secondInterval;
-  let seconds = flipTime;
-  let pages = [];
-  let password = "";
-  let passwordError = false;
+  let seconds         = flipTime;
+  let pages           = [];
+  let password        = "";
+  let passwordError   = false;
   let passwordMessage = "";
-  let isInitialised = false;
-  const minScale = 1.0;
-  const maxScale = 2.3;
+  let isInitialised   = false;
+  const minScale      = 1.0;
+  const maxScale      = 2.3;
 
   const renderPage = (num) => {
     pageRendering = true;
@@ -92,20 +95,17 @@
   };
 
   const queueRenderPage = (num) => {
-    if (pageRendering) {
-      pageNumPending = num;
-    } else {
-      renderPage(num);
-    }
+    if (pageRendering)
+      return pageNumPending = num;
+
+    return renderPage(num);
   };
 
   /**
    * Displays previous page.
    */
   const onPrevPage = () => {
-    if (pageNum <= 1) {
-      return;
-    }
+    if (pageNum <= 1) { return; }
     pageNum--;
     queueRenderPage(pageNum);
   };
@@ -114,12 +114,11 @@
    * Displays next page.
    */
   const onNextPage = () => {
-    if (pageNum >= pdfDoc.numPages) {
-      return;
-    }
+    if (pageNum >= pdfDoc.numPages) { return; }
     pageNum++;
     queueRenderPage(pageNum);
   };
+
   /*
    * Display Zoom In
    */
@@ -129,6 +128,7 @@
       queueRenderPage(pageNum);
     }
   };
+
   /*
    * Display Zoom Out
    */
@@ -160,7 +160,6 @@
   /**
    * Asynchronously downloads PDF.
    */
-
   const initialLoad = async () => {
     let loadingTask = pdfjs.getDocument({
       ...(url && { url }),
@@ -191,8 +190,8 @@
         passwordError = true;
         passwordMessage = error.message;
       });
-  };
-  initialLoad();
+  }; initialLoad();
+
   $: if (isInitialised) queueRenderPage(pageNum);
 
   //turn page after certain time interval
@@ -203,7 +202,6 @@
       clearInterval(secondInterval); //stop countdown seconds
     }
     if (autoFlip === true && pageNum <= totalPage) {
-      //countdown seconds
       secondInterval = setInterval(() => {
         seconds = seconds - 1;
       }, 1000);
@@ -213,12 +211,14 @@
       }, flipTime * 1000); //every {flipTime} seconds
     }
   };
+
   //Download pdf function
   const downloadPdf = ({ url: fileURL, data }) => {
     let fileName =
       downloadFileName || fileURL && fileURL.substring(fileURL.lastIndexOf("/") + 1);
     savePDF({ fileURL, data, name: fileName });
   };
+
   //prevent memory leak
   onDestroy(() => {
     clearInterval(interval);
@@ -249,6 +249,8 @@
         {#if showButtons.includes("navigation")}
           <Tooltip>
             <span
+              role="button"
+              tabindex=0
               slot="activator"
               class="button-control {pageNum <= 1 ? 'disabled' : null}"
               on:click={() => onPrevPage()}
@@ -269,6 +271,8 @@
           </Tooltip>
           <Tooltip>
             <span
+              tabindex=0
+              role="button"
               slot="activator"
               class="button-control {pageNum >= totalPage ? 'disabled' : null}"
               on:click={() => onNextPage()}
@@ -291,6 +295,8 @@
           {#if showButtons.includes("zoom")}
           <Tooltip>
             <span
+              tabindex=0
+              role="button"
               slot="activator"
               class="button-control {scale >= maxScale ? 'disabled' : null}"
               on:click={() => onZoomIn()}
@@ -313,6 +319,8 @@
           </Tooltip>
           <Tooltip>
             <span
+              tabindex=0
+              role="button"
               slot="activator"
               class="button-control {scale <= minScale ? 'disabled' : null}"
               on:click={() => onZoomOut()}
@@ -337,6 +345,8 @@
           {#if showButtons.includes("print")}
           <Tooltip>
             <span
+              tabindex=0
+              role="button"
               slot="activator"
               class="button-control"
               on:click={() => printPdf(url)}
@@ -359,6 +369,8 @@
           {#if showButtons.includes("rotate")}
           <Tooltip>
             <span
+              tabindex=0
+              role="button"
               slot="activator"
               class="button-control"
               on:click={() => antiClockwiseRotate()}
@@ -379,6 +391,8 @@
           </Tooltip>
           <Tooltip>
             <span
+              tabindex=0
+              role="button"
               slot="activator"
               class="button-control"
               on:click={() => clockwiseRotate()}
@@ -401,6 +415,8 @@
           {#if showButtons.includes("download")}
           <Tooltip>
             <span
+              tabindex=0
+              role="button"
               slot="activator"
               class="button-control"
               on:click={() => downloadPdf({url, data})}
@@ -420,6 +436,8 @@
           {#if showButtons.includes("autoflip")}
           <Tooltip>
             <span
+              tabindex=0
+              role="button"
               slot="activator"
               class="page-info button-control"
               on:click={() => onPageTurn()}
@@ -507,9 +525,7 @@
 </div>
 
 <style>
-  :global(html) {
-    scroll-behavior: smooth;
-  }
+  :global(html) { scroll-behavior: smooth; }
   .parent {
     display: flex;
     flex-direction: column;
@@ -561,9 +577,7 @@
     background-color: #fff;
     border-width: 1px;
   }
-  .control-start {
-    padding: 1.25rem;
-  }
+  .control-start { padding: 1.25rem; }
   .line {
     display: flex;
     flex-direction: row;
@@ -619,9 +633,7 @@
     margin-left: 0.5rem;
     cursor: default;
   }
-  .rot-icon {
-    transform: scaleX(-1);
-  }
+  .rot-icon { transform: scaleX(-1); }
   #topBtn {
     position: fixed;
     bottom: 10px;
@@ -645,15 +657,9 @@
   */
 
   @media (min-width: 768px) and (max-width: 1024px) {
-    .parent {
-      margin: 0;
-    }
-    .control {
-      margin: 0;
-    }
-    .control-start {
-      padding: 0;
-    }
+    .parent { margin: 0; }
+    .control { margin: 0; }
+    .control-start { padding: 0; }
     .line {
       justify-content: center;
     }
@@ -671,9 +677,8 @@
       border-right-width: 1px;
       cursor: pointer;
     }
-    .page-info {
-      display: none;
-    }
+    .page-info { display: none; }
+
     canvas {
       width: 100%;
       height: 100%;
@@ -685,18 +690,10 @@
   */
 
   @media (min-width: 481px) and (max-width: 767px) {
-    .parent {
-      margin: 0;
-    }
-    .control {
-      margin: 0;
-    }
-    .control-start {
-      padding: 0;
-    }
-    .line {
-      justify-content: center;
-    }
+    .parent { margin: 0; }
+    .control { margin: 0; }
+    .control-start { padding: 0; }
+    .line { justify-content: center; }
     .button-control {
       display: flex;
       flex-direction: row;
@@ -711,9 +708,8 @@
       border-right-width: 1px;
       cursor: pointer;
     }
-    .page-info {
-      display: none;
-    }
+    .page-info { display: none; }
+
     canvas {
       width: 100%;
       height: 100%;
@@ -726,18 +722,10 @@
   */
 
   @media (min-width: 320px) and (max-width: 480px) {
-    .parent {
-      margin: 0;
-    }
-    .control {
-      margin: 0;
-    }
-    .control-start {
-      padding: 0;
-    }
-    .line {
-      justify-content: center;
-    }
+    .parent { margin: 0; }
+    .control { margin: 0; }
+    .control-start { padding: 0; }
+    .line { justify-content: center; }
     .button-control {
       display: flex;
       flex-direction: row;
@@ -752,9 +740,8 @@
       border-right-width: 1px;
       cursor: pointer;
     }
-    .page-info {
-      display: none;
-    }
+    .page-info { display: none; }
+
     canvas {
       width: 100%;
       height: 100%;

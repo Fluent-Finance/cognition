@@ -14,12 +14,9 @@
     DropdownDivider,
   } from 'flowbite-svelte';
 
-  import { ChevronDownOutline } from 'flowbite-svelte-icons';
-
   import _                         from 'lodash';
   import { onMount }               from 'svelte';
   import { page }                  from '$app/stores';
-  import theme                     from '$lib/stores/ThemeStore';
   import FluentLogoIconWhite       from '$lib/assets/Logo-White.svg?url';
   
   let width: number;
@@ -184,8 +181,8 @@
         active={activeUrl === '/pages/team'}> Team
       </NavLi>
       <NavLi 
-        href='/blog/fluent-finances-integration-with-flow-rewards-offers-lps-a-risk-off-and-non-custodial-offering-on-uniswap'
-        active={activeUrl === '/blog/*'}> Blog
+        href='/pages/blog'
+        active={activeUrl === '/pages/blog'}> Blog
       </NavLi>
     </NavUl>
 

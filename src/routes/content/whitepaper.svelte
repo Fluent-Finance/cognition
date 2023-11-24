@@ -1,14 +1,11 @@
 <!-- handcoded with ♥︎  by ⚡️-𝙆𝙊𝘿𝞝𝙋𝞸𝞝𝙏-⚡️--->
 <script lang='ts'>
-  import type { PageServerData } from './$types';
-
   import { Section } from 'flowbite-svelte-blocks';
   import { onMount } from "svelte";
   import url         from "$lib/assets/FluentWhitepaper.pdf";
 
   let PdfViewer;
 
-  export let data: PageServerData;
   export let width: number;
 
   $: scale = (width >= 1920) ? 1.5 : 1.7;

@@ -31,8 +31,7 @@ order: 2
   text-black 
   dark:text-white
   text-center">
-    <span class={`${defaults}`}>Blog</span>
+    <span class={`${defaults}`}>Our Blog: Coming Soon!</span>
   </div>
  
-  <a href='/blog/fluent-finances-integration-with-flow-rewards-offers-lps-a-risk-off-and-non-custodial-offering-on-uniswap'>Flow Rewards</a>
 </Section>

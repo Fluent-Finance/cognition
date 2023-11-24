@@ -95,7 +95,7 @@ title: 'Fluent Finance’s integration with Flow Rewards offers LPs a risk-off a
       Our strategy is simple yet effective. We take our revenue from Market Maker earnings 
       and funnel it back to our Liquidity Providers through the Flow Rewards smart contract.
 
-      ![](https://miro.medium.com/v2/resize:fit:1920/0*e_88xxYmM_cJOf8f)
+      <Img src='https://miro.medium.com/v2/resize:fit:1920/0*e_88xxYmM_cJOf8f' alt="fluent" size="m-10 object-cover max-h-50 rounded-xl " alignment="mx-auto" />
 
       Fluent Finance Implementation of Flow Rewards
       Please note that our rewards program is not applicable to US citizens or residents.
