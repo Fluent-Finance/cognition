@@ -102,6 +102,9 @@ COPY --from=node_base /usr/local/bin/node /usr/local/bin/node
 
 COPY . $APP_PATH
 
+RUN chmod -R 0777 $APP_PATH/entrypoints/entrypoint.d/*
+RUN chown -R bun:bun $APP_PATH
+
 # RUN --mount=type=secret,id=opConnectToken \
 #     --mount=type=secret,id=opConnectHost  \
 #     ./buildSecurity
@@ -118,7 +121,7 @@ SHELL ["/bin/bash", "-c"]
 ARG SERVICE_NAME=frontend
 ARG APP_ENV=production
 ARG APP_PORT=3333
-arg APP_HOST=0.0.0.0
+ARG APP_HOST=0.0.0.0
 ARG APP_LOG_LEVEL=error
 ARG ENV_FILE="bootstrap.env"
 ARG APP_PATH=/usr/src/app
@@ -133,11 +136,6 @@ WORKDIR $APP_PATH
 ENV PORT $APP_PORT
 ENV HOST $APP_HOST
 ENV NODE_ENV development
-
-COPY . $APP_PATH
-
-RUN chmod -R 0777 $APP_PATH/entrypoints/entrypoint.d/*
-RUN chown -R bun:bun $APP_PATH
 
 HEALTHCHECK  --interval=45s --start-period=30s --timeout=6s \
   CMD wget --no-verbose --tries=1 --spider http://0.0.0.0:3333/ || exit 1

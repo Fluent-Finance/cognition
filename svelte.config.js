@@ -1,5 +1,5 @@
-// import adapter            from '@sveltejs/adapter-auto';
-import adapter            from '@sveltejs/adapter-static';
+import adapterNode        from '@sveltejs/adapter-node';
+import adapterStatic      from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/kit/vite';
 import preprocess         from 'svelte-preprocess';
 import tailwindcss        from 'tailwindcss';
@@ -14,6 +14,8 @@ import { fileURLToPath }  from "url";
 
 const json = readFileSync(fileURLToPath(new URL("package.json", import.meta.url)), 'utf8');
 const { version } = JSON.parse(json);
+
+const adapter = (process?.env?.BUILD_ADAPTER === 'static') ? adapterStatic : adapterNode;
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -42,7 +44,7 @@ const config = {
       $utils: 'src/lib/utils'
     },
     csrf: {
-      checkOrigin: process?.env.NODE_ENV === 'production'
+      checkOrigin: process?.env?.NODE_ENV === 'production'
     },
     csp: {
       mode: 'hash',
