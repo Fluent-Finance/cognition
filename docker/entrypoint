@@ -6,6 +6,7 @@ set -e
 
 cd /usr/src/app
 
+bunx vite build
 bunx vite preview --port $PORT --host $HOST
 
 exec "$@"

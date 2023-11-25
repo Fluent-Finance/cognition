@@ -1,7 +1,5 @@
 <script lang='ts'>
 
-  export const prerender = true;
-
   import { onDestroy, tick } from "svelte";
   import Tooltip             from "$lib/utils/Tooltip.svelte";
   import * as pdfjs          from "pdfjs-dist";

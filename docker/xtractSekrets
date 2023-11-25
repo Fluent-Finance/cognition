@@ -7,7 +7,7 @@ source ./sekrets
 declare -A SEKRETS
 source ./sekrets_array
 
-# Extract secrets from 1Password
+# Extract secrets from vault
 # set corresponding environment variables.
 function extract_secrets() {
   for secret in "${SEKRETS[@]}"; do

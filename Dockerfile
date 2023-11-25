@@ -7,8 +7,7 @@ ARG CACHE_IMAGE=${BASE_IMAGE}
 ARG BASE_DOMAIN=fluent.finance
 
 # -------------------------------------------------------------------
-FROM node:20.9.0-bullseye AS node_base
-# -------------------------------------------------------------------
+FROM node:20.9.0-bullseye as node_base
 # -------------------------------------------------------------------
 FROM $CACHE_IMAGE as base
 # -------------------------------------------------------------------
@@ -106,7 +105,6 @@ COPY . $APP_PATH
 # RUN --mount=type=secret,id=opConnectToken \
 #     --mount=type=secret,id=opConnectHost  \
 #     ./buildSecurity
-
 # ----------------------------------------------------------
 # !!! END BUILD STAGE ||||||||||||||||||||||||||||||||||||||
 # ----------------------------------------------------------
@@ -140,9 +138,6 @@ COPY . $APP_PATH
 
 RUN chmod -R 0777 $APP_PATH/entrypoints/entrypoint.d/*
 RUN chown -R bun:bun $APP_PATH
-
-# HEALTHCHECK --interval=30s --timeout=10s --start-period=15s --retries=3 \
-#   CMD curl --fail "http://0.0.0.0:$APP_PORT/" || exit 1
 
 HEALTHCHECK  --interval=45s --start-period=30s --timeout=6s \
   CMD wget --no-verbose --tries=1 --spider http://0.0.0.0:3333/ || exit 1

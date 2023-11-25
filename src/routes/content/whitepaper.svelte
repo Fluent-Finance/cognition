@@ -5,6 +5,8 @@
   import url         from "$lib/assets/FluentWhitepaper.pdf";
   import pdfViewer   from "$lib/components/PdfViewer.svelte";
 
+  export const prerender = true;
+
   let PdfViewer;
 
   export let width: number;
