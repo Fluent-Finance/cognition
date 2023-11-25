@@ -1,0 +1,1 @@
+declare -a SEKRETS='([0]="OP_TOKEN")'

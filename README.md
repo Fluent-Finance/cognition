@@ -70,6 +70,33 @@ bun run test:unit
 bun run test:integration
 ```
 
+### Docker Build
+
+```bash
+docker buildx build -f Dockerfile \
+  --ssh default \
+  --platform linux/arm64 \
+  --build-arg APP_ENV=$APP_ENV \
+  --build-arg APP_PORT=$PORT \
+  --build-arg APP_HOST=$APP_ENV \
+  --build-arg SERVICE_NAME=$SERVICE_NAME \
+  --build-arg APP_LOG_LEVEL=$LOG_LEVEL \
+  --tag "cognition:latest" \
+  .
+```
+
+### Docker Run
+
+```bash
+docker run -it \
+  --label cognition \
+  --name cognition \
+  --env-file build.env \
+  -p 0.0.0.0:3333:3333/tcp \
+  --rm \
+  -t cognition:latest \
+```
+
 ### :closed_lock_with_key: Secure Shell / Runtime
 
 ```bash

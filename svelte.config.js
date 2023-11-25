@@ -1,3 +1,4 @@
+// import adapter            from '@sveltejs/adapter-auto';
 import adapter            from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/kit/vite';
 import preprocess         from 'svelte-preprocess';
@@ -31,6 +32,7 @@ const config = {
     },
 		serviceWorker: { register: true },
     alias: {
+      $routes: 'src/routes',
       $styles: 'src/lib/styles',
       $actions: 'src/lib/actions',
       $components: 'src/lib/components',
@@ -80,7 +82,6 @@ const config = {
     mdsvex(mdsvexConfig),
 
     vitePreprocess({
-
       optimizeDeps: {
         include: ['lodash.get', 'lodash.isequal', 'lodash.clonedeep']
       },

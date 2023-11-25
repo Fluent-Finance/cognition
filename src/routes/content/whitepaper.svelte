@@ -1,8 +1,9 @@
 <!-- handcoded with ♥︎  by ⚡️-𝙆𝙊𝘿𝞝𝙋𝞸𝞝𝙏-⚡️--->
 <script lang='ts'>
-  import { Section } from 'flowbite-svelte-blocks';
   import { onMount } from "svelte";
+  import { Section } from 'flowbite-svelte-blocks';
   import url         from "$lib/assets/FluentWhitepaper.pdf";
+  import pdfViewer   from "$lib/components/PdfViewer.svelte";
 
   let PdfViewer;
 
@@ -14,10 +15,8 @@
   const showButtons = ['navigation', 'timeInfo', 'pageInfo'];
 
   onMount(async () => {
-    try {
-      const module = await import("$lib/components/PdfViewer.svelte");
-      PdfViewer = module.default;
-    } catch (error) { console.log(error); }
+    try { PdfViewer = pdfViewer; } 
+    catch (error) { console.log(error); }
   });
 </script>
 

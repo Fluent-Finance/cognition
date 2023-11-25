@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# handcoded with 🤍 by 𝙆𝙊𝘿𝞝𝙋𝞸𝞝𝙏 <iam@kodepoet.dev>
+
+set -e
+
+cd /usr/src/app
+
+bunx vite preview --port $PORT --host $HOST
+
+exec "$@"

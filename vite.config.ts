@@ -57,6 +57,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
+      $routes:     resolve('src/routes'),
       $styles:     resolve('src/lib/styles'),
       $components: resolve('src/lib/components'),
       $icons:      resolve('src/lib/icons'),

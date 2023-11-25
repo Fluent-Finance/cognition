@@ -30,6 +30,7 @@ jspm_packages
 .env
 .env.*
 !.env.example
+build.env
 
 # Editor and other files
 .idea

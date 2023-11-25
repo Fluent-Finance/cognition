@@ -1,0 +1,40 @@
+#!/bin/bash
+
+# handcoded with 🤍 by 𝙆𝙊𝘿𝞝𝙋𝞸𝞝𝙏 <iam@kodepoet.dev>
+
+set -aeuo pipefail nounset
+
+cd "$APP_PATH"
+
+export ENVFILE="$APP_PATH/bootstrap.env"
+
+source ./sekrets;
+
+for key in "${!SEKRETS[@]}";
+do
+  if [ -f /run/secrets/"${key}" ]; then
+    envpath="/run/secrets/${key}"
+    val=$(cat "$envpath")
+    export "${SEKRETS[$key]}"="$val";
+    export "${SEKRETS[$key]}_FILE"="$envpath";
+    echo "Exporting secret -> ${SEKRETS[$key]}"
+  fi
+
+  if [ -n "${OP_HOST-}" ]; then
+    if [ -n "${OP_CONNECT_HOST-}" ]; then
+      echo "OP HOST Already Set $OP_CONNECT_HOST"
+    else
+      export OP_CONNECT_HOST="$OP_HOST"
+    fi
+  fi
+
+  if [ -n "${OP_TOKEN-}" ]; then
+    if [ -n "${OP_CONNECT_TOKEN-}" ]; then
+      echo "OP TOKEN Already Set"
+    else
+      export OP_CONNECT_TOKEN="$OP_TOKEN"
+    fi
+  fi
+done
+
+NODE_ENV=production bun do

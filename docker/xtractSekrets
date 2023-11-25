@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# handcoded with 🤍 by 𝙆𝙊𝘿𝞝𝙋𝞸𝞝𝙏 <iam@kodepoet.dev>
+
+source ./sekrets
+
+declare -A SEKRETS
+source ./sekrets_array
+
+# Extract secrets from 1Password
+# set corresponding environment variables.
+function extract_secrets() {
+  for secret in "${SEKRETS[@]}"; do
+    op read -o "${secret}_FILE" "$(printenv "${secret}")" && chmod 0600 "${secret}_FILE"
+    export "FILE_${secret}"="./${secret}_FILE"
+  done
+}
+
+# Remove secrets files.
+function remove_files() {
+  for file in *_FILE; do
+    if [ -e "$file" ]; then
+      echo "Removing secrets file: $file"
+      rm "./$file"
+    fi
+  done
+}
+
+# remove_files
+extract_secrets

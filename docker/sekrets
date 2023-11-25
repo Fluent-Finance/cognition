@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# handcoded with 🤍 by 𝙆𝙊𝘿𝞝𝙋𝞸𝞝𝙏 <iam@kodepoet.dev>
+
+set -e
+
+declare -A SEKRETS=(
+  [opConnectHost]=OP_HOST
+  [opConnectToken]=OP_TOKEN
+);
+
+declare -p SEKRETS > sekrets_array
+export SEKRETS;

@@ -1,9 +1,9 @@
 // handcoded with ♥︎  by ⚡️ 𝙆𝙊𝘿𝞝𝙋𝞸𝞝𝙏 ⚡️
 
-export const prerender = true;
-
 import { json } from '@sveltejs/kit';
 import _ from 'lodash';
+
+export const prerender = true;
 
 export const GET = async () => {
   const allContent = await fetchMarkdown();
@@ -11,8 +11,8 @@ export const GET = async () => {
 };
 
 const fetchMarkdown = async () => {
-  const page    = import.meta.glob('/src/routes/pages/*.md');
-  const blog    = import.meta.glob('/src/routes/blog/*.md');
+  const page    = import.meta.glob('/src/routes/pages/*.svelte.md');
+  const blog    = import.meta.glob('/src/routes/blog/*.svelte.md');
   const content = import.meta.glob('/src/routes/content/*.svelte');
 
   const posts = await Promise.all(

@@ -1,4 +1,7 @@
 <script lang='ts'>
+
+  export const prerender = true;
+
   import { onDestroy, tick } from "svelte";
   import Tooltip             from "$lib/utils/Tooltip.svelte";
   import * as pdfjs          from "pdfjs-dist";
@@ -31,7 +34,7 @@
   ]; 
 
   if (pdfjs.GlobalWorkerOptions)
-    pdfjs.GlobalWorkerOptions.workerSrc = new URL('/pdf.worker.js', import.meta.url);
+    pdfjs.GlobalWorkerOptions.workerSrc = new URL("/pdf.worker.js", import.meta.url);
 
   let canvas;
   let page_num        = 0;
