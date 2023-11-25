@@ -163,7 +163,7 @@
         <DropdownItem 
           href="https://github.com/Fluent-Finance" 
           target="_blank">
-            Github
+            GitHub
         </DropdownItem>
         <DropdownDivider />
         <DropdownItem href="/dashboard/fluent">Dashboard</DropdownItem>
