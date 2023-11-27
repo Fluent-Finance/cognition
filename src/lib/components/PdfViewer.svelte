@@ -214,7 +214,7 @@
   const downloadPdf = ({ url: fileURL, data }) => {
     let fileName =
       downloadFileName || fileURL && fileURL.substring(fileURL.lastIndexOf("/") + 1);
-    savePDF({ fileURL, data, name: fileName });
+    savePDF({ fileName, data, name: fileName });
   };
 
   // prevent memory leak

@@ -66,7 +66,7 @@
     }
 
     const url = URL.createObjectURL(blobs);
-    link.href = url;
+    link.href = '/Fluent_Whitepaper.pdf';
     link.click();
     // Revoke the object URL to free up memory
     URL.revokeObjectURL(link.href);

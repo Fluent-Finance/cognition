@@ -15,6 +15,7 @@
 
   const showBorder  = true;
   const showButtons = ['navigation', 'timeInfo', 'pageInfo', 'download'];
+  const downloadFileName = '/Fluent_Whitepaper.pdf';
 
   onMount(async () => {
     try { PdfViewer = pdfViewer; } 
@@ -23,5 +24,5 @@
 </script>
 
 <Section class="relative bg-white dark:bg-base-100 min-h-[100vh]">
-  <svelte:component this={PdfViewer} {scale} {url} {showBorder} {showButtons} />
+  <svelte:component this={PdfViewer} {scale} {url} {downloadFileName} {showBorder} {showButtons} />
 </Section>
