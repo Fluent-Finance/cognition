@@ -14,7 +14,7 @@
   $: scale = (width >= 1920) ? 1.5 : 1.7;
 
   const showBorder  = true;
-  const showButtons = ['navigation', 'timeInfo', 'pageInfo'];
+  const showButtons = ['navigation', 'timeInfo', 'pageInfo', 'download'];
 
   onMount(async () => {
     try { PdfViewer = pdfViewer; } 
