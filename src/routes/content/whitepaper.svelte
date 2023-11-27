@@ -2,7 +2,7 @@
 <script lang='ts'>
   import { onMount } from "svelte";
   import { Section } from 'flowbite-svelte-blocks';
-  import url         from "$lib/assets/FluentWhitepaper.pdf";
+  import url         from "$lib/assets/Fluent_Whitepaper.pdf";
   import pdfViewer   from "$lib/components/PdfViewer.svelte";
 
   export const prerender = true;

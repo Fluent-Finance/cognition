@@ -159,6 +159,7 @@
         active={activeUrl === '/content/whitepaper'}> Resources
       </NavLi>
       <Dropdown class="w-44 z-20">
+        <DropdownItem href="/content/whitepaper">Whitepaper</DropdownItem>
         <DropdownItem 
           href="https://github.com/Fluent-Finance" 
           target="_blank">
