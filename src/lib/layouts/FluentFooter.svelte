@@ -75,13 +75,6 @@
     <Hr class='mx-2 px-10' />
 
     <div> 
-      <p class='my-5 ml-3 text-base-200 prose prose-p text-[10px] xs:text-sm'> 
-        Fluent Finance is the fintech infrastructure company responsible for 
-        developing connections from core banking to public layers, bridging 
-        Web2 & Web3 utilizing the Fluent Protocol. Our flagship product is 
-        USPlus, the only fully verifiable cash and equivalent backed stablecoin.
-      </p>
-
       <FooterCopyright spanClass="ml-3 my-5 text-[6px] xs:text-xs max-w-xl text-base-200" {by} />
 
       <div class='my-5 max-w-sm'>
